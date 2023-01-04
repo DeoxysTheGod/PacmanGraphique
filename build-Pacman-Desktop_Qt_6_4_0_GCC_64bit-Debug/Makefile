@@ -53,6 +53,7 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Pacman/main.cpp \
+		../Pacman/module/gameSprite.cpp \
 		../Pacman/MinGL2/src/audio/audioengine.cpp \
 		../Pacman/MinGL2/src/exception/cexception.cpp \
 		../Pacman/MinGL2/src/mingl.cpp \
@@ -71,6 +72,7 @@ SOURCES       = ../Pacman/main.cpp \
 		../Pacman/MinGL2/src/transition/transition_contract.cpp \
 		../Pacman/MinGL2/src/transition/transition_engine.cpp 
 OBJECTS       = main.o \
+		gameSprite.o \
 		audioengine.o \
 		cexception.o \
 		mingl.o \
@@ -211,6 +213,7 @@ DIST          = /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/qt_config.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_post.prf \
+		../Pacman/.qmake.stash \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/toolchain.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -251,7 +254,10 @@ DIST          = /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition.h \
 		/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_contract.h \
 		/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_engine.h \
-		/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h ../Pacman/main.cpp \
+		/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h \
+		module/gameSprite.h \
+		module/type.h ../Pacman/main.cpp \
+		../Pacman/module/gameSprite.cpp \
 		../Pacman/MinGL2/src/audio/audioengine.cpp \
 		../Pacman/MinGL2/src/exception/cexception.cpp \
 		../Pacman/MinGL2/src/mingl.cpp \
@@ -403,6 +409,7 @@ Makefile: ../Pacman/Pacman.pro /home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/q
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/qt_config.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/toolchain.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -542,6 +549,7 @@ Makefile: ../Pacman/Pacman.pro /home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/q
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/qt_config.prf:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/toolchain.prf:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/default_pre.prf:
@@ -613,8 +621,28 @@ main.o: ../Pacman/main.cpp ../Pacman/MinGL2/include/mingl/mingl.h \
 		../Pacman/MinGL2/include/mingl/transition/itransitionable.h \
 		../Pacman/MinGL2/include/mingl/shape/circle.h \
 		../Pacman/MinGL2/include/mingl/shape/line.h \
-		../Pacman/MinGL2/include/mingl/shape/triangle.h
+		../Pacman/MinGL2/include/mingl/shape/triangle.h \
+		../Pacman/module/type.h \
+		../Pacman/module/gameSprite.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Pacman/main.cpp
+
+gameSprite.o: ../Pacman/module/gameSprite.cpp ../Pacman/module/gameSprite.h \
+		../Pacman/module/type.h \
+		../Pacman/MinGL2/include/mingl/mingl.h \
+		../Pacman/MinGL2/include/mingl/graphics/idrawable.h \
+		../Pacman/MinGL2/include/mingl/graphics/rgbacolor.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.hpp \
+		../Pacman/MinGL2/include/mingl/graphics/vec2d.h \
+		../Pacman/MinGL2/include/mingl/event/event_manager.h \
+		../Pacman/MinGL2/include/mingl/event/event.hpp \
+		../Pacman/MinGL2/include/mingl/shape/rectangle.h \
+		../Pacman/MinGL2/include/mingl/shape/shape.h \
+		../Pacman/MinGL2/include/mingl/transition/itransitionable.h \
+		../Pacman/MinGL2/include/mingl/shape/circle.h \
+		../Pacman/MinGL2/include/mingl/shape/line.h \
+		../Pacman/MinGL2/include/mingl/shape/triangle.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gameSprite.o ../Pacman/module/gameSprite.cpp
 
 audioengine.o: ../Pacman/MinGL2/src/audio/audioengine.cpp ../Pacman/MinGL2/include/mingl/audio/audioengine.h \
 		../Pacman/MinGL2/include/mingl/exception/cexception.h \

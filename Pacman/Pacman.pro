@@ -5,6 +5,10 @@ CONFIG -= qt
 
 SOURCES += \
         main.cpp \
-        module/sprite.cpp
+        module/gameSprite.cpp
 
 include(MinGL2/mingl.pri)
+
+HEADERS += \
+    module/gameSprite.h \
+    module/type.h

@@ -12,9 +12,20 @@
 
 #include <random>
 
+#include "module/type.h"
+
+#include "module/gameSprite.h"
+
 using namespace std;
 using namespace nsShape;
 using namespace nsGraphics;
+
+void affPac(MinGL & window, sPacman & pacman) {
+    window << Circle(Vec2D(pacman.pos.first, pacman.pos.second), pacman.size, pacman.color);
+    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
+                       Vec2D(pacman.triangle1.first.first, pacman.triangle1.first.second),
+                       Vec2D(pacman.triangle1.second.first, pacman.triangle1.second.second), KRed);
+}
 
 void animPacMan (MinGL & window, unsigned & i, unsigned & move) {
     if (move> 1000) move = 0;
@@ -61,6 +72,9 @@ int main()
     chrono::microseconds frameTime = chrono::microseconds::zero();
     unsigned i (0);
     unsigned move (0);
+
+    sPacman pac1;
+    initPacman(pac1);
     // On fait tourner la boucle tant que la fenêtre est ouverte
     while (window.isOpen())
     {
@@ -71,8 +85,12 @@ int main()
         window.clearScreen();
 
         // On dessine les formes géométriques
+        /*
         animPacMan(window, i, move);
         gosth(window, 190, 25, 40, 150);
+        */
+        affPac(window, pac1);
+
         ++i;
         move += 3;
         // On finit la frame en cours
