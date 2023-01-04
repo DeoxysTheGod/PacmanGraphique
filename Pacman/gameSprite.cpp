@@ -1,1 +1,0 @@
-void InitPacMan(sPacman & pacman)

@@ -7,9 +7,16 @@
 struct sPacman {
     Position pos;
     unsigned size;
-    pacMousePos triangle1;
+    unsigned rotation;
+
+    unsigned triangleAmount;
+    unsigned mouthStart;
+    unsigned mouthSize;
+
+    //pacMousePos triangle1, triangle2, triangle3, triangle4;
     // couleur
     RGBAcolor color;
+    RGBAcolor colorMouth, colorMouse2;
 };
 
 void initPacman(sPacman & pac);

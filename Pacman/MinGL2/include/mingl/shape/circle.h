@@ -42,11 +42,14 @@ public:
      * @brief Constructeur pour la classe Circle
      * @param[in] firstPosition : Position du centre
      * @param[in] radius : Rayon du cercle
+     * @param[in] triangleAmount : Nombre de triangle
+     * @param[in] start : a partir de quel triangle il faut commencer a dessiner
+     * @param[in] drawTriangle : combien faut il dessiner de triangle
      * @param[in] fillColor : Couleur de remplissage
      * @param[in] borderColor : Couleur de bord
      * @fn Circle(const nsGraphics::Vec2D& position, const unsigned& radius, const nsGraphics::RGBAcolor& fillColor, const nsGraphics::RGBAcolor& borderColor = nsGraphics::KTransparent);
      */
-    Circle(const nsGraphics::Vec2D& position, const unsigned& radius, const nsGraphics::RGBAcolor& fillColor, const nsGraphics::RGBAcolor& borderColor = nsGraphics::KTransparent);
+    Circle(const nsGraphics::Vec2D& position, const unsigned& radius, const unsigned &triangleAmount, const unsigned &start, const unsigned &drawTriangle, const nsGraphics::RGBAcolor& fillColor, const nsGraphics::RGBAcolor& borderColor = nsGraphics::KTransparent);
 
     /**
      * @brief Destructeur virtuel pour la classe Circle
@@ -109,6 +112,18 @@ private:
      * @brief m_radius : Rayon du cercle
      */
     unsigned m_radius;
+    /*!
+     * \brief m_triangleAmount : Nombre de triangle
+     */
+    unsigned m_triangleAmount;
+    /*!
+     * \brief m_start : Debut de dessin des triangles
+     */
+    unsigned m_start;
+    /*!
+     * \brief m_drawTriangle : Nombre de triangle a dessiner
+     */
+    unsigned m_drawTriangle;
 
 }; // class Circle
 
