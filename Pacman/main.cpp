@@ -64,11 +64,20 @@ void affPac(MinGL & window, sPacman & pacman) {
 }
 
 void affGhost(MinGL & window, sGhost & ghost) {
+    // tete
     window << Circle(Vec2D(ghost.pos.first, ghost.pos.second), ghost.size, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.color);
+    // jointure entre tete et vague
+    window << Rectangle(Vec2D(ghost.pos.first+ghost.size, ghost.pos.second), Vec2D(ghost.pos.first-ghost.size, ghost.wavePos.second), ghost.color);
+    // yeux
     window << Circle(Vec2D(ghost.rightEyePos.first, ghost.rightEyePos.second), ghost.eyeSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.eyeColor);
     window << Circle(Vec2D(ghost.leftEyePos.first, ghost.leftEyePos.second), ghost.eyeSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.eyeColor);
     window << Circle(Vec2D(ghost.rightEyePos.first, ghost.rightEyePos.second), ghost.pupilSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.pupilColor);
     window << Circle(Vec2D(ghost.leftEyePos.first, ghost.leftEyePos.second), ghost.pupilSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.pupilColor);
+    // vague
+    for (unsigned i (0) ; i < ghost.nbWave ; ++i) {
+        window << Circle(Vec2D(ghost.wavePos.first+i*ghost.waveSize*2, ghost.wavePos.second), ghost.waveSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.color);
+        //cout << ghost.size << ", " << ghost.waveSize << endl;
+    }
 }
 
 
@@ -106,7 +115,7 @@ int main()
 {
     srand(time(NULL));
     // Initialise le système
-    MinGL window("Pacman", Vec2D(1000, 800), Vec2D(128, 128), RGBAcolor(0,0,0));
+    MinGL window("Pacman", Vec2D(1000, 1000), Vec2D(128, 128), RGBAcolor(0,0,0));
     window.initGlut();
     window.initGraphic();
 
@@ -136,10 +145,13 @@ int main()
                   {1,3,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,1},
                   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
 
+    // initialisation des sprites
+    unsigned caseSize = 36;
     sPacman pac1;
     sGhost ghost1;
-    initPacman(pac1);
-    initGhost(ghost1);
+    initPacman(pac1, caseSize);
+    initGhost(ghost1, caseSize);
+
     // On fait tourner la boucle tant que la fenêtre est ouverte
     while (window.isOpen())
     {
@@ -150,7 +162,7 @@ int main()
         window.clearScreen();
 
         // affiche la grille de jeu
-        displayMat(matrice,30, 50, window, pac1, ghost1);
+        displayMat(matrice,caseSize, 50, window, pac1, ghost1);
 
         affPac(window, pac1);
         majGhostSpritePos(ghost1);

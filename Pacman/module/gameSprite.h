@@ -6,7 +6,7 @@
 
 struct sPacman {
     Position pos;
-    unsigned size = 10;
+    unsigned size;
     unsigned rotation;
 
     unsigned triangleAmount;
@@ -22,20 +22,23 @@ struct sPacman {
 struct sGhost {
     Position pos;
     Position rightEyePos, leftEyePos;
-    unsigned size = 10;
+    unsigned size;
     unsigned rotation = 0;
 
     unsigned triangleAmount;
     unsigned eyeSize, pupilSize;
+
+    Position wavePos;
+    unsigned nbWave, waveSize;
 
     RGBAcolor color, eyeColor, pupilColor;
 
     unsigned previousCase = 0;
 };
 
-void initPacman(sPacman & pac);
+void initPacman(sPacman & pac, const unsigned caseSize);
 
-void initGhost(sGhost & ghost);
+void initGhost(sGhost & ghost, const unsigned caseSize);
 
 void majGhostSpritePos(sGhost & ghost);
 
