@@ -28,3 +28,5 @@ void initPacman(sPacman & pac) {
     pac.color = KYellow;
     pac.colorMouth = KBlack;
 }
+
+// comment voila
