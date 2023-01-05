@@ -68,40 +68,7 @@ void affPac(MinGL & window, sPacman & pacman) {
 //                       Vec2D(pacman.triangle4.second.first, pacman.triangle4.second.second),
 //                       Vec2D(pacman.triangle4.first.first, pacman.triangle4.first.second), pacman.colorMouse2);
 }
-/*
-void animPacMan (MinGL & window, unsigned & i, unsigned & move) {
-    if (move> 1000) move = 0;
-    if (i % 60 <= 20) {
-        window << Circle(Vec2D(150+move,300), 150, KYellow);
-        window << Circle(Vec2D(150+move,250), 10, KBlack);
-        window << Triangle(Vec2D(150+move,300), Vec2D(293+move,250), Vec2D(300+move,300), KBlack);
-        window << Triangle(Vec2D(150+move,300), Vec2D(271+move,210), Vec2D(293+move,250), KBlack);
-        window << Triangle(Vec2D(150+move,300), Vec2D(293+move,350), Vec2D(300+move,300), KBlack);
-        window << Triangle(Vec2D(150+move,300), Vec2D(271+move,390), Vec2D(293+move,350), KBlack);
-    }
-    else if (i % 60 <= 30) {
-        window << Circle(Vec2D(150+move,300), 150, KYellow);
-        window << Circle(Vec2D(150+move,250), 10, KBlack);
-        window << Triangle(Vec2D(150+move,300), Vec2D(293+move,250), Vec2D(300+move,300), KBlack);
-        window << Triangle(Vec2D(150+move,300), Vec2D(293+move,350), Vec2D(300+move,300), KBlack);
-    }
-    else if (i % 60 <= 50) {
-        window << Circle(Vec2D(150+move,300), 150, KYellow);
-        window << Circle(Vec2D(150+move,250), 10, KBlack);
-    }
-    else {
-        window << Circle(Vec2D(150+move,300), 150, KYellow);
-        window << Circle(Vec2D(150+move,250), 10, KBlack);
-        window << Triangle(Vec2D(150+move,300), Vec2D(293+move,250), Vec2D(300+move,300), KBlack);
-        window << Triangle(Vec2D(150+move,300), Vec2D(293+move,350), Vec2D(300+move,300), KBlack);
-    }
-}
 
-void gosth(MinGL & window, const unsigned r, const unsigned g, const unsigned b, const unsigned & size) {
-    window << Circle(Vec2D(600, 300), size, RGBAcolor(r,g,b));
-    window << Circle(Vec2D(600 + size/6, 300 + size * 1.5), size / 6, RGBAcolor(r,g,b));
-}
-*/
 int main()
 {
     srand(time(NULL));
@@ -112,8 +79,6 @@ int main()
 
     // Variable qui tient le temps de frame
     chrono::microseconds frameTime = chrono::microseconds::zero();
-    unsigned i (0);
-    unsigned move (0);
 
     vector<vector<unsigned>> matrice =
                  {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -150,15 +115,9 @@ int main()
         window.clearScreen();
 
         // On dessine les formes géométriques
-        /*
-        animPacMan(window, i, move);
-        gosth(window, 190, 25, 40, 150);
-        */
         affPac(window, pac1);
         displayMat(matrice,30, 50, window);
 
-        ++i;
-        move += 3;
         // On finit la frame en cours
         window.finishFrame();
 
