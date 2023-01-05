@@ -170,6 +170,7 @@ const RGBAcolor KGreen       {  0, 128,   0};
 const RGBAcolor KPurple      {128,   0, 128};
 const RGBAcolor KTeal        {  0, 128, 128};
 const RGBAcolor KNavy        {  0,   0, 128};
+const RGBAcolor KBeige       {255, 200, 130};
 const RGBAcolor KTransparent {  0,   0,   0,  0};
 
 } // namespace nsGraphics
