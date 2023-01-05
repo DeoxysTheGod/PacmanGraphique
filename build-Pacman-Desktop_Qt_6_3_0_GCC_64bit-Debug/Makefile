@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Pacman1.0.0
-DISTDIR = /amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.tmp/Pacman1.0.0
+DISTDIR = /amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.tmp/Pacman1.0.0
 LINK          = g++
 LFLAGS        = 
 LIBS          = $(SUBLIBS) -lglut -lsfml-audio -lGLU -lGL   
@@ -222,6 +222,7 @@ DIST          = /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/spec_post.prf \
+		../Pacman/.qmake.stash \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -236,33 +237,33 @@ DIST          = /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/exceptions.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/lex.prf \
-		../Pacman/Pacman.pro /amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/audio/audioengine.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/exception/cexception.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/exception/cexception.hpp \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/exception/errcode.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/macros.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/mingl.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/event/event.hpp \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/event/event_manager.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/circle.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/line.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/rectangle.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/triangle.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/shape.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/graphics/idrawable.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/graphics/rgbacolor.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/graphics/vec2d.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/gui/glut_font.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/gui/sprite.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/gui/text.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.hpp \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/tools/ifonctorunaire.hpp \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/itransitionable.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition_contract.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition_engine.h \
-		/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h \
+		../Pacman/Pacman.pro /amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/audio/audioengine.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/exception/cexception.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/exception/cexception.hpp \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/exception/errcode.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/macros.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/mingl.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/event/event.hpp \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/event/event_manager.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/circle.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/line.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/rectangle.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/triangle.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/shape.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/graphics/idrawable.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/graphics/rgbacolor.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/graphics/vec2d.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/glut_font.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/sprite.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/text.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.hpp \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/tools/ifonctorunaire.hpp \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/itransitionable.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_contract.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_engine.h \
+		/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h \
 		module/gameSprite.h \
 		module/type.h ../Pacman/main.cpp \
 		../Pacman/module/gameSprite.cpp \
@@ -426,6 +427,7 @@ Makefile: ../Pacman/Pacman.pro /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++/qmake.
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -574,6 +576,7 @@ Makefile: ../Pacman/Pacman.pro /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++/qmake.
 /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/qt_config.prf:
 /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/toolchain.prf:
 /opt/Qt-6.3/6.3.0/gcc_64/mkspecs/features/default_pre.prf:
