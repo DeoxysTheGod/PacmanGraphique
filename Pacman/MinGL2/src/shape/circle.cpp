@@ -13,10 +13,15 @@
 #include "mingl/shape/circle.h"
 #include "mingl/macros.h"
 
-nsShape::Circle::Circle(const nsGraphics::Vec2D &position, const unsigned &radius, const nsGraphics::RGBAcolor &fillColor, const nsGraphics::RGBAcolor &borderColor)
+#include <iostream>
+
+nsShape::Circle::Circle(const nsGraphics::Vec2D &position, const unsigned &radius, const unsigned &triangleAmount, const unsigned &start, const unsigned &drawTriangle, const nsGraphics::RGBAcolor &fillColor, const nsGraphics::RGBAcolor &borderColor)
     : Shape(fillColor, borderColor)
     , m_position(position)
     , m_radius(radius)
+    , m_triangleAmount(triangleAmount)
+    , m_start(start)
+    , m_drawTriangle(drawTriangle)
 {} // Circle()
 
 void nsShape::Circle::draw(MinGL& window) const
@@ -25,8 +30,7 @@ void nsShape::Circle::draw(MinGL& window) const
 
     // Source: https://gist.github.com/linusthe3rd/803118
 
-    int i;
-    int triangleAmount = 20; // Nombre de triangles a dessiner
+    unsigned i;
 
     // On règle la couleur du cercle
     const nsGraphics::RGBAcolor inColor = getFillColor();
@@ -38,9 +42,9 @@ void nsShape::Circle::draw(MinGL& window) const
 
     glVertex2f(m_position.getX(), m_position.getY()); // Centre du cercle
 
-    for(i = 0; i <= triangleAmount;i++) {
-        glVertex2f(m_position.getX() + (m_radius * cos(i * twicePi / triangleAmount)),
-                   m_position.getY() + (m_radius * sin(i * twicePi / triangleAmount)));
+    for(i = m_start; i <= m_drawTriangle+m_start;i++) {
+        glVertex2f(m_position.getX() + (m_radius * cos(i * twicePi / m_triangleAmount)),
+                   m_position.getY() + (m_radius * sin(i * twicePi / m_triangleAmount)));
     }
 
     glEnd();
@@ -53,9 +57,9 @@ void nsShape::Circle::draw(MinGL& window) const
 
         glBegin(GL_LINE_LOOP);
 
-        for(i = 0; i <= triangleAmount;i++) {
-            glVertex2f(m_position.getX() + (m_radius * cos(i * twicePi / triangleAmount)),
-                       m_position.getY() + (m_radius * sin(i * twicePi / triangleAmount)));
+        for(i = m_start; i <= m_drawTriangle+m_start;i++) {
+            glVertex2f(m_position.getX() + (m_radius * cos(i * twicePi / m_triangleAmount)),
+                       m_position.getY() + (m_radius * sin(i * twicePi / m_triangleAmount)));
         }
 
         glEnd();
@@ -144,12 +148,12 @@ void nsShape::Circle::setValues(const int &id, const std::vector<float> &values)
 
 nsShape::Circle nsShape::Circle::operator+(const nsGraphics::Vec2D& position) const
 {
-    return Circle(m_position + position, m_radius, getFillColor(), getBorderColor());
+    return Circle(m_position + position, m_radius, m_triangleAmount, m_start, m_drawTriangle, getFillColor(), getBorderColor());
 } // operator+()
 
 nsShape::Circle nsShape::Circle::operator*(const float& f) const
 {
-    return Circle(m_position * f, m_radius, getFillColor(), getBorderColor());
+    return Circle(m_position * f, m_radius, m_triangleAmount, m_start, m_drawTriangle, getFillColor(), getBorderColor());
 } // operator*()
 
 unsigned nsShape::Circle::getRadius() const

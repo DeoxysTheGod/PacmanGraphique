@@ -21,12 +21,28 @@ using namespace nsShape;
 using namespace nsGraphics;
 
 void affPac(MinGL & window, sPacman & pacman) {
-    window << Circle(Vec2D(pacman.pos.first, pacman.pos.second), pacman.size, pacman.color);
-    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
-                       Vec2D(pacman.triangle1.first.first, pacman.triangle1.first.second),
-                       Vec2D(pacman.triangle1.second.first, pacman.triangle1.second.second), KRed);
-}
+    window << Circle(Vec2D(pacman.pos.first, pacman.pos.second), pacman.size, pacman.triangleAmount, 0, pacman.triangleAmount, pacman.color);
+    window << Circle(Vec2D(pacman.pos.first, pacman.pos.second),
+                     pacman.size,
+                     pacman.triangleAmount,
+                     pacman.mouthStart-(pacman.triangleAmount/4)*pacman.rotation,
+                     pacman.mouthSize,
+                     pacman.colorMouth);
+//    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
+//                       Vec2D(pacman.triangle1.second.first, pacman.triangle1.second.second),
+//                       Vec2D(pacman.triangle1.first.first, pacman.triangle1.first.second), pacman.colorMouse);
+//    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
+//                       Vec2D(pacman.triangle2.second.first, pacman.triangle2.second.second),
+//                       Vec2D(pacman.triangle2.first.first, pacman.triangle2.first.second), pacman.colorMouse);
 
+//    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
+//                       Vec2D(pacman.triangle3.second.first, pacman.triangle3.second.second),
+//                       Vec2D(pacman.triangle3.first.first, pacman.triangle3.first.second), pacman.colorMouse2);
+//    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
+//                       Vec2D(pacman.triangle4.second.first, pacman.triangle4.second.second),
+//                       Vec2D(pacman.triangle4.first.first, pacman.triangle4.first.second), pacman.colorMouse2);
+}
+/*
 void animPacMan (MinGL & window, unsigned & i, unsigned & move) {
     if (move> 1000) move = 0;
     if (i % 60 <= 20) {
@@ -59,7 +75,7 @@ void gosth(MinGL & window, const unsigned r, const unsigned g, const unsigned b,
     window << Circle(Vec2D(600, 300), size, RGBAcolor(r,g,b));
     window << Circle(Vec2D(600 + size/6, 300 + size * 1.5), size / 6, RGBAcolor(r,g,b));
 }
-
+*/
 int main()
 {
     srand(time(NULL));
