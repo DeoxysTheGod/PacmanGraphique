@@ -213,6 +213,7 @@ DIST          = /home/clement/Qt/6.4.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/spec_post.prf \
+		../Pacman/.qmake.stash \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -408,6 +409,7 @@ Makefile: ../Pacman/Pacman.pro /home/clement/Qt/6.4.1/gcc_64/mkspecs/linux-g++/q
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/clement/Qt/6.4.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -547,6 +549,7 @@ Makefile: ../Pacman/Pacman.pro /home/clement/Qt/6.4.1/gcc_64/mkspecs/linux-g++/q
 /home/clement/Qt/6.4.1/gcc_64/mkspecs/features/qt_config.prf:
 /home/clement/Qt/6.4.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/clement/Qt/6.4.1/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/clement/Qt/6.4.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/clement/Qt/6.4.1/gcc_64/mkspecs/features/toolchain.prf:
 /home/clement/Qt/6.4.1/gcc_64/mkspecs/features/default_pre.prf:

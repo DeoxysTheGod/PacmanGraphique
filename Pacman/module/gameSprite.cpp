@@ -1,5 +1,6 @@
 #include "gameSprite.h"
 #include <iostream>
+#include <unistd.h>
 
 using namespace std;
 using namespace nsShape;
