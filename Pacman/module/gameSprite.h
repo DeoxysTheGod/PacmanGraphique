@@ -37,4 +37,6 @@ void initPacman(sPacman & pac);
 
 void initGhost(sGhost & ghost);
 
+void majGhostSpritePos(sGhost & ghost);
+
 #endif // GAMESPRITE_H

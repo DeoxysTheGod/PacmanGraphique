@@ -21,18 +21,22 @@ void initPacman(sPacman & pac) {
 
 void initGhost(sGhost & ghost) {
     ghost.pos = {200, 200};
-    ghost.size = 100;
     ghost.triangleAmount = 40;
     ghost.rotation = 0;
 
     // Yeux du ghost
-    ghost.eyeSize = ghost.size/2.8;
+    ghost.eyeSize = ghost.size/3;
     ghost.pupilSize = ghost.size/7;
-    ghost.rightEyePos = {ghost.pos.first - ghost.size/2.5, ghost.pos.second};
-    ghost.leftEyePos = {ghost.pos.first + ghost.size/2.5, ghost.pos.second};
+    ghost.rightEyePos = {ghost.pos.first - ghost.size/3, ghost.pos.second};
+    ghost.leftEyePos = {ghost.pos.first + ghost.size/3, ghost.pos.second};
 
     // couleur
     ghost.color = KRed;
     ghost.eyeColor = KWhite;
     ghost.pupilColor = KLightBlue;
+}
+
+void majGhostSpritePos(sGhost & ghost) {
+    ghost.rightEyePos = {ghost.pos.first - ghost.size/2.5, ghost.pos.second};
+    ghost.leftEyePos = {ghost.pos.first + ghost.size/2.5, ghost.pos.second};
 }
