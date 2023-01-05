@@ -26,10 +26,10 @@ void initGhost(sGhost & ghost) {
     ghost.rotation = 0;
 
     // Yeux du ghost
-    ghost.eyeSize = ghost.size/3;
+    ghost.eyeSize = ghost.size/2.8;
     ghost.pupilSize = ghost.size/7;
-    ghost.rightEyePos = {ghost.pos.first - ghost.size/2, ghost.pos.second};
-    ghost.leftEyePos = {ghost.pos.first + ghost.size/2, ghost.pos.second};
+    ghost.rightEyePos = {ghost.pos.first - ghost.size/2.5, ghost.pos.second};
+    ghost.leftEyePos = {ghost.pos.first + ghost.size/2.5, ghost.pos.second};
 
     // couleur
     ghost.color = KRed;
