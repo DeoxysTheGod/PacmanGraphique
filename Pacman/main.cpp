@@ -20,7 +20,7 @@ using namespace std;
 using namespace nsShape;
 using namespace nsGraphics;
 
-void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman){
+void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman, sGhost & ghost){
     // reset fenetre
     //windowClear();
     unsigned posx;
@@ -45,11 +45,13 @@ void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, cons
 //                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 2, 20, 0, 20, nsGraphics::KYellow);
             }
             if (mat[i][j] == 9){
-
+                ghost.pos.first = posx + (caseSize/2);
+                ghost.pos.second = posy + (caseSize/2);
             }
         }
     }
 }
+
 
 void affPac(MinGL & window, sPacman & pacman) {
     window << Circle(Vec2D(pacman.pos.first, pacman.pos.second), pacman.size, pacman.triangleAmount, 0, pacman.triangleAmount, pacman.color);
@@ -68,6 +70,16 @@ void affGhost(MinGL & window, sGhost & ghost) {
     window << Circle(Vec2D(ghost.rightEyePos.first, ghost.rightEyePos.second), ghost.pupilSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.pupilColor);
     window << Circle(Vec2D(ghost.leftEyePos.first, ghost.leftEyePos.second), ghost.pupilSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.pupilColor);
 }
+
+
+bool getHit (sGhost & ghost){
+    return ghost.previousCase == '8';
+}
+
+bool caseExist (const unsigned & nbLine,const unsigned & nbColumn,const pair<unsigned,unsigned> pos, vector<vector<unsigned>> mat){
+    return (((0<=pos.first) && (pos.first<nbLine) && (0<=pos.second) && (pos.second<nbColumn)) && (mat[pos.first][pos.second] != 1));
+}
+
 
 int main()
 {
@@ -117,11 +129,11 @@ int main()
         window.clearScreen();
 
         // affiche la grille de jeu
-        displayMat(matrice,30, 50, window, pac1);
+        displayMat(matrice,30, 50, window, pac1, ghost1);
 
         // On dessine les formes géométriques
         affPac(window, pac1);
-        affGhost(window, ghost1);
+        //affGhost(window, ghost1);
 
         // On finit la frame en cours
         window.finishFrame();

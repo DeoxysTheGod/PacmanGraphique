@@ -29,6 +29,8 @@ struct sGhost {
     unsigned eyeSize, pupilSize;
 
     RGBAcolor color, eyeColor, pupilColor;
+
+    unsigned previousCase = 0;
 };
 
 void initPacman(sPacman & pac);
