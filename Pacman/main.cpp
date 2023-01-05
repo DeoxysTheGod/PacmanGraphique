@@ -73,7 +73,7 @@ int main()
 {
     srand(time(NULL));
     // Initialise le système
-    MinGL window("01 - Shapes", Vec2D(1000, 800), Vec2D(128, 128), RGBAcolor(40,40,40));
+    MinGL window("Pacman", Vec2D(1000, 800), Vec2D(128, 128), RGBAcolor(40,40,40));
     window.initGlut();
     window.initGraphic();
 
