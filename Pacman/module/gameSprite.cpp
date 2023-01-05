@@ -6,6 +6,7 @@ using namespace nsGraphics;
 
 void initPacman(sPacman & pac, const unsigned caseSize) {
     pac.pos = {200, 200};
+    pac.posMat = {1,1};
     pac.triangleAmount = 40;
     pac.size = caseSize/2.5;
     pac.rotation = 0;

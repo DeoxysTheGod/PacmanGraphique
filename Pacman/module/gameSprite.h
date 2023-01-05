@@ -5,9 +5,11 @@
 #include <math.h>
 
 struct sPacman {
-    Position pos;
+    Position pos, posMat;
     unsigned size;
     unsigned rotation;
+
+    unsigned cooldown;
 
     unsigned triangleAmount;
     unsigned mouthStart;
@@ -39,6 +41,8 @@ struct sGhost {
 void initPacman(sPacman & pac, const unsigned caseSize);
 
 void initGhost(sGhost & ghost, const unsigned caseSize);
+
+void moveStop(sPacman & pac);
 
 void majGhostSpritePos(sGhost & ghost);
 
