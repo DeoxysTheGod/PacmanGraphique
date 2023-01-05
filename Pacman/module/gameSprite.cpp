@@ -1,4 +1,9 @@
 #include "gameSprite.h"
+#include <iostream>
+
+using namespace std;
+using namespace nsShape;
+using namespace nsGraphics;
 
 void initPacman(sPacman & pac) {
     pac.pos = {200, 200};
