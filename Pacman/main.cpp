@@ -81,6 +81,27 @@ bool caseExist (const unsigned & nbLine,const unsigned & nbColumn,const pair<uns
 }
 
 
+
+void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, pair<unsigned,unsigned> & posEnd){
+    mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
+    mat[posStart.first][posStart.second] = 0;
+    posStart.first = posEnd.first;
+    posStart.second = posEnd.second;
+
+}
+
+void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, pair<unsigned,unsigned> & posEnd, unsigned & previousCase)
+{
+    unsigned tmp = mat[posEnd.first][posEnd.second];
+    mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
+    mat[posStart.first][posStart.second] = previousCase;
+    previousCase = tmp;
+    posStart.first = posEnd.first;
+    posStart.second = posEnd.second;
+}
+
+
+
 int main()
 {
     srand(time(NULL));
@@ -102,9 +123,9 @@ int main()
                   {1,1,2,2,2,2,1,2,2,2,1,2,2,2,1,2,2,2,2,1,1},
                   {1,1,2,1,1,1,1,2,1,1,1,1,1,2,1,1,1,1,2,1,1},
                   {1,1,2,2,2,2,2,0,0,0,0,0,0,0,2,2,2,2,2,1,1},
-                  {0,2,2,1,2,1,1,0,1,1,0,1,1,0,1,1,2,1,2,2,0},
+                  {7,2,2,1,2,1,1,0,1,1,0,1,1,0,1,1,2,1,2,2,7},
                   {1,1,1,1,2,2,1,0,1,0,9,0,1,0,1,2,2,1,1,1,1},
-                  {0,2,2,1,2,1,1,0,1,1,1,1,1,0,1,1,2,1,2,2,0},
+                  {7,2,2,1,2,1,1,0,1,1,1,1,1,0,1,1,2,1,2,2,7},
                   {1,1,2,2,2,2,1,0,0,0,0,0,0,0,1,2,2,2,2,1,1},
                   {1,1,2,1,1,1,1,1,1,2,1,2,1,1,1,1,1,1,2,1,1},
                   {1,1,2,2,2,2,1,2,2,2,1,2,2,2,1,2,2,2,2,1,1},
