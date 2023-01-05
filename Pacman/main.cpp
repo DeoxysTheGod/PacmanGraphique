@@ -88,7 +88,7 @@ int main()
     chrono::microseconds frameTime = chrono::microseconds::zero();
     unsigned i (0);
     unsigned move (0);
-
+//z
     sPacman pac1;
     initPacman(pac1);
     // On fait tourner la boucle tant que la fenêtre est ouverte
