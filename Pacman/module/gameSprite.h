@@ -16,9 +16,23 @@ struct sPacman {
     //pacMousePos triangle1, triangle2, triangle3, triangle4;
     // couleur
     RGBAcolor color;
-    RGBAcolor colorMouth, colorMouse2;
+    RGBAcolor mouthColor;
+};
+
+struct sGhost {
+    Position pos;
+    Position rightEyePos, leftEyePos;
+    unsigned size = 10;
+    unsigned rotation = 0;
+
+    unsigned triangleAmount;
+    unsigned eyeSize, pupilSize;
+
+    RGBAcolor color, eyeColor, pupilColor;
 };
 
 void initPacman(sPacman & pac);
+
+void initGhost(sGhost & ghost);
 
 #endif // GAMESPRITE_H

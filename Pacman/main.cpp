@@ -58,20 +58,15 @@ void affPac(MinGL & window, sPacman & pacman) {
                      pacman.triangleAmount,
                      pacman.mouthStart-(pacman.triangleAmount/4)*pacman.rotation,
                      pacman.mouthSize,
-                     pacman.colorMouth);
-//    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
-//                       Vec2D(pacman.triangle1.second.first, pacman.triangle1.second.second),
-//                       Vec2D(pacman.triangle1.first.first, pacman.triangle1.first.second), pacman.colorMouse);
-//    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
-//                       Vec2D(pacman.triangle2.second.first, pacman.triangle2.second.second),
-//                       Vec2D(pacman.triangle2.first.first, pacman.triangle2.first.second), pacman.colorMouse);
+                     pacman.mouthColor);
+}
 
-//    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
-//                       Vec2D(pacman.triangle3.second.first, pacman.triangle3.second.second),
-//                       Vec2D(pacman.triangle3.first.first, pacman.triangle3.first.second), pacman.colorMouse2);
-//    window << Triangle(Vec2D(pacman.pos.first, pacman.pos.second),
-//                       Vec2D(pacman.triangle4.second.first, pacman.triangle4.second.second),
-//                       Vec2D(pacman.triangle4.first.first, pacman.triangle4.first.second), pacman.colorMouse2);
+void affGhost(MinGL & window, sGhost & ghost) {
+    window << Circle(Vec2D(ghost.pos.first, ghost.pos.second), ghost.size, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.color);
+    window << Circle(Vec2D(ghost.rightEyePos.first, ghost.rightEyePos.second), ghost.eyeSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.eyeColor);
+    window << Circle(Vec2D(ghost.leftEyePos.first, ghost.leftEyePos.second), ghost.eyeSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.eyeColor);
+    window << Circle(Vec2D(ghost.rightEyePos.first, ghost.rightEyePos.second), ghost.pupilSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.pupilColor);
+    window << Circle(Vec2D(ghost.leftEyePos.first, ghost.leftEyePos.second), ghost.pupilSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.pupilColor);
 }
 
 int main()
@@ -109,7 +104,9 @@ int main()
                   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
 
     sPacman pac1;
+    sGhost ghost1;
     initPacman(pac1);
+    initGhost(ghost1);
     // On fait tourner la boucle tant que la fenêtre est ouverte
     while (window.isOpen())
     {
@@ -121,6 +118,9 @@ int main()
 
         // On dessine les formes géométriques
         affPac(window, pac1);
+        affGhost(window, ghost1);
+
+        // affiche la grille de jeu
         displayMat(matrice,30, 50, window, pac1);
 
         // On finit la frame en cours
