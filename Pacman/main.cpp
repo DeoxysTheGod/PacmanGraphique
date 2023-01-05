@@ -116,12 +116,12 @@ int main()
         // On efface la fenêtre
         window.clearScreen();
 
+        // affiche la grille de jeu
+        displayMat(matrice,30, 50, window, pac1);
+
         // On dessine les formes géométriques
         affPac(window, pac1);
         affGhost(window, ghost1);
-
-        // affiche la grille de jeu
-        displayMat(matrice,30, 50, window, pac1);
 
         // On finit la frame en cours
         window.finishFrame();
