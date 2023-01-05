@@ -20,6 +20,32 @@ using namespace std;
 using namespace nsShape;
 using namespace nsGraphics;
 
+void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window){
+    // reset fenetre
+    //windowClear();
+    unsigned posx;
+    unsigned posy;
+    for (unsigned i = 0; i < mat.size(); ++i){
+        for (unsigned j = 0; j < mat[i].size(); ++j){
+            posx = (j * caseSize) + margeSize;
+            posy = (i * caseSize) + margeSize;
+            if (mat[i][j] == 1){
+                nsShape::Rectangle rect1(nsGraphics::Vec2D(posx, posy), nsGraphics::Vec2D(posx + caseSize, posy + caseSize), nsGraphics::KBlue);
+                window << rect1;
+            }
+            if (mat[i][j] == 2){
+                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 15, 20, 0, 20, nsGraphics::KPurple);
+            }
+            if (mat[i][j] == 3){
+                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 10, 20, 0, 20, nsGraphics::KRed);
+            }
+            if (mat[i][j] == 8){
+                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 2, 20, 0, 20, nsGraphics::KYellow);
+            }
+        }
+    }
+}
+
 void affPac(MinGL & window, sPacman & pacman) {
     window << Circle(Vec2D(pacman.pos.first, pacman.pos.second), pacman.size, pacman.triangleAmount, 0, pacman.triangleAmount, pacman.color);
     window << Circle(Vec2D(pacman.pos.first, pacman.pos.second),
@@ -88,7 +114,30 @@ int main()
     chrono::microseconds frameTime = chrono::microseconds::zero();
     unsigned i (0);
     unsigned move (0);
-//z
+
+    vector<vector<unsigned>> matrice =
+                 {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                  {1,3,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,3,1},
+                  {1,2,2,2,2,2,2,2,2,2,1,2,1,1,1,2,1,1,1,2,1},
+                  {1,2,2,2,2,2,2,2,2,2,1,2,1,2,2,2,1,2,2,2,1},
+                  {1,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,1,2,2,1,1},
+                  {1,2,2,2,2,2,2,2,2,2,1,2,1,2,1,2,1,2,2,1,1},
+                  {1,2,2,2,2,2,2,2,2,2,1,2,2,2,1,2,2,2,2,1,1},
+                  {1,2,2,2,2,2,2,2,1,1,1,1,1,2,1,1,1,1,2,1,1},
+                  {1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1},
+                  {1,2,2,2,2,1,1,2,1,1,2,1,1,2,1,1,2,1,2,2,0},
+                  {0,2,2,2,2,2,1,2,1,0,9,0,1,2,1,2,2,1,1,1,1},
+                  {1,2,2,2,2,1,1,2,1,1,1,1,1,2,1,1,2,1,2,2,0},
+                  {1,2,2,2,2,2,1,2,2,2,2,2,2,2,1,2,2,2,2,1,1},
+                  {1,2,2,2,1,1,1,1,1,2,1,2,1,1,1,1,1,1,2,1,1},
+                  {1,2,2,2,2,2,1,2,2,2,1,2,2,2,1,2,2,2,2,1,1},
+                  {1,2,2,2,2,2,1,2,1,1,1,1,1,2,1,2,1,1,2,1,1},
+                  {1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,1,1},
+                  {1,2,2,2,2,2,2,2,2,2,2,2,1,1,1,2,1,2,2,2,1},
+                  {1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,1,2,1},
+                  {1,3,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,1},
+                  {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
+
     sPacman pac1;
     initPacman(pac1);
     // On fait tourner la boucle tant que la fenêtre est ouverte
@@ -106,6 +155,7 @@ int main()
         gosth(window, 190, 25, 40, 150);
         */
         affPac(window, pac1);
+        displayMat(matrice,30, 50, window);
 
         ++i;
         move += 3;

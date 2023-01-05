@@ -2,7 +2,6 @@
 
 void initPacman(sPacman & pac) {
     pac.pos = {200, 200};
-    pac.size = 150;
     pac.triangleAmount = 40;
     pac.rotation = 0;
 

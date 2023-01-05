@@ -3,7 +3,7 @@
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -18,11 +18,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -49,16 +49,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/main.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/main.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/main.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/main.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -73,11 +73,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -104,16 +104,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/module/gameSprite.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/module/gameSprite.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/module/gameSprite.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/module/gameSprite.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -128,11 +128,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -159,16 +159,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/audio/audioengine.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/audio/audioengine.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/audio/audioengine.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/audio/audioengine.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -183,11 +183,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -214,16 +214,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/exception/cexception.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/exception/cexception.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/exception/cexception.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/exception/cexception.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -238,11 +238,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -269,16 +269,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/mingl.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/mingl.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/mingl.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/mingl.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -293,11 +293,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -324,16 +324,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/event/event_manager.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/event/event_manager.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/event/event_manager.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/event/event_manager.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -348,11 +348,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -379,16 +379,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/circle.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/circle.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/circle.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/circle.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -403,11 +403,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -434,16 +434,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/line.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/line.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/line.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/line.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -458,11 +458,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -489,16 +489,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/rectangle.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/rectangle.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/rectangle.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/rectangle.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -513,11 +513,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -544,16 +544,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/triangle.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/triangle.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/triangle.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/triangle.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -568,11 +568,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -599,16 +599,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/shape.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/shape.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/shape/shape.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/shape/shape.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -623,11 +623,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -654,16 +654,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/graphics/rgbacolor.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/graphics/rgbacolor.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/graphics/rgbacolor.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/graphics/rgbacolor.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -678,11 +678,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -709,16 +709,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/graphics/vec2d.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/graphics/vec2d.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/graphics/vec2d.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/graphics/vec2d.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -733,11 +733,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -764,16 +764,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/gui/glut_font.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/gui/glut_font.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/gui/glut_font.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/gui/glut_font.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -788,11 +788,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -819,16 +819,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/gui/sprite.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/gui/sprite.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/gui/sprite.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/gui/sprite.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -843,11 +843,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -874,16 +874,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/gui/text.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/gui/text.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/gui/text.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/gui/text.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -898,11 +898,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -929,16 +929,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/transition/transition.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/transition/transition.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/transition/transition.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/transition/transition.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -953,11 +953,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -984,16 +984,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/transition/transition_contract.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/transition/transition_contract.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/transition/transition_contract.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/transition/transition_contract.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1008,11 +1008,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1039,16 +1039,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/transition/transition_engine.cpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/transition/transition_engine.cpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/src/transition/transition_engine.cpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/src/transition/transition_engine.cpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1063,11 +1063,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1094,16 +1094,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/exception/cexception.hpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/exception/cexception.hpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/exception/cexception.hpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/exception/cexception.hpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1118,11 +1118,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1149,16 +1149,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/event/event.hpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/event/event.hpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/event/event.hpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/event/event.hpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1173,11 +1173,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1204,16 +1204,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.hpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.hpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.hpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.hpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1228,11 +1228,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1259,16 +1259,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/tools/ifonctorunaire.hpp"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/tools/ifonctorunaire.hpp"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/tools/ifonctorunaire.hpp"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/tools/ifonctorunaire.hpp"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1283,11 +1283,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1314,16 +1314,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/audio/audioengine.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/audio/audioengine.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/audio/audioengine.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/audio/audioengine.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1338,11 +1338,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1369,16 +1369,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/exception/cexception.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/exception/cexception.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/exception/cexception.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/exception/cexception.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1393,11 +1393,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1424,16 +1424,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/exception/errcode.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/exception/errcode.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/exception/errcode.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/exception/errcode.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1448,11 +1448,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1479,16 +1479,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/macros.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/macros.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/macros.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/macros.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1503,11 +1503,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1534,16 +1534,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/mingl.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/mingl.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/mingl.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/mingl.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1558,11 +1558,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1589,16 +1589,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/event/event_manager.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/event/event_manager.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/event/event_manager.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/event/event_manager.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1613,11 +1613,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1644,16 +1644,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/circle.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/circle.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/circle.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/circle.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1668,11 +1668,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1699,16 +1699,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/line.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/line.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/line.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/line.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1723,11 +1723,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1754,16 +1754,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/rectangle.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/rectangle.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/rectangle.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/rectangle.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1778,11 +1778,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1809,16 +1809,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/triangle.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/triangle.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/triangle.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/triangle.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1833,11 +1833,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1864,16 +1864,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/shape.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/shape.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/shape/shape.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/shape.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1888,11 +1888,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1919,16 +1919,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/graphics/idrawable.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/graphics/idrawable.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/graphics/idrawable.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/graphics/idrawable.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1943,11 +1943,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -1974,16 +1974,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/graphics/rgbacolor.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/graphics/rgbacolor.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/graphics/rgbacolor.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/graphics/rgbacolor.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1998,11 +1998,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2029,16 +2029,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/graphics/vec2d.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/graphics/vec2d.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/graphics/vec2d.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/graphics/vec2d.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2053,11 +2053,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2084,16 +2084,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/gui/glut_font.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/glut_font.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/gui/glut_font.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/glut_font.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2108,11 +2108,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2139,16 +2139,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/gui/sprite.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/sprite.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/gui/sprite.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/sprite.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2163,11 +2163,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2194,16 +2194,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/gui/text.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/text.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/gui/text.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/text.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2218,11 +2218,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2249,16 +2249,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/tools/ieditable.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2273,11 +2273,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2304,16 +2304,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/itransitionable.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/itransitionable.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/itransitionable.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/itransitionable.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2328,11 +2328,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2359,16 +2359,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2383,11 +2383,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2414,16 +2414,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition_contract.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_contract.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition_contract.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_contract.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2438,11 +2438,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2469,16 +2469,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition_engine.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_engine.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition_engine.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_engine.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2493,11 +2493,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2524,16 +2524,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2548,11 +2548,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2579,16 +2579,16 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/module/gameSprite.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/module/gameSprite.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/module/gameSprite.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/module/gameSprite.h"
 },
 {
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-xEiFFR/clang-uiheader-BVIaYS",
+        "/tmp/QtCreator-Ciwnnk/clang-uiheader-OUDSWc",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -2603,11 +2603,11 @@
         "-DQ_CREATOR_RUN",
         "-DQT_QML_DEBUG",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/MinGL2/include",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/MinGL2/include",
         "-I",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug",
         "-I",
         "/opt/Qt-6.3/6.3.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
@@ -2634,9 +2634,9 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/module/type.h"
+        "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/module/type.h"
     ],
-    "directory": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
-    "file": "/amuhome/p22008750/Bureau/newCode/PacmanGraphique/Pacman/module/type.h"
+    "directory": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/build-Pacman-Desktop_Qt_6_3_0_GCC_64bit-Debug/.qtc_clangd",
+    "file": "/amuhome/m22004066/0_cours/algo/Sae/PacManGraphique/Pacman/module/type.h"
 }
 ]

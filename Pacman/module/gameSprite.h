@@ -6,7 +6,7 @@
 
 struct sPacman {
     Position pos;
-    unsigned size;
+    unsigned size = 10;
     unsigned rotation;
 
     unsigned triangleAmount;
