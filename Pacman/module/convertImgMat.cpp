@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void convertMat (CMat & Mat , string & nomImg)
+void convertMat (CMat & Mat , const string & nomImg)
 {
     ifstream img(nomImg);
     string dump ;
@@ -24,7 +24,6 @@ void convertMat (CMat & Mat , string & nomImg)
         while (cpt < line.size())
         {
             currentTile = line[cpt];
-            cout << currentTile ;
             if (currentTile == '2')
             {
                 Mat[row][count] = '0' ;
@@ -39,7 +38,6 @@ void convertMat (CMat & Mat , string & nomImg)
         }
         cpt = 0;
         count = 0;
-        cout << endl;
         ++row;
     }
 }
