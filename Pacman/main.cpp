@@ -131,14 +131,9 @@ int main()
         // affiche la grille de jeu
         displayMat(matrice,30, 50, window, pac1, ghost1);
 
-        // On dessine les formes géométriques
         affPac(window, pac1);
-<<<<<<< HEAD
-        //affGhost(window, ghost1);
-=======
         majGhostSpritePos(ghost1);
         affGhost(window, ghost1);
->>>>>>> 8bab14f (fast update)
 
         // On finit la frame en cours
         window.finishFrame();
