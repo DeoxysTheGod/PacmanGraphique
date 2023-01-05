@@ -53,6 +53,7 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Pacman/main.cpp \
+		../Pacman/module/convertImgMat.cpp \
 		../Pacman/module/gameSprite.cpp \
 		../Pacman/MinGL2/src/audio/audioengine.cpp \
 		../Pacman/MinGL2/src/exception/cexception.cpp \
@@ -72,6 +73,7 @@ SOURCES       = ../Pacman/main.cpp \
 		../Pacman/MinGL2/src/transition/transition_contract.cpp \
 		../Pacman/MinGL2/src/transition/transition_engine.cpp 
 OBJECTS       = main.o \
+		convertImgMat.o \
 		gameSprite.o \
 		audioengine.o \
 		cexception.o \
@@ -256,7 +258,9 @@ DIST          = /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_engine.h \
 		/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h \
 		module/gameSprite.h \
+		module/convertImgMat.h \
 		module/type.h ../Pacman/main.cpp \
+		../Pacman/module/convertImgMat.cpp \
 		../Pacman/module/gameSprite.cpp \
 		../Pacman/MinGL2/src/audio/audioengine.cpp \
 		../Pacman/MinGL2/src/exception/cexception.cpp \
@@ -625,6 +629,23 @@ main.o: ../Pacman/main.cpp ../Pacman/MinGL2/include/mingl/mingl.h \
 		../Pacman/module/type.h \
 		../Pacman/module/gameSprite.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Pacman/main.cpp
+
+convertImgMat.o: ../Pacman/module/convertImgMat.cpp ../Pacman/module/type.h \
+		../Pacman/MinGL2/include/mingl/mingl.h \
+		../Pacman/MinGL2/include/mingl/graphics/idrawable.h \
+		../Pacman/MinGL2/include/mingl/graphics/rgbacolor.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.hpp \
+		../Pacman/MinGL2/include/mingl/graphics/vec2d.h \
+		../Pacman/MinGL2/include/mingl/event/event_manager.h \
+		../Pacman/MinGL2/include/mingl/event/event.hpp \
+		../Pacman/MinGL2/include/mingl/shape/rectangle.h \
+		../Pacman/MinGL2/include/mingl/shape/shape.h \
+		../Pacman/MinGL2/include/mingl/transition/itransitionable.h \
+		../Pacman/MinGL2/include/mingl/shape/circle.h \
+		../Pacman/MinGL2/include/mingl/shape/line.h \
+		../Pacman/MinGL2/include/mingl/shape/triangle.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o convertImgMat.o ../Pacman/module/convertImgMat.cpp
 
 gameSprite.o: ../Pacman/module/gameSprite.cpp ../Pacman/module/gameSprite.h \
 		../Pacman/module/type.h \

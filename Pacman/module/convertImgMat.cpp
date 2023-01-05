@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "../PacMan/Correc_Prof/type.h"
+#include "type.h"
 
 using namespace std;
 

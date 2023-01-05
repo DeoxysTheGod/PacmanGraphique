@@ -111,10 +111,6 @@ void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, p
     posStart.second = posEnd.second;
 }
 
-
-
-=======
->>>>>>> f9a2f3f (maj)
 int main()
 {
     srand(time(NULL));
