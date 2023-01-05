@@ -63,6 +63,10 @@ void affPac(MinGL & window, sPacman & pacman) {
                      pacman.mouthColor);
 }
 
+void showLet(MinGL & window){
+    window << nsShape::Circle(nsGraphics::Vec2D(10, 20), 30 / 40, 30, 20, 0, nsGraphics::KYellow);
+}
+
 void affGhost(MinGL & window, sGhost & ghost) {
     // tete
     window << Circle(Vec2D(ghost.pos.first, ghost.pos.second), ghost.size, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.color);
@@ -167,6 +171,8 @@ int main()
         affPac(window, pac1);
         majGhostSpritePos(ghost1);
         affGhost(window, ghost1);
+
+        showLet(window);
 
         // On finit la frame en cours
         window.finishFrame();
