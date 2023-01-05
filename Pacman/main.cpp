@@ -63,9 +63,9 @@ void affPac(MinGL & window, sPacman & pacman) {
                      pacman.mouthColor);
 }
 
-void showLet(MinGL & window){
-    window << nsShape::Circle(nsGraphics::Vec2D(10, 20), 30 / 40, 30, 20, 0, nsGraphics::KYellow);
-}
+//void showLet(MinGL & window){
+//    window << nsShape::Circle(nsGraphics::Vec2D(10, 20), 30 / 40, 30, 20, 0, nsGraphics::KYellow);
+//}
 
 void affGhost(MinGL & window, sGhost & ghost) {
     // tete
@@ -93,6 +93,7 @@ bool caseExist (const unsigned & nbLine,const unsigned & nbColumn,const pair<uns
     return (((0<=pos.first) && (pos.first<nbLine) && (0<=pos.second) && (pos.second<nbColumn)) && (mat[pos.first][pos.second] != 1));
 }
 
+<<<<<<< HEAD
 
 
 void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, pair<unsigned,unsigned> & posEnd){
@@ -115,6 +116,8 @@ void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, p
 
 
 
+=======
+>>>>>>> f9a2f3f (maj)
 int main()
 {
     srand(time(NULL));
@@ -172,7 +175,32 @@ int main()
         majGhostSpritePos(ghost1);
         affGhost(window, ghost1);
 
-        showLet(window);
+        if (window.isPressed({'z', false})){
+            if (pac1.pos.second+1 != 1){
+                pac1.pos.second += 1;
+                pac1.rotation = 1;
+            }
+        }
+        if (window.isPressed({'s', false})){
+            if (pac1.pos.second-1 != 1){
+                pac1.pos.second -= 1;
+                pac1.rotation = 3;
+            }
+        }
+        if (window.isPressed({'q', false})){
+            if (pac1.pos.first-1 != 1){
+                pac1.pos.first += 1;
+                pac1.rotation = 2;
+            }
+        }
+        if (window.isPressed({'d', false})){
+            if (pac1.pos.first+1 != 1){
+                pac1.pos.first += 1;
+                pac1.rotation = 0;
+            }
+        }
+
+  //      showLet(window);
 
         // On finit la frame en cours
         window.finishFrame();
