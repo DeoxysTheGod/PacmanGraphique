@@ -20,7 +20,7 @@ using namespace std;
 using namespace nsShape;
 using namespace nsGraphics;
 
-void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window){
+void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman){
     // reset fenetre
     //windowClear();
     unsigned posx;
@@ -30,17 +30,22 @@ void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, cons
             posx = (j * caseSize) + margeSize;
             posy = (i * caseSize) + margeSize;
             if (mat[i][j] == 1){
-                nsShape::Rectangle rect1(nsGraphics::Vec2D(posx, posy), nsGraphics::Vec2D(posx + caseSize, posy + caseSize), nsGraphics::KBlue);
+                nsShape::Rectangle rect1(nsGraphics::Vec2D(posx, posy), nsGraphics::Vec2D(posx + caseSize, posy + caseSize), nsGraphics::KBlueWall);
                 window << rect1;
             }
             if (mat[i][j] == 2){
                 window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 15, 20, 0, 20, nsGraphics::KBeige);
             }
             if (mat[i][j] == 3){
-                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 10, 20, 0, 20, nsGraphics::KRed);
+                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 5, 20, 0, 20, nsGraphics::KBeige);
             }
             if (mat[i][j] == 8){
-                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 2, 20, 0, 20, nsGraphics::KYellow);
+                pacman.pos.first = posx + (caseSize/2);
+                pacman.pos.second = posy + (caseSize/2);
+//                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 2, 20, 0, 20, nsGraphics::KYellow);
+            }
+            if (mat[i][j] == 9){
+
             }
         }
     }
@@ -83,23 +88,23 @@ int main()
     vector<vector<unsigned>> matrice =
                  {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                   {1,3,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,3,1},
-                  {1,2,2,2,2,2,2,2,2,2,1,2,1,1,1,2,1,1,1,2,1},
-                  {1,2,2,2,2,2,2,2,2,2,1,2,1,2,2,2,1,2,2,2,1},
-                  {1,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,1,2,2,1,1},
-                  {1,2,2,2,2,2,2,2,2,2,1,2,1,2,1,2,1,2,2,1,1},
-                  {1,2,2,2,2,2,2,2,2,2,1,2,2,2,1,2,2,2,2,1,1},
-                  {1,2,2,2,2,2,2,2,1,1,1,1,1,2,1,1,1,1,2,1,1},
-                  {1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1},
-                  {1,2,2,2,2,1,1,2,1,1,2,1,1,2,1,1,2,1,2,2,0},
-                  {0,2,2,2,2,2,1,2,1,0,9,0,1,2,1,2,2,1,1,1,1},
-                  {1,2,2,2,2,1,1,2,1,1,1,1,1,2,1,1,2,1,2,2,0},
-                  {1,2,2,2,2,2,1,2,2,2,2,2,2,2,1,2,2,2,2,1,1},
-                  {1,2,2,2,1,1,1,1,1,2,1,2,1,1,1,1,1,1,2,1,1},
-                  {1,2,2,2,2,2,1,2,2,2,1,2,2,2,1,2,2,2,2,1,1},
-                  {1,2,2,2,2,2,1,2,1,1,1,1,1,2,1,2,1,1,2,1,1},
-                  {1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,1,1},
-                  {1,2,2,2,2,2,2,2,2,2,2,2,1,1,1,2,1,2,2,2,1},
-                  {1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,1,2,1},
+                  {1,2,1,1,1,2,1,1,1,2,1,2,1,1,1,2,1,1,1,2,1},
+                  {1,2,2,2,1,2,2,2,1,2,1,2,1,2,2,2,1,2,2,2,1},
+                  {1,1,2,2,1,2,1,2,1,2,2,2,1,2,1,2,1,2,2,1,1},
+                  {1,1,2,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,2,1,1},
+                  {1,1,2,2,2,2,1,2,2,2,1,2,2,2,1,2,2,2,2,1,1},
+                  {1,1,2,1,1,1,1,2,1,1,1,1,1,2,1,1,1,1,2,1,1},
+                  {1,1,2,2,2,2,2,0,0,0,0,0,0,0,2,2,2,2,2,1,1},
+                  {0,2,2,1,2,1,1,0,1,1,0,1,1,0,1,1,2,1,2,2,0},
+                  {1,1,1,1,2,2,1,0,1,0,9,0,1,0,1,2,2,1,1,1,1},
+                  {0,2,2,1,2,1,1,0,1,1,1,1,1,0,1,1,2,1,2,2,0},
+                  {1,1,2,2,2,2,1,0,0,0,0,0,0,0,1,2,2,2,2,1,1},
+                  {1,1,2,1,1,1,1,1,1,2,1,2,1,1,1,1,1,1,2,1,1},
+                  {1,1,2,2,2,2,1,2,2,2,1,2,2,2,1,2,2,2,2,1,1},
+                  {1,1,2,1,1,2,1,2,1,1,1,1,1,2,1,2,1,1,2,1,1},
+                  {1,1,2,2,1,2,2,2,2,2,2,2,2,2,2,2,1,2,2,1,1},
+                  {1,2,2,2,1,2,1,1,1,1,2,1,1,1,1,2,1,2,2,2,1},
+                  {1,2,1,2,1,2,1,2,2,2,2,2,2,2,1,2,1,2,1,2,1},
                   {1,3,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,1},
                   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
 
@@ -116,7 +121,7 @@ int main()
 
         // On dessine les formes géométriques
         affPac(window, pac1);
-        displayMat(matrice,30, 50, window);
+        displayMat(matrice,30, 50, window, pac1);
 
         // On finit la frame en cours
         window.finishFrame();

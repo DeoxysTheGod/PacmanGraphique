@@ -159,6 +159,7 @@ const RGBAcolor KWhite       {255, 255, 255};
 const RGBAcolor KRed         {255,   0,   0};
 const RGBAcolor KLime        {  0, 255,   0};
 const RGBAcolor KBlue        {  0,   0, 255};
+const RGBAcolor KBlueWall    { 65,  90, 173};
 const RGBAcolor KYellow      {255, 255,   0};
 const RGBAcolor KCyan        {  0, 255, 255};
 const RGBAcolor KMagenta     {255,   0, 255};
