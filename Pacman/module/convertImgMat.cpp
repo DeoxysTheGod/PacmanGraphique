@@ -2,6 +2,7 @@
 #include <fstream>
 #include <vector>
 #include "type.h"
+#include "convertImgMat.h"
 
 using namespace std;
 

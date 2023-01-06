@@ -66,10 +66,6 @@ void affPac(MinGL & window, sPacman & pacman) {
                      pacman.mouthColor);
 }
 
-void showLet(MinGL & window){
-    window << nsShape::Circle(nsGraphics::Vec2D(10, 20), 30 / 40, 30, 20, 0, nsGraphics::KYellow);
-}
-
 void affGhost(MinGL & window, sGhost & ghost) {
     // tete
     window << Circle(Vec2D(ghost.pos.first, ghost.pos.second), ghost.size, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.color);
@@ -95,9 +91,6 @@ bool getHit (sGhost & ghost){
 bool caseExist (const unsigned & nbLine,const unsigned & nbColumn,const pair<unsigned,unsigned> pos, vector<vector<unsigned>> mat){
     return (((0<=pos.first) && (pos.first<nbLine) && (0<=pos.second) && (pos.second<nbColumn)) && (mat[pos.first][pos.second] != 1));
 }
-
-<<<<<<< HEAD
-
 void tp (vector<vector<unsigned>> & mat, pair<unsigned, unsigned> & pos){
     if (pos.first == 0)
         pos.first = mat.size() -2;
@@ -112,9 +105,6 @@ void tp (vector<vector<unsigned>> & mat, pair<unsigned, unsigned> & pos){
 void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, pair<unsigned,unsigned> posEnd){
     if (mat[posEnd.first][posEnd.second] == 7)
        tp(mat, posEnd);
-=======
-void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, const pair<unsigned,unsigned> & posEnd){
->>>>>>> 94f32ee (maj)
     mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
     mat[posStart.first][posStart.second] = 0;
     posStart.first = posEnd.first;
@@ -177,7 +167,7 @@ int main()
 
     chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
 
-    showLet(window);
+    displayMat(matFirst,window);
 
     // On finit la frame en cours
     window.finishFrame();
@@ -186,7 +176,7 @@ int main()
     window.getEventManager().clearEvents();
 
     // On attend un peu pour limiter le framerate et soulager le CPU
-    this_thread::sleep_for(chrono::milliseconds(1000 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
+    this_thread::sleep_for(chrono::milliseconds(100 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
 
     // On récupère le temps de frame
     frameTime = chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start);
@@ -294,8 +284,6 @@ int main()
             --pac1.cooldown;
         }
         //cout << pac1.posMat.first << ", " << pac1.posMat.second << " -> " << pac1.currentMove << endl;
-
-  //      showLet(window);
 
         // On finit la frame en cours
         window.finishFrame();
