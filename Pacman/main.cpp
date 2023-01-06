@@ -20,7 +20,8 @@ using namespace std;
 using namespace nsShape;
 using namespace nsGraphics;
 
-void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman, sGhost & ghost){
+void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman, sGhost & ghost)
+{
     // reset fenetre
     //windowClear();
     unsigned posx;
@@ -119,6 +120,19 @@ void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, p
     previousCase = tmp;
     posStart.first = posEnd.first;
     posStart.second = posEnd.second;
+}
+
+
+void addScore (const vector<vector<unsigned>> & mat, const Position & pos, unsigned & score){
+    if (mat[pos.first][pos.second] == 2){
+        score += 10;
+    }
+    else if (mat[pos.first][pos.second] == 3){
+        score += 50;
+    }
+    else if (mat[pos.first][pos.second] ==  4){
+        score += 100;
+    }
 }
 
 
