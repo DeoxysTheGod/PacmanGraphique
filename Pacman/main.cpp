@@ -96,7 +96,21 @@ bool caseExist (const unsigned & nbLine,const unsigned & nbColumn,const pair<uns
     return (((0<=pos.first) && (pos.first<nbLine) && (0<=pos.second) && (pos.second<nbColumn)) && (mat[pos.first][pos.second] != 1));
 }
 
-void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, const pair<unsigned,unsigned> & posEnd){
+
+void tp (vector<vector<unsigned>> & mat, pair<unsigned, unsigned> & pos){
+    if (pos.first == 0)
+        pos.first = mat.size() -2;
+    else if (pos.first == mat.size() -2)
+        pos.first = 1;
+    else if (pos.second == 0)
+        pos.second = mat.size() -2;
+    else if (pos.second == mat.size() -2)
+        pos.second = 1;
+}
+
+void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, pair<unsigned,unsigned> posEnd){
+    if (mat[posEnd.first][posEnd.second] == 7)
+       tp(mat, posEnd);
     mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
     mat[posStart.first][posStart.second] = 0;
     posStart.first = posEnd.first;
@@ -112,6 +126,8 @@ void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, p
     posStart.first = posEnd.first;
     posStart.second = posEnd.second;
 }
+
+
 
 int main()
 {
