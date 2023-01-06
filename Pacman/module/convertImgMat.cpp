@@ -12,9 +12,9 @@ void convertMat (CMat & Mat , const string & nomImg)
     unsigned cpt(0) , row(0) , count(0);
     char currentTile;
 
-    Mat.resize(21);
+    Mat.resize(31);
     for (unsigned i(0) ; i < Mat.size() ; ++i)
-        Mat[i].resize(21);
+        Mat[i].resize(31);
 
     for (unsigned i(0) ; i < 3 ; ++i)
         getline(img , dump);
@@ -34,6 +34,11 @@ void convertMat (CMat & Mat , const string & nomImg)
                 Mat[row][count] = '1' ;
                 cpt += 6 ;
             }
+            else if (currentTile == '1')
+            {
+                Mat[row][count] = '2' ;
+                cpt += 12 ;
+            }
             count += 1 ;
         }
         cpt = 0;
@@ -41,3 +46,4 @@ void convertMat (CMat & Mat , const string & nomImg)
         ++row;
     }
 }
+
