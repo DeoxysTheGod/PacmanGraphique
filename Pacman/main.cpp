@@ -66,9 +66,9 @@ void affPac(MinGL & window, sPacman & pacman) {
                      pacman.mouthColor);
 }
 
-//void showLet(MinGL & window){
-//    window << nsShape::Circle(nsGraphics::Vec2D(10, 20), 30 / 40, 30, 20, 0, nsGraphics::KYellow);
-//}
+void showLet(MinGL & window){
+    window << nsShape::Circle(nsGraphics::Vec2D(10, 20), 30 / 40, 30, 20, 0, nsGraphics::KYellow);
+}
 
 void affGhost(MinGL & window, sGhost & ghost) {
     // tete
@@ -96,6 +96,7 @@ bool caseExist (const unsigned & nbLine,const unsigned & nbColumn,const pair<uns
     return (((0<=pos.first) && (pos.first<nbLine) && (0<=pos.second) && (pos.second<nbColumn)) && (mat[pos.first][pos.second] != 1));
 }
 
+<<<<<<< HEAD
 
 void tp (vector<vector<unsigned>> & mat, pair<unsigned, unsigned> & pos){
     if (pos.first == 0)
@@ -111,6 +112,9 @@ void tp (vector<vector<unsigned>> & mat, pair<unsigned, unsigned> & pos){
 void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, pair<unsigned,unsigned> posEnd){
     if (mat[posEnd.first][posEnd.second] == 7)
        tp(mat, posEnd);
+=======
+void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, const pair<unsigned,unsigned> & posEnd){
+>>>>>>> 94f32ee (maj)
     mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
     mat[posStart.first][posStart.second] = 0;
     posStart.first = posEnd.first;
@@ -133,7 +137,7 @@ int main()
 {
     srand(time(NULL));
     // Initialise le système
-    MinGL window("Pacman", Vec2D(1000, 1000), Vec2D(128, 128), RGBAcolor(0,0,0));
+    MinGL window("Pacman", Vec2D(1920, 1080), Vec2D(128, 128), RGBAcolor(0,0,0));
     window.initGlut();
     window.initGraphic();
 
@@ -170,6 +174,24 @@ int main()
     sGhost ghost1;
     initPacman(pac1, caseSize);
     initGhost(ghost1, caseSize);
+
+    chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
+
+    showLet(window);
+
+    // On finit la frame en cours
+    window.finishFrame();
+
+    // On vide la queue d'évènements
+    window.getEventManager().clearEvents();
+
+    // On attend un peu pour limiter le framerate et soulager le CPU
+    this_thread::sleep_for(chrono::milliseconds(1000 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
+
+    // On récupère le temps de frame
+    frameTime = chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start);
+    // On efface la fenêtre
+    window.clearScreen();
 
     // On fait tourner la boucle tant que la fenêtre est ouverte
     while (window.isOpen())
