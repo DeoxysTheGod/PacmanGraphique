@@ -11,6 +11,12 @@ void initPacman(sPacman & pac, const unsigned caseSize) {
     pac.size = caseSize/2.5;
     pac.rotation = 0;
 
+    pac.currentMove = 'p';
+
+    // cooldown
+    pac.cooldown = 0;
+    pac.baseCooldown = 0;
+
     // Bouche du pacman
     pac.mouthSize = pac.triangleAmount/5;
     pac.mouthStart = pac.triangleAmount-pac.mouthSize/2;

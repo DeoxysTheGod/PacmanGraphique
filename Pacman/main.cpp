@@ -1,4 +1,4 @@
-#define FPS_LIMIT 5
+#define FPS_LIMIT 36
 
 #include <iostream>
 #include <thread>
@@ -41,8 +41,10 @@ void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, cons
             }
             if (mat[i][j] == 8){
                 pacman.posMat = {i, j};
-                pacman.pos.first = posx + (caseSize/2);
-                pacman.pos.second = posy + (caseSize/2);
+                if (pacman.cooldown == 0) {
+                    pacman.pos.first = posx + (caseSize/2);
+                    pacman.pos.second = posy + (caseSize/2);
+                }
 //                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 2, 20, 0, 20, nsGraphics::KYellow);
             }
             if (mat[i][j] == 9){
@@ -169,21 +171,46 @@ int main()
         majGhostSpritePos(ghost1);
         affGhost(window, ghost1);
 
-        if (window.isPressed({'z', false}) || lastPressedKey == 'z'){
+        if (window.isPressed({'z', false}))
+            lastPressedKey = 'z';
+        if (window.isPressed({'s', false}))
+            lastPressedKey = 's';
+        if (window.isPressed({'q', false}))
+            lastPressedKey = 'q';
+        if (window.isPressed({'d', false}))
+            lastPressedKey = 'd';
+
+        if (lastPressedKey == 'z'){
             if (matrice[pac1.posMat.first-1][pac1.posMat.second] != 1){
-                move(matrice, pac1.posMat, {pac1.posMat.first-1, pac1.posMat.second});
                 pac1.rotation = 1;
-                lastPressedKey = 'z';
+                pac1.cooldown = FPS_LIMIT;
+                pac1.baseCooldown = pac1.cooldown;
+            }
+            else if (pac1.cooldown == 1) {
+                move(matrice, pac1.posMat, {pac1.posMat.first-1, pac1.posMat.second});
+                pac1.cooldown = 0;
+            }
+            else if (pac1.cooldown != 0) {
+                pac1.pos = {pac1.pos.first, pac1.pos.second-1};
+                --pac1.cooldown;
             }
         }
-        if (window.isPressed({'s', false}) || lastPressedKey == 's'){
+        if (lastPressedKey == 's'){
             if (matrice[pac1.posMat.first+1][pac1.posMat.second] != 1){
-                move(matrice, pac1.posMat, {pac1.posMat.first+1, pac1.posMat.second});
                 pac1.rotation = 3;
-                lastPressedKey = 's';
+                pac1.cooldown = FPS_LIMIT;
+                pac1.baseCooldown = pac1.cooldown;
+            }
+            else if (pac1.cooldown == 1) {
+                move(matrice, pac1.posMat, {pac1.posMat.first+1, pac1.posMat.second});
+                pac1.cooldown = 0;
+            }
+            else if (pac1.cooldown != 0) {
+                pac1.pos = {pac1.pos.first, pac1.pos.second+1};
+                --pac1.cooldown;
             }
         }
-        if (window.isPressed({'q', false}) || lastPressedKey == 'q'){
+        if (lastPressedKey == 'q'){
             if (matrice[pac1.posMat.first][pac1.posMat.second-1] != 1){
                 move(matrice, pac1.posMat, {pac1.posMat.first, pac1.posMat.second-1});
                 pac1.rotation = 2;
@@ -197,6 +224,7 @@ int main()
                 lastPressedKey = 'd';
             }
         }
+        cout << pac1.posMat.first << ", " << pac1.posMat.second << endl;
 
   //      showLet(window);
 

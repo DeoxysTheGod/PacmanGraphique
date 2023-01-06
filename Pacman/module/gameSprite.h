@@ -10,6 +10,9 @@ struct sPacman {
     unsigned rotation;
 
     unsigned cooldown;
+    unsigned baseCooldown;
+
+    char currentMove;
 
     unsigned triangleAmount;
     unsigned mouthStart;
