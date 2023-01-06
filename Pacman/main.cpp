@@ -89,10 +89,11 @@ bool getHit (sGhost & ghost){
     return ghost.previousCase == '8';
 }
 
-bool caseExist (const unsigned & nbLine,const unsigned & nbColumn,const pair<unsigned,unsigned> pos, vector<vector<unsigned>> mat){
-    return (((0<=pos.first) && (pos.first<nbLine) && (0<=pos.second) && (pos.second<nbColumn)) && (mat[pos.first][pos.second] != 1));
+bool caseExist (const vector<vector<unsigned>> & mat, const Position & pos){
+    return (((0<=pos.first) && (pos.first<mat[0].size()) && (0<=pos.second) && (pos.second<mat.size())) && (mat[pos.first][pos.second] != 1));
 }
-void tp (vector<vector<unsigned>> & mat, pair<unsigned, unsigned> & pos){
+
+void tp (vector<vector<unsigned>> & mat, Position & pos){
     if (pos.first == 0)
         pos.first = mat.size() -2;
     else if (pos.first == mat.size() -2)
@@ -103,7 +104,8 @@ void tp (vector<vector<unsigned>> & mat, pair<unsigned, unsigned> & pos){
         pos.second = 1;
 }
 
-void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, pair<unsigned,unsigned> posEnd){
+void move (vector<vector<unsigned>> & mat, Position & posStart, Position & posEnd){
+    cout << posEnd.first << ", " << posEnd.second << "->" << mat[posEnd.first][posEnd.second] <<  endl;
     if (mat[posEnd.first][posEnd.second] == 7)
        tp(mat, posEnd);
     mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
@@ -141,7 +143,7 @@ int main()
 {
     srand(time(NULL));
     // Initialise le système
-    MinGL window("Pacman", Vec2D(1920, 1080), Vec2D(128, 128), RGBAcolor(0,0,0));
+    MinGL window("Pacman", Vec2D(1000, 1000), Vec2D(128, 128), RGBAcolor(0,0,0));
     window.initGlut();
     window.initGraphic();
 
@@ -181,7 +183,7 @@ int main()
 
     chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
 
-    displayMat(matFirst,window);
+    //displayMat(matFirst,window);
 
     // On finit la frame en cours
     window.finishFrame();
@@ -223,7 +225,7 @@ int main()
             pressedKey = 'd';
 
         if ((pac1.currentMove == 'p') && pressedKey == 'z'){
-            if (pac1.cooldown == 0 && matrice[pac1.posMat.first-1][pac1.posMat.second] != 1){
+            if (pac1.cooldown == 0 && caseExist(matrice, {pac1.posMat.first-1, pac1.posMat.second})) {
                 pac1.rotation = 1;
                 pac1.currentMove = 'z';
                 pac1.cooldown = FPS_LIMIT;
@@ -231,7 +233,8 @@ int main()
             }
         }
         if (pac1.currentMove =='z' && pac1.cooldown == 1) {
-            move(matrice, pac1.posMat, {pac1.posMat.first-1, pac1.posMat.second});
+            pac1.nextPos = {pac1.posMat.first-1, pac1.posMat.second};
+            move(matrice, pac1.posMat, pac1.nextPos);
             pac1.currentMove = 'p';
             pac1.cooldown = 0;
         }
@@ -242,7 +245,7 @@ int main()
         }
 
         if ((pac1.currentMove == 'p') && pressedKey == 's'){
-            if (pac1.cooldown == 0 && matrice[pac1.posMat.first+1][pac1.posMat.second] != 1){
+            if (pac1.cooldown == 0 && caseExist(matrice, {pac1.posMat.first+1, pac1.posMat.second})){
                 pac1.rotation = 3;
                 pac1.currentMove = 's';
                 pac1.cooldown = FPS_LIMIT;
@@ -250,7 +253,8 @@ int main()
             }
         }
         if (pac1.currentMove =='s' && pac1.cooldown == 1) {
-            move(matrice, pac1.posMat, {pac1.posMat.first+1, pac1.posMat.second});
+            pac1.nextPos = {pac1.posMat.first+1, pac1.posMat.second};
+            move(matrice, pac1.posMat, pac1.nextPos);
             pac1.currentMove = 'p';
             pac1.cooldown = 0;
         }
@@ -261,7 +265,7 @@ int main()
         }
 
         if ((pac1.currentMove == 'p') && pressedKey == 'q'){
-            if (pac1.cooldown == 0 && matrice[pac1.posMat.first][pac1.posMat.second-1] != 1){
+            if (pac1.cooldown == 0 && caseExist(matrice, {pac1.posMat.first, pac1.posMat.second-1})){
                 pac1.rotation = 2;
                 pac1.currentMove = 'q';
                 pac1.cooldown = FPS_LIMIT;
@@ -269,7 +273,8 @@ int main()
             }
         }
         if (pac1.currentMove =='q' && pac1.cooldown == 1) {
-            move(matrice, pac1.posMat, {pac1.posMat.first, pac1.posMat.second-1});
+            pac1.nextPos = {pac1.posMat.first, pac1.posMat.second-1};
+            move(matrice, pac1.posMat, pac1.nextPos);
             pac1.currentMove = 'p';
             pac1.cooldown = 0;
         }
@@ -280,7 +285,7 @@ int main()
         }
 
         if ((pac1.currentMove == 'p') && pressedKey == 'd'){
-            if (pac1.cooldown == 0 && matrice[pac1.posMat.first][pac1.posMat.second+1] != 1){
+            if (pac1.cooldown == 0 && caseExist(matrice, {pac1.posMat.first, pac1.posMat.second+1})){
                 pac1.rotation = 0;
                 pac1.currentMove = 'd';
                 pac1.cooldown = FPS_LIMIT;
@@ -288,7 +293,8 @@ int main()
             }
         }
         if (pac1.currentMove == 'd' && pac1.cooldown == 1) {
-            move(matrice, pac1.posMat, {pac1.posMat.first, pac1.posMat.second+1});
+            pac1.nextPos = {pac1.posMat.first, pac1.posMat.second+1};
+            move(matrice, pac1.posMat, pac1.nextPos);
             pac1.currentMove = 'p';
             pac1.cooldown = 0;
         }

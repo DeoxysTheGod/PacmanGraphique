@@ -5,7 +5,7 @@
 #include <math.h>
 
 struct sPacman {
-    Position pos, posMat;
+    Position pos, nextPos, posMat;
     unsigned size;
     unsigned rotation;
 
