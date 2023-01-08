@@ -9,6 +9,7 @@
  * \param[in] mat : la matrice qui represente la grille de jeu
  * \param[in] pos : la position de la case
  * \return renvoie un booleen pour dire si la case existe
+ * @fn bool caseExist (const UIntMat & mat, const Position & pos);
  */
 bool caseExist (const UIntMat & mat, const Position & pos);
 
@@ -17,14 +18,36 @@ bool caseExist (const UIntMat & mat, const Position & pos);
  * \param[in out] mat : la matrice qui represente la grille de jeu
  * \param[in out] pressedKey : la touche qui a ete presse
  * \param[in out] pac : la structure de notre pacman
- * \param[in] fps : le taux de raffraichissement de la fenetre
+ * \param[in] caseSize : la taille d'une case
+ * @fn void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const unsigned & fps);
  */
-void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const unsigned & fps);
+void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const unsigned & caseSize);
 
-void tp (UIntMat & mat, Position & pos);
+/*!
+ * \brief tp : permet de gerer la teleportation de pacman lorsqu'il sors de l'ecran
+ * \param[in] mat : la matrice qui represente la grille de jeu
+ * \param[out] pos : la position actuelle du pacman
+ * @fn void tp (const UIntMat & mat, Position & pos);
+ */
+void tp (const UIntMat & mat, Position & pos);
 
+/*!
+ * \brief move : gere les deplacement reel du pacman dans la matrice
+ * \param[out] mat : la matrice qui represente la grille de jeu
+ * \param[out] posStart : position de debut du pacman
+ * \param[out] posEnd : position de fin du pacman
+ * @fn void move (UIntMat & mat, Position & posStart, Position & posEnd);
+ */
 void move (UIntMat & mat, Position & posStart, Position & posEnd);
 
+/*!
+ * \brief move : gere les deplacement reel du pacman dans la matrice
+ * \param[out] mat : la matrice qui represente la grille de jeu
+ * \param[out] posStart : position de debut du fantome
+ * \param[out] posEnd : position de fin du fantome
+ * \param[in out] previousCase : c'est ce que contenait la case avant que le fantome ne passe dessus
+ * @fn void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & previousCase);
+ */
 void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & previousCase);
 
 #endif // MOVEMENT_H

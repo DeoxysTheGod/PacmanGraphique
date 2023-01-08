@@ -23,7 +23,7 @@ void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & pre
     posStart.second = posEnd.second;
 }
 
-void tp (UIntMat & mat, Position & pos){
+void tp (const UIntMat & mat, Position & pos){
     if (pos.first == 0)
         pos.first = mat.size() -2;
     else if (pos.first == mat.size() -1)
@@ -34,34 +34,34 @@ void tp (UIntMat & mat, Position & pos){
         pos.second = 1;
 }
 
-void movementDirection (UIntMat & matrice, char & pressedKey, sPacman & pac, const unsigned & fps) {
+void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const unsigned & caseSize) {
     if (pac.currentMove == 'p' && (pressedKey == 'z' || pressedKey == 's' || pressedKey == 'q' || pressedKey == 'd')) {
         if (pac.cooldown == 0) {
-            pac.cooldown = fps/pac.speed;
+            pac.cooldown = caseSize/pac.speed;
             if (pressedKey == 'z') {
                 pac.rotation = 1;
-                if (caseExist(matrice, {pac.posMat.first-1, pac.posMat.second}))
+                if (caseExist(mat, {pac.posMat.first-1, pac.posMat.second}))
                     pac.currentMove = 'z';
                 else
                     pac.currentMove = 'p';
             }
             else if (pressedKey == 's') {
                 pac.rotation = 3;
-                if (caseExist(matrice, {pac.posMat.first+1, pac.posMat.second}))
+                if (caseExist(mat, {pac.posMat.first+1, pac.posMat.second}))
                     pac.currentMove = 's';
                 else
                     pac.currentMove = 'p';
             }
             else if (pressedKey == 'q') {
                 pac.rotation = 2;
-                if (caseExist(matrice, {pac.posMat.first, pac.posMat.second-1}))
+                if (caseExist(mat, {pac.posMat.first, pac.posMat.second-1}))
                     pac.currentMove = 'q';
                 else
                     pac.currentMove = 'p';
             }
             else if (pressedKey == 'd') {
                 pac.rotation = 0;
-                if (caseExist(matrice, {pac.posMat.first, pac.posMat.second+1}))
+                if (caseExist(mat, {pac.posMat.first, pac.posMat.second+1}))
                     pac.currentMove = 'd';
                 else
                     pac.currentMove = 'p';
@@ -80,7 +80,7 @@ void movementDirection (UIntMat & matrice, char & pressedKey, sPacman & pac, con
             pac.nextPos = {pac.posMat.first, pac.posMat.second-1};
         else if (pac.currentMove == 'd')
             pac.nextPos = {pac.posMat.first, pac.posMat.second+1};
-        move(matrice, pac.posMat, pac.nextPos);
+        move(mat, pac.posMat, pac.nextPos);
         pac.currentMove = 'p';
         pac.cooldown = 0;
     }

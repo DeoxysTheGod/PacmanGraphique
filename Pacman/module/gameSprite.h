@@ -4,27 +4,37 @@
 #include "type.h"
 #include <math.h>
 
+/*!
+ * \brief The sPacman class : informations concernant le pacman
+ */
 struct sPacman {
+    // position
     Position pos, nextPos, posMat;
+    // corps du pacman
+    unsigned triangleAmount;
     unsigned size;
     unsigned rotation;
 
+    // cooldown
     unsigned cooldown;
     unsigned baseCooldown;
 
+    // deplacement
     char currentMove;
     unsigned speed;
 
-    unsigned triangleAmount;
+    // bouche
     unsigned mouthStart;
     unsigned mouthSize;
 
-    //pacMousePos triangle1, triangle2, triangle3, triangle4;
     // couleur
     RGBAcolor color;
     RGBAcolor mouthColor;
 };
 
+/*!
+ * \brief The sGhost class : informations concernant le fantome
+ */
 struct sGhost {
     Position pos;
     Position rightEyePos, leftEyePos;
@@ -42,12 +52,27 @@ struct sGhost {
     unsigned previousCase = 0;
 };
 
+/*!
+ * \brief initPacman : initialisation des variables de bases du pacman
+ * \param[in out] pac : le pacman a modifier
+ * \param[in] caseSize : la taille des cases fictives sur l'ecran
+ * @fn void initPacman(sPacman & pac, const unsigned caseSize);
+ */
 void initPacman(sPacman & pac, const unsigned caseSize);
 
+/*!
+ * \brief initPacman : initialisation des variables de bases du fantome
+ * \param[in out] pac : le fantome a modifier
+ * \param[in] caseSize : la taille des cases fictives sur l'ecran
+ * @fn void initGhost(sGhost & ghost, const unsigned caseSize);
+ */
 void initGhost(sGhost & ghost, const unsigned caseSize);
 
-void moveStop(sPacman & pac);
-
+/*!
+ * \brief majGhostSpritePos : cette fonction sert a faire en sorte que les yeux se deplacent a l'endroit ou est le fantome
+ * \param[in out] ghost : la structure du fantome
+ * @fn void majGhostSpritePos(sGhost & ghost);
+ */
 void majGhostSpritePos(sGhost & ghost);
 
 #endif // GAMESPRITE_H

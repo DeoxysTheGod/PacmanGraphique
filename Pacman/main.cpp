@@ -1,4 +1,4 @@
-#define FPS_LIMIT 36
+#define FPS_LIMIT 144
 
 #include <iostream>
 #include <thread>
@@ -16,6 +16,7 @@
 #include "module/type.h"
 #include "module/gameSprite.h"
 #include "module/movement.h"
+#include "module/convertImgMat.h"
 
 using namespace std;
 using namespace nsShape;
@@ -98,19 +99,6 @@ void affGhost(MinGL & window, sGhost & ghost) {
 bool getHit (sGhost & ghost){
     return ghost.previousCase == '8';
 }
-
-
-
-void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & previousCase)
-{
-    unsigned tmp = mat[posEnd.first][posEnd.second];
-    mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
-    mat[posStart.first][posStart.second] = previousCase;
-    previousCase = tmp;
-    posStart.first = posEnd.first;
-    posStart.second = posEnd.second;
-}
-
 
 void addScore (const UIntMat & mat, const Position & pos, unsigned & score){
     if (mat[pos.first][pos.second] == 2){
@@ -205,7 +193,7 @@ int main()
         window.clearScreen();
 
         // affiche la grille de jeu
-        displayMat(matrice,caseSize, 50, window, pac1, ghost1);
+        displayMat(matrice, caseSize, 50, window, pac1, ghost1);
 
         affPac(window, pac1);
         majGhostSpritePos(ghost1);
@@ -214,7 +202,7 @@ int main()
         // Mouvements
         isKeyPressed(window, pressedKey);
 
-        movementDirection(matrice, pressedKey, pac1, FPS_LIMIT);
+        movementDirection(matrice, pressedKey, pac1, caseSize);
 
         // On finit la frame en cours
         window.finishFrame();
