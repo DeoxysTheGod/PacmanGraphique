@@ -10,6 +10,7 @@ void initPacman(sPacman & pac, const unsigned caseSize) {
     pac.triangleAmount = 40;
     pac.size = caseSize/2.5;
     pac.rotation = 0;
+    pac.speed = 6;
 
     pac.currentMove = 'p';
 

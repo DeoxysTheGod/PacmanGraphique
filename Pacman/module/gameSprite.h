@@ -13,6 +13,7 @@ struct sPacman {
     unsigned baseCooldown;
 
     char currentMove;
+    unsigned speed;
 
     unsigned triangleAmount;
     unsigned mouthStart;

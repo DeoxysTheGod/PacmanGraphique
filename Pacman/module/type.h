@@ -19,6 +19,8 @@ using namespace nsGraphics;
 typedef pair<pair<unsigned, unsigned>, pair<unsigned,unsigned>> pacMousePos;
 typedef pair<unsigned, unsigned> Position;
 
+typedef vector<vector<unsigned>> UIntMat;
+
 //Ces types appartiennent à Monsieur Casali
 typedef std::vector <char> CVLine;
 typedef std::vector <CVLine> CMat;

@@ -644,7 +644,8 @@ convertImgMat.o: ../Pacman/module/convertImgMat.cpp ../Pacman/module/type.h \
 		../Pacman/MinGL2/include/mingl/transition/itransitionable.h \
 		../Pacman/MinGL2/include/mingl/shape/circle.h \
 		../Pacman/MinGL2/include/mingl/shape/line.h \
-		../Pacman/MinGL2/include/mingl/shape/triangle.h
+		../Pacman/MinGL2/include/mingl/shape/triangle.h \
+		../Pacman/module/convertImgMat.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o convertImgMat.o ../Pacman/module/convertImgMat.cpp
 
 gameSprite.o: ../Pacman/module/gameSprite.cpp ../Pacman/module/gameSprite.h \

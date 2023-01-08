@@ -20,7 +20,7 @@ using namespace std;
 using namespace nsShape;
 using namespace nsGraphics;
 
-void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman, sGhost & ghost)
+void displayMat (UIntMat & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman, sGhost & ghost)
 {
     // reset fenetre
     //windowClear();
@@ -56,6 +56,15 @@ void displayMat (vector<vector<unsigned>> & mat, const unsigned & caseSize, cons
     }
 }
 
+template<typename T>
+void affMat (vector<vector<T>> & mat) {
+    for (auto & i : mat) {
+        for (auto & j : i)
+            cout << j;
+        cout << endl;
+    }
+
+}
 
 void affPac(MinGL & window, sPacman & pacman) {
     window << Circle(Vec2D(pacman.pos.first, pacman.pos.second), pacman.size, pacman.triangleAmount, 0, pacman.triangleAmount, pacman.color);
@@ -89,32 +98,33 @@ bool getHit (sGhost & ghost){
     return ghost.previousCase == '8';
 }
 
-bool caseExist (const vector<vector<unsigned>> & mat, const Position & pos){
-    return (((0<=pos.first) && (pos.first<mat[0].size()) && (0<=pos.second) && (pos.second<mat.size())) && (mat[pos.first][pos.second] != 1));
+bool caseExist (const UIntMat & mat, const Position & pos){
+    return ((pos.first<mat[0].size() && (pos.second<mat.size())) && (mat[pos.first][pos.second] != 1));
 }
 
-void tp (vector<vector<unsigned>> & mat, Position & pos){
+void tp (UIntMat & mat, Position & pos){
     if (pos.first == 0)
         pos.first = mat.size() -2;
-    else if (pos.first == mat.size() -2)
+    else if (pos.first == mat.size() -1)
         pos.first = 1;
     else if (pos.second == 0)
         pos.second = mat.size() -2;
-    else if (pos.second == mat.size() -2)
+    else if (pos.second == mat.size() -1)
         pos.second = 1;
 }
 
-void move (vector<vector<unsigned>> & mat, Position & posStart, Position & posEnd){
-    cout << posEnd.first << ", " << posEnd.second << "->" << mat[posEnd.first][posEnd.second] <<  endl;
+void move (UIntMat & mat, Position & posStart, Position & posEnd){
+    unsigned previousCase = 0;
     if (mat[posEnd.first][posEnd.second] == 7)
        tp(mat, posEnd);
     mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
-    mat[posStart.first][posStart.second] = 0;
+    mat[posStart.first][posStart.second] = previousCase;
     posStart.first = posEnd.first;
     posStart.second = posEnd.second;
+    affMat (mat);
 }
 
-void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, pair<unsigned,unsigned> & posEnd, unsigned & previousCase)
+void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & previousCase)
 {
     unsigned tmp = mat[posEnd.first][posEnd.second];
     mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
@@ -125,7 +135,7 @@ void move (vector<vector<unsigned>> & mat, pair<unsigned,unsigned> & posStart, p
 }
 
 
-void addScore (const vector<vector<unsigned>> & mat, const Position & pos, unsigned & score){
+void addScore (const UIntMat & mat, const Position & pos, unsigned & score){
     if (mat[pos.first][pos.second] == 2){
         score += 10;
     }
@@ -137,7 +147,80 @@ void addScore (const vector<vector<unsigned>> & mat, const Position & pos, unsig
     }
 }
 
+void isKeyPressed (MinGL & window, char & pressedKey) {
+    if (window.isPressed({'z', false}))
+        pressedKey = 'z';
+    else if (window.isPressed({'s', false}))
+        pressedKey = 's';
+    else if (window.isPressed({'q', false}))
+        pressedKey = 'q';
+    else if (window.isPressed({'d', false}))
+        pressedKey = 'd';
+}
 
+void movementDirection (UIntMat & matrice, char & pressedKey, sPacman & pac) {
+    if (pac.currentMove == 'p' && (pressedKey == 'z' || pressedKey == 's' || pressedKey == 'q' || pressedKey == 'd')) {
+        if (pac.cooldown == 0) {
+            pac.cooldown = FPS_LIMIT/pac.speed;
+            if (pressedKey == 'z') {
+                pac.rotation = 1;
+                if (caseExist(matrice, {pac.posMat.first-1, pac.posMat.second}))
+                    pac.currentMove = 'z';
+                else
+                    pac.currentMove = 'p';
+            }
+            else if (pressedKey == 's') {
+                pac.rotation = 3;
+                if (caseExist(matrice, {pac.posMat.first+1, pac.posMat.second}))
+                    pac.currentMove = 's';
+                else
+                    pac.currentMove = 'p';
+            }
+            else if (pressedKey == 'q') {
+                pac.rotation = 2;
+                if (caseExist(matrice, {pac.posMat.first, pac.posMat.second-1}))
+                    pac.currentMove = 'q';
+                else
+                    pac.currentMove = 'p';
+            }
+            else if (pressedKey == 'd') {
+                pac.rotation = 0;
+                if (caseExist(matrice, {pac.posMat.first, pac.posMat.second+1}))
+                    pac.currentMove = 'd';
+                else
+                    pac.currentMove = 'p';
+            }
+            if (pac.currentMove == 'p')
+                pac.cooldown = 0;
+        }
+    }
+
+    else if (pac.cooldown == 1) {
+        if (pac.currentMove == 'z')
+            pac.nextPos = {pac.posMat.first-1, pac.posMat.second};
+        else if (pac.currentMove == 's')
+            pac.nextPos = {pac.posMat.first+1, pac.posMat.second};
+        else if (pac.currentMove == 'q')
+            pac.nextPos = {pac.posMat.first, pac.posMat.second-1};
+        else if (pac.currentMove == 'd')
+            pac.nextPos = {pac.posMat.first, pac.posMat.second+1};
+        move(matrice, pac.posMat, pac.nextPos);
+        pac.currentMove = 'p';
+        pac.cooldown = 0;
+    }
+
+    else if (pac.cooldown != 0) {
+        if (pac.currentMove == 'z')
+            pac.pos = {pac.pos.first, pac.pos.second-pac.speed};
+        else if (pac.currentMove == 's')
+            pac.pos = {pac.pos.first, pac.pos.second+pac.speed};
+        else if (pac.currentMove == 'q')
+            pac.pos = {pac.pos.first-pac.speed, pac.pos.second};
+        else if (pac.currentMove == 'd')
+            pac.pos = {pac.pos.first+pac.speed, pac.pos.second};
+        --pac.cooldown;
+    }
+}
 
 int main()
 {
@@ -150,7 +233,7 @@ int main()
     // Variable qui tient le temps de frame
     chrono::microseconds frameTime = chrono::microseconds::zero();
 
-    vector<vector<unsigned>> matrice =
+    UIntMat matrice =
                  {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                   {1,3,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,3,1},
                   {1,2,1,1,1,2,1,1,1,2,1,2,1,1,1,2,1,1,1,2,1},
@@ -215,95 +298,10 @@ int main()
         majGhostSpritePos(ghost1);
         affGhost(window, ghost1);
 
-        if (window.isPressed({'z', false}))
-            pressedKey = 'z';
-        if (window.isPressed({'s', false}))
-            pressedKey = 's';
-        if (window.isPressed({'q', false}))
-            pressedKey = 'q';
-        if (window.isPressed({'d', false}))
-            pressedKey = 'd';
+        // Mouvements
+        isKeyPressed(window, pressedKey);
 
-        if ((pac1.currentMove == 'p') && pressedKey == 'z'){
-            if (pac1.cooldown == 0 && caseExist(matrice, {pac1.posMat.first-1, pac1.posMat.second})) {
-                pac1.rotation = 1;
-                pac1.currentMove = 'z';
-                pac1.cooldown = FPS_LIMIT;
-                pac1.baseCooldown = pac1.cooldown;
-            }
-        }
-        if (pac1.currentMove =='z' && pac1.cooldown == 1) {
-            pac1.nextPos = {pac1.posMat.first-1, pac1.posMat.second};
-            move(matrice, pac1.posMat, pac1.nextPos);
-            pac1.currentMove = 'p';
-            pac1.cooldown = 0;
-        }
-
-        if (pac1.currentMove =='z' && pac1.cooldown != 0) {
-            pac1.pos = {pac1.pos.first, pac1.pos.second-1};
-            --pac1.cooldown;
-        }
-
-        if ((pac1.currentMove == 'p') && pressedKey == 's'){
-            if (pac1.cooldown == 0 && caseExist(matrice, {pac1.posMat.first+1, pac1.posMat.second})){
-                pac1.rotation = 3;
-                pac1.currentMove = 's';
-                pac1.cooldown = FPS_LIMIT;
-                pac1.baseCooldown = pac1.cooldown;
-            }
-        }
-        if (pac1.currentMove =='s' && pac1.cooldown == 1) {
-            pac1.nextPos = {pac1.posMat.first+1, pac1.posMat.second};
-            move(matrice, pac1.posMat, pac1.nextPos);
-            pac1.currentMove = 'p';
-            pac1.cooldown = 0;
-        }
-
-        if (pac1.currentMove =='s' && pac1.cooldown != 0) {
-            pac1.pos = {pac1.pos.first, pac1.pos.second+1};
-            --pac1.cooldown;
-        }
-
-        if ((pac1.currentMove == 'p') && pressedKey == 'q'){
-            if (pac1.cooldown == 0 && caseExist(matrice, {pac1.posMat.first, pac1.posMat.second-1})){
-                pac1.rotation = 2;
-                pac1.currentMove = 'q';
-                pac1.cooldown = FPS_LIMIT;
-                pac1.baseCooldown = pac1.cooldown;
-            }
-        }
-        if (pac1.currentMove =='q' && pac1.cooldown == 1) {
-            pac1.nextPos = {pac1.posMat.first, pac1.posMat.second-1};
-            move(matrice, pac1.posMat, pac1.nextPos);
-            pac1.currentMove = 'p';
-            pac1.cooldown = 0;
-        }
-
-        if (pac1.currentMove =='q' && pac1.cooldown != 0) {
-            pac1.pos = {pac1.pos.first-1, pac1.pos.second};
-            --pac1.cooldown;
-        }
-
-        if ((pac1.currentMove == 'p') && pressedKey == 'd'){
-            if (pac1.cooldown == 0 && caseExist(matrice, {pac1.posMat.first, pac1.posMat.second+1})){
-                pac1.rotation = 0;
-                pac1.currentMove = 'd';
-                pac1.cooldown = FPS_LIMIT;
-                pac1.baseCooldown = pac1.cooldown;
-            }
-        }
-        if (pac1.currentMove == 'd' && pac1.cooldown == 1) {
-            pac1.nextPos = {pac1.posMat.first, pac1.posMat.second+1};
-            move(matrice, pac1.posMat, pac1.nextPos);
-            pac1.currentMove = 'p';
-            pac1.cooldown = 0;
-        }
-
-        if (pac1.currentMove =='d' && pac1.cooldown != 0) {
-            pac1.pos = {pac1.pos.first+1, pac1.pos.second};
-            --pac1.cooldown;
-        }
-        //cout << pac1.posMat.first << ", " << pac1.posMat.second << " -> " << pac1.currentMove << endl;
+        movementDirection(matrice, pressedKey, pac1);
 
         // On finit la frame en cours
         window.finishFrame();
