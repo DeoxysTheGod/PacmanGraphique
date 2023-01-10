@@ -36,10 +36,17 @@ struct sPacman {
  * \brief The sGhost class : informations concernant le fantome
  */
 struct sGhost {
-    Position pos;
+    Position pos, nextPos, posMat;
     Position rightEyePos, leftEyePos;
     unsigned size;
-    unsigned rotation = 0;
+
+    // cooldown
+    unsigned cooldown;
+    unsigned baseCooldown;
+
+    // deplacement
+    char currentMove;
+    unsigned speed;
 
     unsigned triangleAmount;
     unsigned eyeSize, pupilSize;
