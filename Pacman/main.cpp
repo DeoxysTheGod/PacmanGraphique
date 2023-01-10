@@ -7,16 +7,16 @@
 
 #include "mingl/shape/rectangle.h"
 #include "mingl/shape/circle.h"
-/*
-#include "mingl/shape/line.h"
-#include "mingl/shape/triangle.h"
-*/
+
+//#include "mingl/shape/line.h"
+//#include "mingl/shape/triangle.h"
+
 #include <random>
 
 #include "module/type.h"
 #include "module/gameSprite.h"
 #include "module/movement.h"
-#include "module/convertImgMat.h"
+//#include "module/convertImgMat.h"
 
 using namespace std;
 using namespace nsShape;
@@ -123,6 +123,17 @@ void isKeyPressed (MinGL & window, char & pressedKey) {
         pressedKey = 'd';
 }
 
+void isKeyPressedGhost (MinGL & window, char & pressedKey) {
+    if (window.isPressed({'8', false}))
+        pressedKey = '8';
+    else if (window.isPressed({'5', false}))
+        pressedKey = '5';
+    else if (window.isPressed({'4', false}))
+        pressedKey = '4';
+    else if (window.isPressed({'6', false}))
+        pressedKey = '6';
+}
+
 int main()
 {
     srand(time(NULL));
@@ -160,28 +171,11 @@ int main()
     // initialisation des sprites
     unsigned caseSize = 36;
     char pressedKey = 'p';
+    char pressedKeyGhost = 'p';
     sPacman pac1;
     sGhost ghost1;
     initPacman(pac1, caseSize);
     initGhost(ghost1, caseSize);
-
-    chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
-
-    //displayMat(matFirst,window);
-
-    // On finit la frame en cours
-    window.finishFrame();
-
-    // On vide la queue d'évènements
-    window.getEventManager().clearEvents();
-
-    // On attend un peu pour limiter le framerate et soulager le CPU
-    this_thread::sleep_for(chrono::milliseconds(100 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
-
-    // On récupère le temps de frame
-    frameTime = chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start);
-    // On efface la fenêtre
-    window.clearScreen();
 
     // On fait tourner la boucle tant que la fenêtre est ouverte
     while (window.isOpen())
@@ -201,8 +195,10 @@ int main()
 
         // Mouvements
         isKeyPressed(window, pressedKey);
+        isKeyPressedGhost(window, pressedKeyGhost);
 
         movementDirection(matrice, pressedKey, pac1, caseSize);
+        movementDirectionGhost(matrice, pressedKeyGhost, ghost1, caseSize);
 
         // On finit la frame en cours
         window.finishFrame();
