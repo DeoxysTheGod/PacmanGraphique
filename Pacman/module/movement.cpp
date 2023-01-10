@@ -97,3 +97,63 @@ void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const u
         --pac.cooldown;
     }
 }
+
+void movementDirectionGhost (UIntMat & mat, char & pressedKey, sGhost & ghost, const unsigned & caseSize) {
+    if (ghost.currentMove == 'p' && (pressedKey == '8' || pressedKey == '5' || pressedKey == '4' || pressedKey == '6')) {
+        if (ghost.cooldown == 0) {
+            ghost.cooldown = caseSize/ghost.speed;
+            if (pressedKey == '8') {
+                if (caseExist(mat, {ghost.posMat.first-1, ghost.posMat.second}))
+                    ghost.currentMove = '8';
+                else
+                    ghost.currentMove = '6';
+            }
+            else if (pressedKey == '5') {
+                if (caseExist(mat, {ghost.posMat.first+1, ghost.posMat.second}))
+                    ghost.currentMove = 's';
+                else
+                    ghost.currentMove = '4';
+            }
+            else if (pressedKey == '4') {
+                if (caseExist(mat, {ghost.posMat.first, ghost.posMat.second-1}))
+                    ghost.currentMove = '4';
+                else
+                    ghost.currentMove = '4';
+            }
+            else if (pressedKey == '6') {
+                if (caseExist(mat, {ghost.posMat.first, ghost.posMat.second+1}))
+                    ghost.currentMove = '6';
+                else
+                    ghost.currentMove = '4';
+            }
+            if (ghost.currentMove == '4')
+                ghost.cooldown = 0;
+        }
+    }
+
+    else if (ghost.cooldown == 1) {
+        if (ghost.currentMove == '8')
+            ghost.nextPos = {ghost.posMat.first-1, ghost.posMat.second};
+        else if (ghost.currentMove == '5')
+            ghost.nextPos = {ghost.posMat.first+1, ghost.posMat.second};
+        else if (ghost.currentMove == '4')
+            ghost.nextPos = {ghost.posMat.first, ghost.posMat.second-1};
+        else if (ghost.currentMove == '6')
+            ghost.nextPos = {ghost.posMat.first, ghost.posMat.second+1};
+        move(mat, ghost.posMat, ghost.nextPos);
+        ghost.currentMove = 'p';
+        ghost.cooldown = 0;
+    }
+
+    else if (ghost.cooldown != 0) {
+        if (ghost.currentMove == 'z')
+            ghost.pos = {ghost.pos.first, ghost.pos.second-ghost.speed};
+        else if (ghost.currentMove == 's')
+            ghost.pos = {ghost.pos.first, ghost.pos.second+ghost.speed};
+        else if (ghost.currentMove == 'q')
+            ghost.pos = {ghost.pos.first-ghost.speed, ghost.pos.second};
+        else if (ghost.currentMove == 'd')
+            ghost.pos = {ghost.pos.first+ghost.speed, ghost.pos.second};
+        --ghost.cooldown;
+    }
+}
