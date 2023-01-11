@@ -50,4 +50,6 @@ void move (UIntMat & mat, Position & posStart, Position & posEnd);
  */
 void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & previousCase);
 
+void movementDirectionGhost (UIntMat & mat, char & pressedKey, sGhost & ghost, const unsigned & caseSize);
+
 #endif // MOVEMENT_H

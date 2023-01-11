@@ -51,8 +51,11 @@ void displayMat (UIntMat & mat, const unsigned & caseSize, const unsigned & marg
 //                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 2, 20, 0, 20, nsGraphics::KYellow);
             }
             if (mat[i][j] == 9){
-                ghost.pos.first = posx + (caseSize/2);
-                ghost.pos.second = posy + (caseSize/2);
+                ghost.posMat = {i, j};
+                if (ghost.cooldown == 0) {
+                    ghost.pos.first = posx + (caseSize/2);
+                    ghost.pos.second = posy + (caseSize/2);
+                }
             }
         }
     }
@@ -65,7 +68,6 @@ void affMat (vector<vector<T>> & mat) {
             cout << j;
         cout << endl;
     }
-
 }
 
 void affPac(MinGL & window, sPacman & pacman) {
@@ -124,14 +126,14 @@ void isKeyPressed (MinGL & window, char & pressedKey) {
 }
 
 void isKeyPressedGhost (MinGL & window, char & pressedKey) {
-    if (window.isPressed({'8', false}))
-        pressedKey = '8';
-    else if (window.isPressed({'5', false}))
-        pressedKey = '5';
-    else if (window.isPressed({'4', false}))
-        pressedKey = '4';
-    else if (window.isPressed({'6', false}))
-        pressedKey = '6';
+    if (window.isPressed({'o', false}))
+        pressedKey = 'o';
+    else if (window.isPressed({'l', false}))
+        pressedKey = 'l';
+    else if (window.isPressed({'k', false}))
+        pressedKey = 'k';
+    else if (window.isPressed({'m', false}))
+        pressedKey = 'm';
 }
 
 int main()
@@ -192,6 +194,9 @@ int main()
         affPac(window, pac1);
         majGhostSpritePos(ghost1);
         affGhost(window, ghost1);
+        cout << "---------------" << endl;
+        affMat(matrice);
+        cout << "---------------" << endl;
 
         // Mouvements
         isKeyPressed(window, pressedKey);

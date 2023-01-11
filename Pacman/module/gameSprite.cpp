@@ -16,7 +16,6 @@ void initPacman(sPacman & pac, const unsigned caseSize) {
 
     // cooldown
     pac.cooldown = 0;
-    pac.baseCooldown = 0;
 
     // Bouche du pacman
     pac.mouthSize = pac.triangleAmount/5;
@@ -32,13 +31,11 @@ void initGhost(sGhost & ghost, const unsigned caseSize) {
     ghost.posMat = {1,1};
     ghost.triangleAmount = 40;
     ghost.size = caseSize/3;
+    ghost.currentMove = 'p';
+    ghost.speed = 3;
 
     // cooldown
     ghost.cooldown = 0;
-    ghost.baseCooldown = 0;
-
-    ghost.currentMove = 'p';
-    ghost.speed = 4;
 
     // Yeux du ghost
     ghost.eyeSize = ghost.size/3;
