@@ -56,6 +56,8 @@ SOURCES       = ../Pacman/main.cpp \
 		../Pacman/module/convertImgMat.cpp \
 		../Pacman/module/gameSprite.cpp \
 		../Pacman/module/movement.cpp \
+		../Pacman/module/parameters.cpp \
+		../Pacman/module/score.cpp \
 		../Pacman/MinGL2/src/audio/audioengine.cpp \
 		../Pacman/MinGL2/src/exception/cexception.cpp \
 		../Pacman/MinGL2/src/mingl.cpp \
@@ -77,6 +79,8 @@ OBJECTS       = main.o \
 		convertImgMat.o \
 		gameSprite.o \
 		movement.o \
+		parameters.o \
+		score.o \
 		audioengine.o \
 		cexception.o \
 		mingl.o \
@@ -94,7 +98,8 @@ OBJECTS       = main.o \
 		transition.o \
 		transition_contract.o \
 		transition_engine.o
-DIST          = /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
+DIST          = ../Pacman/autre/config.yaml \
+		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/common/unix.conf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/common/linux.conf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/common/sanitize.conf \
@@ -262,10 +267,14 @@ DIST          = /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
 		module/gameSprite.h \
 		module/convertImgMat.h \
 		module/movement.h \
+		module/parameters.h \
+		module/score.h \
 		module/type.h ../Pacman/main.cpp \
 		../Pacman/module/convertImgMat.cpp \
 		../Pacman/module/gameSprite.cpp \
 		../Pacman/module/movement.cpp \
+		../Pacman/module/parameters.cpp \
+		../Pacman/module/score.cpp \
 		../Pacman/MinGL2/src/audio/audioengine.cpp \
 		../Pacman/MinGL2/src/exception/cexception.cpp \
 		../Pacman/MinGL2/src/mingl.cpp \
@@ -628,11 +637,14 @@ main.o: ../Pacman/main.cpp ../Pacman/MinGL2/include/mingl/mingl.h \
 		../Pacman/MinGL2/include/mingl/shape/shape.h \
 		../Pacman/MinGL2/include/mingl/transition/itransitionable.h \
 		../Pacman/MinGL2/include/mingl/shape/circle.h \
+		../Pacman/MinGL2/include/mingl/gui/text.h \
+		../Pacman/MinGL2/include/mingl/gui/glut_font.h \
 		../Pacman/module/type.h \
 		../Pacman/MinGL2/include/mingl/shape/line.h \
 		../Pacman/MinGL2/include/mingl/shape/triangle.h \
 		../Pacman/module/gameSprite.h \
-		../Pacman/module/movement.h
+		../Pacman/module/movement.h \
+		../Pacman/module/score.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Pacman/main.cpp
 
 convertImgMat.o: ../Pacman/module/convertImgMat.cpp ../Pacman/module/type.h \
@@ -668,7 +680,8 @@ gameSprite.o: ../Pacman/module/gameSprite.cpp ../Pacman/module/gameSprite.h \
 		../Pacman/MinGL2/include/mingl/transition/itransitionable.h \
 		../Pacman/MinGL2/include/mingl/shape/circle.h \
 		../Pacman/MinGL2/include/mingl/shape/line.h \
-		../Pacman/MinGL2/include/mingl/shape/triangle.h
+		../Pacman/MinGL2/include/mingl/shape/triangle.h \
+		../Pacman/module/parameters.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gameSprite.o ../Pacman/module/gameSprite.cpp
 
 movement.o: ../Pacman/module/movement.cpp ../Pacman/module/movement.h \
@@ -687,8 +700,47 @@ movement.o: ../Pacman/module/movement.cpp ../Pacman/module/movement.h \
 		../Pacman/MinGL2/include/mingl/shape/circle.h \
 		../Pacman/MinGL2/include/mingl/shape/line.h \
 		../Pacman/MinGL2/include/mingl/shape/triangle.h \
-		../Pacman/module/gameSprite.h
+		../Pacman/module/gameSprite.h \
+		../Pacman/module/score.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o movement.o ../Pacman/module/movement.cpp
+
+parameters.o: ../Pacman/module/parameters.cpp ../Pacman/module/parameters.h \
+		../Pacman/module/type.h \
+		../Pacman/MinGL2/include/mingl/mingl.h \
+		../Pacman/MinGL2/include/mingl/graphics/idrawable.h \
+		../Pacman/MinGL2/include/mingl/graphics/rgbacolor.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.hpp \
+		../Pacman/MinGL2/include/mingl/graphics/vec2d.h \
+		../Pacman/MinGL2/include/mingl/event/event_manager.h \
+		../Pacman/MinGL2/include/mingl/event/event.hpp \
+		../Pacman/MinGL2/include/mingl/shape/rectangle.h \
+		../Pacman/MinGL2/include/mingl/shape/shape.h \
+		../Pacman/MinGL2/include/mingl/transition/itransitionable.h \
+		../Pacman/MinGL2/include/mingl/shape/circle.h \
+		../Pacman/MinGL2/include/mingl/shape/line.h \
+		../Pacman/MinGL2/include/mingl/shape/triangle.h \
+		../Pacman/module/gameSprite.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o parameters.o ../Pacman/module/parameters.cpp
+
+score.o: ../Pacman/module/score.cpp ../Pacman/module/score.h \
+		../Pacman/module/type.h \
+		../Pacman/MinGL2/include/mingl/mingl.h \
+		../Pacman/MinGL2/include/mingl/graphics/idrawable.h \
+		../Pacman/MinGL2/include/mingl/graphics/rgbacolor.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.hpp \
+		../Pacman/MinGL2/include/mingl/graphics/vec2d.h \
+		../Pacman/MinGL2/include/mingl/event/event_manager.h \
+		../Pacman/MinGL2/include/mingl/event/event.hpp \
+		../Pacman/MinGL2/include/mingl/shape/rectangle.h \
+		../Pacman/MinGL2/include/mingl/shape/shape.h \
+		../Pacman/MinGL2/include/mingl/transition/itransitionable.h \
+		../Pacman/MinGL2/include/mingl/shape/circle.h \
+		../Pacman/MinGL2/include/mingl/shape/line.h \
+		../Pacman/MinGL2/include/mingl/shape/triangle.h \
+		../Pacman/module/gameSprite.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o score.o ../Pacman/module/score.cpp
 
 audioengine.o: ../Pacman/MinGL2/src/audio/audioengine.cpp ../Pacman/MinGL2/include/mingl/audio/audioengine.h \
 		../Pacman/MinGL2/include/mingl/exception/cexception.h \

@@ -1,12 +1,14 @@
 #include "movement.h"
+#include "score.h"
 
 bool caseExist (const UIntMat & mat, const Position & pos){
     return ((pos.first<mat[0].size() && (pos.second<mat.size())) && (mat[pos.first][pos.second] != 1));
 }
 
-void move (UIntMat & mat, Position & posStart, Position & posEnd){
+void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & score){
     if (mat[posEnd.first][posEnd.second] == 7)
        tp(mat, posEnd);
+    addScore(mat, posEnd, score);
     mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
     mat[posStart.first][posStart.second] = 0;
     posStart.first = posEnd.first;
@@ -35,36 +37,57 @@ void tp (const UIntMat & mat, Position & pos){
 }
 
 void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const unsigned & caseSize) {
-    if (pac.currentMove == 'p' && (pressedKey == 'z' || pressedKey == 's' || pressedKey == 'q' || pressedKey == 'd')) {
+    char kUp = pac.MapParamChar.find("PKeyUp")->second;
+    char kDown = pac.MapParamChar.find("PKeyDown")->second;
+    char kRight = pac.MapParamChar.find("PKeyRight")->second;
+    char kLeft = pac.MapParamChar.find("PKeyLeft")->second;
+    //cout << kUp << ", " << kDown << ", " << kLeft << ", " << kRight << ", " << endl;
+    if (pac.currentMove == 'p' && (pressedKey == kUp || pressedKey == kDown || pressedKey == kRight || pressedKey == kLeft)) {
         if (pac.cooldown == 0) {
             pac.cooldown = caseSize/pac.speed;
-            if (pressedKey == 'z') {
-                pac.rotation = 1;
-                if (caseExist(mat, {pac.posMat.first-1, pac.posMat.second}))
-                    pac.currentMove = 'z';
+            if (pressedKey == kUp) {
+                if (caseExist(mat, {pac.posMat.first-1, pac.posMat.second})) {
+                    pac.rotation = 1;
+                    pac.currentMove = kUp;
+                    pac.lastMove = kUp;
+                }
+                else if (pressedKey == pac.lastMove)
+                    pac.lastMove = 'p';
                 else
-                    pac.currentMove = 'p';
+                    pac.currentMove = pac.lastMove;
             }
-            else if (pressedKey == 's') {
-                pac.rotation = 3;
-                if (caseExist(mat, {pac.posMat.first+1, pac.posMat.second}))
-                    pac.currentMove = 's';
+            else if (pressedKey == kDown) {
+                if (caseExist(mat, {pac.posMat.first+1, pac.posMat.second})) {
+                    pac.rotation = 3;
+                    pac.currentMove = kDown;
+                    pac.lastMove = kDown;
+                }
+                else if (pressedKey == pac.lastMove)
+                    pac.lastMove = 'p';
                 else
-                    pac.currentMove = 'p';
+                    pac.currentMove = pac.lastMove;
             }
-            else if (pressedKey == 'q') {
-                pac.rotation = 2;
-                if (caseExist(mat, {pac.posMat.first, pac.posMat.second-1}))
-                    pac.currentMove = 'q';
+            else if (pressedKey == kLeft) {
+                if (caseExist(mat, {pac.posMat.first, pac.posMat.second-1})) {
+                    pac.rotation = 2;
+                    pac.currentMove = kLeft;
+                    pac.lastMove = kLeft;
+                }
+                else if (pressedKey == pac.lastMove)
+                    pac.lastMove = 'p';
                 else
-                    pac.currentMove = 'p';
+                    pac.currentMove = pac.lastMove;
             }
-            else if (pressedKey == 'd') {
-                pac.rotation = 0;
-                if (caseExist(mat, {pac.posMat.first, pac.posMat.second+1}))
-                    pac.currentMove = 'd';
+            else if (pressedKey == kRight) {
+                if (caseExist(mat, {pac.posMat.first, pac.posMat.second+1})) {
+                    pac.rotation = 0;
+                    pac.currentMove = kRight;
+                    pac.lastMove = kRight;
+                }
+                else if (pressedKey == pac.lastMove)
+                    pac.lastMove = 'p';
                 else
-                    pac.currentMove = 'p';
+                    pac.currentMove = pac.lastMove;
             }
             if (pac.currentMove == 'p')
                 pac.cooldown = 0;
@@ -80,7 +103,7 @@ void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const u
             pac.nextPos = {pac.posMat.first, pac.posMat.second-1};
         else if (pac.currentMove == 'd')
             pac.nextPos = {pac.posMat.first, pac.posMat.second+1};
-        move(mat, pac.posMat, pac.nextPos);
+        move(mat, pac.posMat, pac.nextPos, pac.score);
         pac.currentMove = 'p';
         pac.cooldown = 0;
     }
@@ -98,33 +121,55 @@ void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const u
     }
 }
 
+
 void movementDirectionGhost (UIntMat & mat, char & pressedKey, sGhost & ghost, const unsigned & caseSize) {
-    if (ghost.currentMove == 'p' && (pressedKey == 'o' || pressedKey == 'l' || pressedKey == 'k' || pressedKey == 'm')) {
+    char kUp = ghost.MapParamChar.find("GKeyUp")->second;
+    char kDown = ghost.MapParamChar.find("GKeyDown")->second;
+    char kRight = ghost.MapParamChar.find("GKeyRight")->second;
+    char kLeft = ghost.MapParamChar.find("GKeyLeft")->second;
+    //cout << kUp << ", " << kDown << ", " << kLeft << ", " << kRight << ", " << endl;
+    if (ghost.currentMove == 'p' && (pressedKey == kUp || pressedKey == kDown || pressedKey == kLeft || pressedKey == kRight)) {
         if (ghost.cooldown == 0) {
             ghost.cooldown = caseSize/ghost.speed;
-            if (pressedKey == 'o') {
-                if (caseExist(mat, {ghost.posMat.first-1, ghost.posMat.second}))
-                    ghost.currentMove = 'o';
+            if (pressedKey == kUp) {
+                if (caseExist(mat, {ghost.posMat.first-1, ghost.posMat.second})) {
+                    ghost.currentMove = kUp;
+                    ghost.lastMove = kUp;
+                }
+                else if (pressedKey == ghost.lastMove)
+                    ghost.lastMove = 'p';
                 else
-                    ghost.currentMove = 'p';
+                    ghost.currentMove = ghost.lastMove;
             }
-            else if (pressedKey == 'l') {
-                if (caseExist(mat, {ghost.posMat.first+1, ghost.posMat.second}))
-                    ghost.currentMove = 'l';
+            else if (pressedKey == kDown) {
+                if (caseExist(mat, {ghost.posMat.first+1, ghost.posMat.second})) {
+                    ghost.currentMove = kDown;
+                    ghost.lastMove = kDown;
+                }
+                else if (pressedKey == ghost.lastMove)
+                    ghost.lastMove = 'p';
                 else
-                    ghost.currentMove = 'p';
+                    ghost.currentMove = ghost.lastMove;
             }
-            else if (pressedKey == 'k') {
-                if (caseExist(mat, {ghost.posMat.first, ghost.posMat.second-1}))
-                    ghost.currentMove = 'k';
+            else if (pressedKey == kLeft) {
+                if (caseExist(mat, {ghost.posMat.first, ghost.posMat.second-1})) {
+                    ghost.currentMove = kLeft;
+                    ghost.lastMove = kLeft;
+                }
+                else if (pressedKey == ghost.lastMove)
+                    ghost.lastMove = 'p';
                 else
-                    ghost.currentMove = 'p';
+                    ghost.currentMove = ghost.lastMove;
             }
-            else if (pressedKey == 'm') {
-                if (caseExist(mat, {ghost.posMat.first, ghost.posMat.second+1}))
-                    ghost.currentMove = 'm';
+            else if (pressedKey == kRight) {
+                if (caseExist(mat, {ghost.posMat.first, ghost.posMat.second+1})) {
+                    ghost.currentMove = kRight;
+                    ghost.lastMove = kRight;
+                }
+                else if (pressedKey == ghost.lastMove)
+                    ghost.lastMove = 'p';
                 else
-                    ghost.currentMove = 'p';
+                    ghost.currentMove = ghost.lastMove;
             }
             if (ghost.currentMove == 'p')
                 ghost.cooldown = 0;
@@ -132,13 +177,13 @@ void movementDirectionGhost (UIntMat & mat, char & pressedKey, sGhost & ghost, c
     }
 
     else if (ghost.cooldown == 1) {
-        if (ghost.currentMove == 'o')
+        if (ghost.currentMove == kUp)
             ghost.nextPos = {ghost.posMat.first-1, ghost.posMat.second};
-        else if (ghost.currentMove == 'l')
+        else if (ghost.currentMove == kDown)
             ghost.nextPos = {ghost.posMat.first+1, ghost.posMat.second};
-        else if (ghost.currentMove == 'k')
+        else if (ghost.currentMove == kLeft)
             ghost.nextPos = {ghost.posMat.first, ghost.posMat.second-1};
-        else if (ghost.currentMove == 'm')
+        else if (ghost.currentMove == kRight)
             ghost.nextPos = {ghost.posMat.first, ghost.posMat.second+1};
         move(mat, ghost.posMat, ghost.nextPos, ghost);
         ghost.currentMove = 'p';
@@ -146,13 +191,13 @@ void movementDirectionGhost (UIntMat & mat, char & pressedKey, sGhost & ghost, c
     }
 
     else if (ghost.cooldown != 0) {
-        if (ghost.currentMove == 'o')
+        if (ghost.currentMove == kUp)
             ghost.pos = {ghost.pos.first, ghost.pos.second-ghost.speed};
-        else if (ghost.currentMove == 'l')
+        else if (ghost.currentMove == kDown)
             ghost.pos = {ghost.pos.first, ghost.pos.second+ghost.speed};
-        else if (ghost.currentMove == 'k')
+        else if (ghost.currentMove == kLeft)
             ghost.pos = {ghost.pos.first-ghost.speed, ghost.pos.second};
-        else if (ghost.currentMove == 'm')
+        else if (ghost.currentMove == kRight)
             ghost.pos = {ghost.pos.first+ghost.speed, ghost.pos.second};
         --ghost.cooldown;
     }

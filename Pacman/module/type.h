@@ -9,6 +9,7 @@
 #include "mingl/shape/triangle.h"
 
 #include <vector>
+#include <map>
 #include <string>
 
 
@@ -24,5 +25,13 @@ typedef vector<vector<unsigned>> UIntMat;
 //Ces types appartiennent à Monsieur Casali
 typedef std::vector <char> CVLine;
 typedef std::vector <CVLine> CMat;
+
+struct authorizedKeyPacman {
+    const std::vector <std::string> VParamChar {"PKeyUp", "PKeyDown", "PKeyLeft", "PKeyRight"};
+};
+
+struct authorizedKeyGhost {
+    const std::vector <std::string> VParamChar {"GKeyUp", "GKeyDown", "GKeyLeft", "GKeyRight"};
+};
 
 #endif // TYPE_H

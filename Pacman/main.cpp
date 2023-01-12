@@ -1,4 +1,4 @@
-#define FPS_LIMIT 144
+#define FPS_LIMIT 36
 
 #include <iostream>
 #include <thread>
@@ -7,15 +7,17 @@
 
 #include "mingl/shape/rectangle.h"
 #include "mingl/shape/circle.h"
-
+#include "mingl/gui/text.h"
+#include "mingl/gui/glut_font.h"
 //#include "mingl/shape/line.h"
 //#include "mingl/shape/triangle.h"
 
 #include <random>
-
+#include <string>
 #include "module/type.h"
 #include "module/gameSprite.h"
 #include "module/movement.h"
+#include "module/score.h"
 //#include "module/convertImgMat.h"
 
 using namespace std;
@@ -102,18 +104,6 @@ bool getHit (sGhost & ghost){
     return ghost.previousCase == '8';
 }
 
-void addScore (const UIntMat & mat, const Position & pos, unsigned & score){
-    if (mat[pos.first][pos.second] == 2){
-        score += 10;
-    }
-    else if (mat[pos.first][pos.second] == 3){
-        score += 50;
-    }
-    else if (mat[pos.first][pos.second] ==  4){
-        score += 100;
-    }
-}
-
 void isKeyPressed (MinGL & window, char & pressedKey) {
     if (window.isPressed({'z', false}))
         pressedKey = 'z';
@@ -147,6 +137,17 @@ int main()
     // Variable qui tient le temps de frame
     chrono::microseconds frameTime = chrono::microseconds::zero();
 
+    // initialisation des sprites
+    unsigned caseSize = 36;
+    unsigned margin = 50;
+    string scoreStr;
+    char pressedKey = 'p';
+    char pressedKeyGhost = 'p';
+    sPacman pac1;
+    sGhost ghost1;
+    initPacman(pac1, caseSize);
+    initGhost(ghost1, caseSize);
+
     UIntMat matrice =
                  {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                   {1,3,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,3,1},
@@ -170,15 +171,6 @@ int main()
                   {1,3,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,1},
                   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
 
-    // initialisation des sprites
-    unsigned caseSize = 36;
-    char pressedKey = 'p';
-    char pressedKeyGhost = 'p';
-    sPacman pac1;
-    sGhost ghost1;
-    initPacman(pac1, caseSize);
-    initGhost(ghost1, caseSize);
-
     // On fait tourner la boucle tant que la fenêtre est ouverte
     while (window.isOpen())
     {
@@ -189,14 +181,12 @@ int main()
         window.clearScreen();
 
         // affiche la grille de jeu
-        displayMat(matrice, caseSize, 50, window, pac1, ghost1);
+        displayMat(matrice, caseSize, margin, window, pac1, ghost1);
 
         affPac(window, pac1);
         majGhostSpritePos(ghost1);
         affGhost(window, ghost1);
-        cout << "---------------" << endl;
-        affMat(matrice);
-        cout << "---------------" << endl;
+
 
         // Mouvements
         isKeyPressed(window, pressedKey);
@@ -204,6 +194,10 @@ int main()
 
         movementDirection(matrice, pressedKey, pac1, caseSize);
         movementDirectionGhost(matrice, pressedKeyGhost, ghost1, caseSize);
+
+        // score
+        majScore(scoreStr, pac1);
+        window << nsGui::Text(Vec2D(margin,margin-10), scoreStr, KWhite, nsGui::GlutFont::BITMAP_HELVETICA_18);
 
         // On finit la frame en cours
         window.finishFrame();

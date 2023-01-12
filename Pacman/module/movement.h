@@ -36,9 +36,10 @@ void tp (const UIntMat & mat, Position & pos);
  * \param[out] mat : la matrice qui represente la grille de jeu
  * \param[out] posStart : position de debut du pacman
  * \param[out] posEnd : position de fin du pacman
+ * \param[in out] score : score du pacman
  * @fn void move (UIntMat & mat, Position & posStart, Position & posEnd);
  */
-void move (UIntMat & mat, Position & posStart, Position & posEnd);
+void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & score);
 
 /*!
  * \brief move : gere les deplacement reel du pacman dans la matrice

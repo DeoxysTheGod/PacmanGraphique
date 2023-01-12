@@ -1,4 +1,5 @@
 #include "gameSprite.h"
+#include "parameters.h"
 
 using namespace std;
 using namespace nsShape;
@@ -10,9 +11,11 @@ void initPacman(sPacman & pac, const unsigned caseSize) {
     pac.triangleAmount = 40;
     pac.size = caseSize/2.5;
     pac.rotation = 0;
-    pac.speed = 3;
+    pac.score = 0;
 
+    pac.speed = 3;
     pac.currentMove = 'p';
+    pac.lastMove = 'p';
 
     // cooldown
     pac.cooldown = 0;
@@ -24,6 +27,9 @@ void initPacman(sPacman & pac, const unsigned caseSize) {
     // couleur
     pac.color = KYellow;
     pac.mouthColor = KBlack;
+
+    // touches
+    loadParameter (pac, pac.authKey);
 }
 
 void initGhost(sGhost & ghost, const unsigned caseSize) {
@@ -31,6 +37,9 @@ void initGhost(sGhost & ghost, const unsigned caseSize) {
     ghost.posMat = {1,1};
     ghost.triangleAmount = 40;
     ghost.size = caseSize/3;
+
+    // mouvements
+    ghost.lastMove = 'p';
     ghost.currentMove = 'p';
     ghost.speed = 3;
 
@@ -52,6 +61,9 @@ void initGhost(sGhost & ghost, const unsigned caseSize) {
     ghost.color = KRed;
     ghost.eyeColor = KWhite;
     ghost.pupilColor = KLightBlue;
+
+    // touches
+    loadParameter (ghost, ghost.authKey);
 }
 
 void majGhostSpritePos(sGhost & ghost) {

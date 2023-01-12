@@ -10,16 +10,25 @@
 struct sPacman {
     // position
     Position pos, nextPos, posMat;
+
+    // touches
+    authorizedKeyPacman authKey;
+    std::map <std::string, char> MapParamChar;
+
     // corps du pacman
     unsigned triangleAmount;
     unsigned size;
     unsigned rotation;
+
+    // score
+    unsigned score;
 
     // cooldown
     unsigned cooldown;
     unsigned baseCooldown;
 
     // deplacement
+    char lastMove;
     char currentMove;
     unsigned speed;
 
@@ -36,18 +45,25 @@ struct sPacman {
  * \brief The sGhost class : informations concernant le fantome
  */
 struct sGhost {
+    // position
     Position pos, nextPos, posMat;
     Position rightEyePos, leftEyePos;
-    unsigned size;
 
     // cooldown
     unsigned cooldown;
     unsigned baseCooldown;
 
+    // touches
+    authorizedKeyGhost authKey;
+    std::map <std::string, char> MapParamChar;
+
     // deplacement
     char currentMove;
+    char lastMove;
     unsigned speed;
 
+    // sprite
+    unsigned size;
     unsigned triangleAmount;
     unsigned eyeSize, pupilSize;
 
