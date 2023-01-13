@@ -222,6 +222,7 @@ DIST          = ../Pacman/autre/config.yaml \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/qt_config.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_post.prf \
+		../Pacman/.qmake.stash \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/toolchain.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -268,6 +269,7 @@ DIST          = ../Pacman/autre/config.yaml \
 		/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/transition/transition_types.h \
 		module/gameSprite.h \
 		module/convertImgMat.h \
+		module/remplissageMat.h \
 		module/movement.h \
 		module/parameters.h \
 		module/score.h \
@@ -429,6 +431,7 @@ Makefile: ../Pacman/Pacman.pro /home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/q
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/qt_config.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/toolchain.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -571,6 +574,7 @@ Makefile: ../Pacman/Pacman.pro /home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/q
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/qt_config.prf:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/toolchain.prf:
 /home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/default_pre.prf:
