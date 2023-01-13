@@ -7,6 +7,6 @@
 void addScore (const UIntMat & mat, const Position & pos, unsigned & score);
 
 
-void majScore (string & scoreStr, sPacman & pacman);
+void majATH (string & scoreStr, string & stockStr, sPacman & pacman);
 
 #endif // SCORE_H

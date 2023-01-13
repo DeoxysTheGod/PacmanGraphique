@@ -9,11 +9,14 @@
  */
 struct sPacman {
     // position
-    Position pos, nextPos, posMat;
+    Position pos, nextPos, posMat, initialPos;
 
     // touches
     authorizedKeyPacman authKey;
     std::map <std::string, char> MapParamChar;
+
+    // contact
+    bool hitGhost;
 
     // corps du pacman
     unsigned triangleAmount;
@@ -22,10 +25,13 @@ struct sPacman {
 
     // score
     unsigned score;
+    unsigned stock;
 
     // cooldown
+    unsigned fps;
+    unsigned eatCooldown;
+    bool canEat;
     unsigned cooldown;
-    unsigned baseCooldown;
 
     // deplacement
     char lastMove;
@@ -33,6 +39,9 @@ struct sPacman {
     unsigned speed;
 
     // bouche
+    unsigned totalAnimation;
+    unsigned currentAnimation;
+    unsigned idle;
     unsigned mouthStart;
     unsigned mouthSize;
 
@@ -46,8 +55,11 @@ struct sPacman {
  */
 struct sGhost {
     // position
-    Position pos, nextPos, posMat;
+    Position pos, nextPos, posMat, initialPos;
     Position rightEyePos, leftEyePos;
+
+    // contact
+    bool hitPacman;
 
     // cooldown
     unsigned cooldown;
@@ -61,6 +73,7 @@ struct sGhost {
     char currentMove;
     char lastMove;
     unsigned speed;
+    unsigned baseSpeed;
 
     // sprite
     unsigned size;
@@ -97,5 +110,7 @@ void initGhost(sGhost & ghost, const unsigned caseSize);
  * @fn void majGhostSpritePos(sGhost & ghost);
  */
 void majGhostSpritePos(sGhost & ghost);
+
+void pacmanAnimation(sPacman & pac);
 
 #endif // GAMESPRITE_H

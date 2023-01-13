@@ -126,6 +126,38 @@ void isKeyPressedGhost (MinGL & window, char & pressedKey) {
         pressedKey = 'm';
 }
 
+void partialReset (UIntMat & mat, char & pressedKeyPacman, char & pressedKeyGhost, sPacman & pac, sGhost & ghost) {
+    pressedKeyGhost = 'p';
+    ghost.currentMove = 'p';
+    ghost.lastMove = 'p';
+
+    if (pac.canEat)
+        ghost.previousCase = 8;
+    else
+        ghost.previousCase = 0;
+    mat[ghost.posMat.first][ghost.posMat.second] = ghost.previousCase;
+    mat[ghost.initialPos.first][ghost.initialPos.second] = 9;
+    ghost.posMat = ghost.initialPos;
+
+    if (!pac.canEat) {
+        pressedKeyPacman = 'p';
+        pac.currentMove = 'p';
+        pac.lastMove = 'p';
+
+        mat[pac.posMat.first][pac.posMat.second] = 0;
+        mat[pac.initialPos.first][pac.initialPos.second] = 8;
+        pac.posMat = pac.initialPos;
+        pac.currentAnimation = pac.totalAnimation;
+
+        --pac.stock;
+    }
+    else
+        pac.score += 200;
+
+    ghost.hitPacman = false;
+    pac.hitGhost = false;
+}
+
 int main()
 {
     srand(time(NULL));
@@ -140,7 +172,7 @@ int main()
     // initialisation des sprites
     unsigned caseSize = 36;
     unsigned margin = 50;
-    string scoreStr;
+    string scoreStr, stockStr;
     char pressedKey = 'p';
     char pressedKeyGhost = 'p';
     sPacman pac1;
@@ -171,6 +203,11 @@ int main()
                   {1,3,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,1},
                   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
 
+    displayMat(matrice, caseSize, margin, window, pac1, ghost1);
+    pac1.initialPos = pac1.posMat;
+    pac1.fps = FPS_LIMIT;
+    ghost1.initialPos = ghost1.posMat;
+
     // On fait tourner la boucle tant que la fenêtre est ouverte
     while (window.isOpen())
     {
@@ -188,16 +225,33 @@ int main()
         affGhost(window, ghost1);
 
 
+
+        affMat(matrice);
+        cout << "--------------------" << endl;
+
         // Mouvements
         isKeyPressed(window, pressedKey);
         isKeyPressedGhost(window, pressedKeyGhost);
 
+        if (pac1.canEat) {
+            ghost1.speed = 2;
+            ghost1.color = KBlue;
+        }
+        else {
+            ghost1.speed = ghost1.baseSpeed;
+            ghost1.color = KRed;
+        }
         movementDirection(matrice, pressedKey, pac1, caseSize);
         movementDirectionGhost(matrice, pressedKeyGhost, ghost1, caseSize);
 
+        if (ghost1.hitPacman || pac1.hitGhost) {
+            partialReset(matrice, pressedKey, pressedKeyGhost, pac1, ghost1);
+        }
+
         // score
-        majScore(scoreStr, pac1);
+        majATH(scoreStr, stockStr, pac1);
         window << nsGui::Text(Vec2D(margin,margin-10), scoreStr, KWhite, nsGui::GlutFont::BITMAP_HELVETICA_18);
+        window << nsGui::Text(Vec2D(margin + (matrice.size()-1) * caseSize,margin-10), stockStr, KWhite, nsGui::GlutFont::BITMAP_HELVETICA_18);
 
         // On finit la frame en cours
         window.finishFrame();

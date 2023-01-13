@@ -58,6 +58,7 @@ SOURCES       = ../Pacman/main.cpp \
 		../Pacman/module/movement.cpp \
 		../Pacman/module/parameters.cpp \
 		../Pacman/module/score.cpp \
+		../Pacman/module/remplissageMat.cpp \
 		../Pacman/MinGL2/src/audio/audioengine.cpp \
 		../Pacman/MinGL2/src/exception/cexception.cpp \
 		../Pacman/MinGL2/src/mingl.cpp \
@@ -81,6 +82,7 @@ OBJECTS       = main.o \
 		movement.o \
 		parameters.o \
 		score.o \
+		remplissageMat.o \
 		audioengine.o \
 		cexception.o \
 		mingl.o \
@@ -279,6 +281,7 @@ DIST          = ../Pacman/autre/config.yaml \
 		../Pacman/module/movement.cpp \
 		../Pacman/module/parameters.cpp \
 		../Pacman/module/score.cpp \
+		../Pacman/module/remplissageMat.cpp \
 		../Pacman/MinGL2/src/audio/audioengine.cpp \
 		../Pacman/MinGL2/src/exception/cexception.cpp \
 		../Pacman/MinGL2/src/mingl.cpp \
@@ -752,6 +755,23 @@ score.o: ../Pacman/module/score.cpp ../Pacman/module/score.h \
 		../Pacman/MinGL2/include/mingl/shape/triangle.h \
 		../Pacman/module/gameSprite.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o score.o ../Pacman/module/score.cpp
+
+remplissageMat.o: ../Pacman/module/remplissageMat.cpp ../Pacman/module/type.h \
+		../Pacman/MinGL2/include/mingl/mingl.h \
+		../Pacman/MinGL2/include/mingl/graphics/idrawable.h \
+		../Pacman/MinGL2/include/mingl/graphics/rgbacolor.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.h \
+		../Pacman/MinGL2/include/mingl/tools/ieditable.hpp \
+		../Pacman/MinGL2/include/mingl/graphics/vec2d.h \
+		../Pacman/MinGL2/include/mingl/event/event_manager.h \
+		../Pacman/MinGL2/include/mingl/event/event.hpp \
+		../Pacman/MinGL2/include/mingl/shape/rectangle.h \
+		../Pacman/MinGL2/include/mingl/shape/shape.h \
+		../Pacman/MinGL2/include/mingl/transition/itransitionable.h \
+		../Pacman/MinGL2/include/mingl/shape/circle.h \
+		../Pacman/MinGL2/include/mingl/shape/line.h \
+		../Pacman/MinGL2/include/mingl/shape/triangle.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o remplissageMat.o ../Pacman/module/remplissageMat.cpp
 
 audioengine.o: ../Pacman/MinGL2/src/audio/audioengine.cpp ../Pacman/MinGL2/include/mingl/audio/audioengine.h \
 		../Pacman/MinGL2/include/mingl/exception/cexception.h \

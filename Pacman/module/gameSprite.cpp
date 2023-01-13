@@ -12,17 +12,27 @@ void initPacman(sPacman & pac, const unsigned caseSize) {
     pac.size = caseSize/2.5;
     pac.rotation = 0;
     pac.score = 0;
+    pac.stock = 3;
 
     pac.speed = 3;
     pac.currentMove = 'p';
     pac.lastMove = 'p';
 
+    // contact
+    pac.hitGhost = false;
+
     // cooldown
     pac.cooldown = 0;
+    pac.eatCooldown = 0;
+    pac.canEat = false;
 
     // Bouche du pacman
     pac.mouthSize = pac.triangleAmount/5;
     pac.mouthStart = pac.triangleAmount-pac.mouthSize/2;
+    // animation bouche
+    pac.idle = 1;
+    pac.totalAnimation = pac.mouthSize;
+    pac.currentAnimation = 0;
 
     // couleur
     pac.color = KYellow;
@@ -38,10 +48,14 @@ void initGhost(sGhost & ghost, const unsigned caseSize) {
     ghost.triangleAmount = 40;
     ghost.size = caseSize/3;
 
+    // contact
+    ghost.hitPacman = false;
+
     // mouvements
     ghost.lastMove = 'p';
     ghost.currentMove = 'p';
-    ghost.speed = 3;
+    ghost.speed = 4;
+    ghost.baseSpeed = ghost.speed;
 
     // cooldown
     ghost.cooldown = 0;
@@ -70,4 +84,21 @@ void majGhostSpritePos(sGhost & ghost) {
     ghost.rightEyePos = {ghost.pos.first - ghost.size/2.2, ghost.pos.second};
     ghost.leftEyePos = {ghost.pos.first + ghost.size/2.2, ghost.pos.second};
     ghost.wavePos = {(ghost.pos.first-ghost.size)+ghost.waveSize, ghost.pos.second+ghost.size};
+}
+
+void pacmanAnimation(sPacman & pac) {
+    if (pac.currentAnimation < pac.totalAnimation/2) {
+        pac.mouthSize -= 2;
+        ++pac.mouthStart;
+        ++pac.currentAnimation;
+    }
+    else if (pac.currentAnimation < pac.totalAnimation) {
+        pac.mouthSize += 2;
+        --pac.mouthStart;
+        ++pac.currentAnimation;
+    }
+    else if (pac.currentAnimation < pac.totalAnimation + pac.idle)
+        ++pac.currentAnimation;
+    else
+        pac.currentAnimation = 0;
 }

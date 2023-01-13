@@ -39,17 +39,17 @@ void tp (const UIntMat & mat, Position & pos);
  * \param[in out] score : score du pacman
  * @fn void move (UIntMat & mat, Position & posStart, Position & posEnd);
  */
-void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & score);
+void move (UIntMat & mat, Position & posStart, Position & posEnd, sPacman & pac, unsigned & score, bool & hitGhost);
 
 /*!
- * \brief move : gere les deplacement reel du pacman dans la matrice
+ * \brief move : gere les deplacement reel du fantome dans la matrice
  * \param[out] mat : la matrice qui represente la grille de jeu
  * \param[out] posStart : position de debut du fantome
  * \param[out] posEnd : position de fin du fantome
  * \param[in out] previousCase : c'est ce que contenait la case avant que le fantome ne passe dessus
  * @fn void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & previousCase);
  */
-void move (UIntMat & mat, Position & posStart, Position & posEnd, unsigned & previousCase);
+void move (UIntMat & mat, Position & posStart, Position & posEnd, sGhost & ghost, bool & hitPacman);
 
 void movementDirectionGhost (UIntMat & mat, char & pressedKey, sGhost & ghost, const unsigned & caseSize);
 

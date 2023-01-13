@@ -12,6 +12,7 @@ void addScore (const UIntMat & mat, const Position & pos, unsigned & score){
     }
 }
 
-void majScore (string & scoreStr, sPacman & pacman){
+void majATH (string & scoreStr, string & stockStr, sPacman & pacman){
     scoreStr = "score : " + std::to_string(pacman.score);
+    stockStr = "vie : " + std::to_string(pacman.stock);
 }

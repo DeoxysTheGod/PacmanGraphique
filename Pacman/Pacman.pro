@@ -9,7 +9,7 @@ SOURCES += \
         module/gameSprite.cpp \
         module/movement.cpp \
         module/parameters.cpp \
-        module/score.cpp
+        module/score.cpp \
         module/remplissageMat.cpp
 
 include(MinGL2/mingl.pri)
