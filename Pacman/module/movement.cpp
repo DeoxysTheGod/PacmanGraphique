@@ -41,11 +41,11 @@ void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const u
     char kDown = pac.MapParamChar.find("PKeyDown")->second;
     char kRight = pac.MapParamChar.find("PKeyRight")->second;
     char kLeft = pac.MapParamChar.find("PKeyLeft")->second;
-    //cout << kUp << ", " << kDown << ", " << kLeft << ", " << kRight << ", " << endl;
     if (pac.currentMove == 'p' && (pressedKey == kUp || pressedKey == kDown || pressedKey == kRight || pressedKey == kLeft)) {
+        cout << pressedKey << ", " << pac.currentMove << ", " << pac.lastMove << endl;
         if (pac.cooldown == 0) {
             pac.cooldown = caseSize/pac.speed;
-            if (pressedKey == kUp) {
+            if (pressedKey == kUp || pac.currentMove == kUp) {
                 if (caseExist(mat, {pac.posMat.first-1, pac.posMat.second})) {
                     pac.rotation = 1;
                     pac.currentMove = kUp;
@@ -56,8 +56,10 @@ void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const u
                 else
                     pac.currentMove = pac.lastMove;
             }
-            else if (pressedKey == kDown) {
+            if (pressedKey == kDown || pac.currentMove == kDown) {
+                cout << "ok down" << endl;
                 if (caseExist(mat, {pac.posMat.first+1, pac.posMat.second})) {
+                    cout << "no wall down" << endl;
                     pac.rotation = 3;
                     pac.currentMove = kDown;
                     pac.lastMove = kDown;
@@ -67,7 +69,7 @@ void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const u
                 else
                     pac.currentMove = pac.lastMove;
             }
-            else if (pressedKey == kLeft) {
+            if (pressedKey == kLeft || pac.currentMove == kLeft) {
                 if (caseExist(mat, {pac.posMat.first, pac.posMat.second-1})) {
                     pac.rotation = 2;
                     pac.currentMove = kLeft;
@@ -78,16 +80,22 @@ void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const u
                 else
                     pac.currentMove = pac.lastMove;
             }
-            else if (pressedKey == kRight) {
+            if (pressedKey == kRight || pac.currentMove == kRight) {
+                cout << "ok right" << endl;
                 if (caseExist(mat, {pac.posMat.first, pac.posMat.second+1})) {
+                    cout << "no wall right" << endl;
                     pac.rotation = 0;
                     pac.currentMove = kRight;
                     pac.lastMove = kRight;
                 }
-                else if (pressedKey == pac.lastMove)
+                else if (pressedKey == pac.lastMove) {
+                    cout << "2 right" << endl;
                     pac.lastMove = 'p';
-                else
+                }
+                else {
+                    cout << "3 right" << endl;
                     pac.currentMove = pac.lastMove;
+                }
             }
             if (pac.currentMove == 'p')
                 pac.cooldown = 0;
