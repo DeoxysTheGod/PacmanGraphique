@@ -10,6 +10,7 @@
 struct sPacman {
     // position
     Position pos, nextPos, posMat, initialPos;
+    bool initialPosNotInit;
 
     // touches
     authorizedKeyPacman authKey;
@@ -91,27 +92,32 @@ struct sGhost {
 
 /*!
  * \brief initPacman : initialisation des variables de bases du pacman
- * \param[in out] pac : le pacman a modifier
- * \param[in] caseSize : la taille des cases fictives sur l'ecran
+ * \param[in_out] pac : le pacman à modifier
+ * \param[in] caseSize : la taille des cases fictives sur l'écran
  * @fn void initPacman(sPacman & pac, const unsigned caseSize);
  */
 void initPacman(sPacman & pac, const unsigned caseSize);
 
 /*!
  * \brief initPacman : initialisation des variables de bases du fantome
- * \param[in out] pac : le fantome a modifier
- * \param[in] caseSize : la taille des cases fictives sur l'ecran
+ * \param[in_out] pac : le fantome à modifier
+ * \param[in] caseSize : la taille des cases fictives sur l'écran
  * @fn void initGhost(sGhost & ghost, const unsigned caseSize);
  */
 void initGhost(sGhost & ghost, const unsigned caseSize);
 
 /*!
- * \brief majGhostSpritePos : cette fonction sert a faire en sorte que les yeux se deplacent a l'endroit ou est le fantome
- * \param[in out] ghost : la structure du fantome
+ * \brief majGhostSpritePos : cette fonction sert à faire en sorte que les yeux se déplacent à l'endroit où est le fantome
+ * \param[in_out] ghost : la structure du fantome
  * @fn void majGhostSpritePos(sGhost & ghost);
  */
 void majGhostSpritePos(sGhost & ghost);
 
+/*!
+ * \brief pacmanAnimation : gère les animations de la bouche de pacman
+ * \param[in_out] pac : le pacman à modifier
+ * @fn void pacmanAnimation(sPacman & pac);
+ */
 void pacmanAnimation(sPacman & pac);
 
 #endif // GAMESPRITE_H

@@ -6,14 +6,21 @@ using namespace nsShape;
 using namespace nsGraphics;
 
 void initPacman(sPacman & pac, const unsigned caseSize) {
+    //position
     pac.pos = {200, 200};
     pac.posMat = {1,1};
+    pac.initialPosNotInit = true;
+
+    // sprite
     pac.triangleAmount = 40;
     pac.size = caseSize/2.5;
     pac.rotation = 0;
+
+    // score
     pac.score = 0;
     pac.stock = 3;
 
+    // deplacement
     pac.speed = 3;
     pac.currentMove = 'p';
     pac.lastMove = 'p';

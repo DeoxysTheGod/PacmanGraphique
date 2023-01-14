@@ -4,16 +4,14 @@
 #include <thread>
 
 #include "mingl/mingl.h"
-
 #include "mingl/shape/rectangle.h"
 #include "mingl/shape/circle.h"
 #include "mingl/gui/text.h"
 #include "mingl/gui/glut_font.h"
-//#include "mingl/shape/line.h"
-//#include "mingl/shape/triangle.h"
 
 #include <random>
 #include <string>
+
 #include "module/type.h"
 #include "module/gameSprite.h"
 #include "module/movement.h"
@@ -35,8 +33,6 @@ unsigned countBeignet (const UIntMat & mat);
 
 
 void displayMat (UIntMat & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman, sGhost & ghost) {
-    // reset fenetre
-    //windowClear();
     unsigned posx;
     unsigned posy;
     for (unsigned i = 0; i < mat.size(); ++i){
@@ -63,7 +59,6 @@ void displayMat (UIntMat & mat, const unsigned & caseSize, const unsigned & marg
                     pacman.pos.first = posx + (caseSize/2);
                     pacman.pos.second = posy + (caseSize/2);
                 }
-//                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 2, 20, 0, 20, nsGraphics::KYellow);
             }
             else if (mat[i][j] == 9){
                 ghost.posMat = {i, j};
@@ -108,7 +103,6 @@ void affGhost(MinGL & window, sGhost & ghost) {
     // vague
     for (unsigned i (0) ; i < ghost.nbWave ; ++i) {
         window << Circle(Vec2D(ghost.wavePos.first+i*ghost.waveSize*2, ghost.wavePos.second), ghost.waveSize, ghost.triangleAmount, 0, ghost.triangleAmount, ghost.color);
-        //cout << ghost.size << ", " << ghost.waveSize << endl;
     }
 }
 
@@ -139,30 +133,26 @@ void partialReset (const plotHolder & allPlot, UIntMat & mat, char & pressedKeyP
     ghost.currentMove = 'p';
     ghost.lastMove = 'p';
 
-    if (pac.canEat)
-        ghost.previousCase = 8;
-    else
-        ghost.previousCase = 0;
-    if (ghost.previousCase == 8 && !pac.canEat)
-        mat[ghost.posMat.first][ghost.posMat.second] = 0;
-    else
-        mat[ghost.posMat.first][ghost.posMat.second] = ghost.previousCase;
-    mat[ghost.initialPos.first][ghost.initialPos.second] = 9;
-    ghost.posMat = ghost.initialPos;
-
     if (!pac.canEat) {
         pressedKeyPacman = 'p';
         pac.currentMove = 'p';
         pac.lastMove = 'p';
 
         mat[pac.initialPos.first][pac.initialPos.second] = 8;
-        pac.posMat = pac.initialPos;
         pac.currentAnimation = pac.totalAnimation;
 
         --pac.stock;
     }
     else
         pac.score += 200;
+
+    if (pac.canEat)
+        ghost.previousCase = 8;
+    else
+        ghost.previousCase = 0;
+    mat[ghost.posMat.first][ghost.posMat.second] = ghost.previousCase;
+    ghost.previousCase = 0;
+    mat[ghost.initialPos.first][ghost.initialPos.second] = 9;
 
     ghost.hitPacman = false;
     pac.hitGhost = false;
@@ -174,6 +164,7 @@ void partialReset (const plotHolder & allPlot, UIntMat & mat, char & pressedKeyP
         pac.stock = 3;
         randomPlot(mat, allPlot);
         pac.beignetToEat = countBeignet (mat);
+        pac.initialPosNotInit = true;
     }
 }
 
@@ -193,6 +184,10 @@ unsigned countBeignet (const UIntMat & mat) {
     return cpt;
 }
 
+void affPos (const Position & pos) {
+    cout << "(" << pos.first << ", " << pos.second << ")" << endl;
+}
+
 int main()
 {
     srand(time(NULL));
@@ -205,7 +200,7 @@ int main()
     chrono::microseconds frameTime = chrono::microseconds::zero();
 
     // initialisation des sprites
-    unsigned caseSize = 24;
+    unsigned caseSize = 30;
     unsigned margin = 50;
     string scoreStr, stockStr;
     char pressedKey = 'p';
@@ -222,6 +217,8 @@ int main()
 
     initPacman(pac1, caseSize);
     initGhost(ghost1, caseSize);
+
+    pac1.fps = FPS_LIMIT;
 /*
     UIntMat matrice =
                  {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -246,12 +243,6 @@ int main()
                   {1,3,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,1},
                   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
 */
-    affMat(matrice);
-
-    displayMat(matrice, caseSize, margin, window, pac1, ghost1);
-    pac1.initialPos = pac1.posMat;
-    pac1.fps = FPS_LIMIT;
-    ghost1.initialPos = ghost1.posMat;
 
     // On fait tourner la boucle tant que la fenêtre est ouverte
     while (window.isOpen())
@@ -264,6 +255,13 @@ int main()
 
         // affiche la grille de jeu
         displayMat(matrice, caseSize, margin, window, pac1, ghost1);
+        if (pac1.initialPosNotInit) {
+            pac1.initialPos = pac1.posMat;
+            ghost1.initialPos = ghost1.posMat;
+            pac1.initialPosNotInit = false;
+        }
+        affPos(pac1.initialPos);
+        affPos(ghost1.initialPos);
 
         affPac(window, pac1);
         majGhostSpritePos(ghost1);
@@ -291,7 +289,7 @@ int main()
         // score
         majATH(scoreStr, stockStr, pac1);
         window << nsGui::Text(Vec2D(margin,margin-10), scoreStr, KWhite, nsGui::GlutFont::BITMAP_HELVETICA_18);
-        window << nsGui::Text(Vec2D(margin + (matrice.size()-1) * caseSize,margin-10), stockStr, KWhite, nsGui::GlutFont::BITMAP_HELVETICA_18);
+        window << nsGui::Text(Vec2D(margin + (matrice[0].size()-1) * caseSize,margin-10), stockStr, KWhite, nsGui::GlutFont::BITMAP_HELVETICA_18);
 
         // On finit la frame en cours
         window.finishFrame();

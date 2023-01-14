@@ -44,12 +44,12 @@ void move (UIntMat & mat, Position & posStart, Position & posEnd, sGhost & ghost
 
 void tp (const UIntMat & mat, Position & pos){
     if (pos.first == 0)
-        pos.first = mat[1].size() -2;
-    else if (pos.first == mat[1].size() -1)
+        pos.first = mat.size() -2;
+    else if (pos.first == mat.size() -1)
         pos.first = 1;
     else if (pos.second == 0)
-        pos.second = mat.size() -2;
-    else if (pos.second == mat.size() -1)
+        pos.second = mat[0].size() -2;
+    else if (pos.second == mat[0].size() -1)
         pos.second = 1;
 }
 
@@ -167,7 +167,6 @@ void movementDirectionGhost (UIntMat & mat, char & pressedKey, sGhost & ghost, c
     char kRight = ghost.MapParamChar.find("GKeyRight")->second;
     char kLeft = ghost.MapParamChar.find("GKeyLeft")->second;
     vector<unsigned> canGo (4,0);
-    cout << mat[0].size() <<  ", " << mat.size() << endl;
 
     if (ghost.currentMove == 'p' && (pressedKey == kUp || pressedKey == kDown || pressedKey == kLeft || pressedKey == kRight)) {
         if (ghost.cooldown == 0) {
