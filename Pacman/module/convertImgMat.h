@@ -4,7 +4,7 @@
 #include "type.h"
 #include <string>
 
-void convertMat (UIntMat & Mat , const std::string & nomImg);
+UIntMat convertMat (const std::string & nomImg);
 
 const UIntMat matFirst = {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                           {1,3,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,3,1},

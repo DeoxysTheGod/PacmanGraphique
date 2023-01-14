@@ -101,6 +101,7 @@ OBJECTS       = main.o \
 		transition_contract.o \
 		transition_engine.o
 DIST          = ../Pacman/autre/config.yaml \
+		../Pacman/carte/map2.ppm \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/common/unix.conf \
 		/home/quentin/Qt/6.4.0/gcc_64/mkspecs/common/linux.conf \
@@ -658,7 +659,8 @@ main.o: ../Pacman/main.cpp ../Pacman/MinGL2/include/mingl/mingl.h \
 		../Pacman/MinGL2/include/mingl/shape/triangle.h \
 		../Pacman/module/gameSprite.h \
 		../Pacman/module/movement.h \
-		../Pacman/module/score.h
+		../Pacman/module/score.h \
+		../Pacman/module/convertImgMat.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Pacman/main.cpp
 
 convertImgMat.o: ../Pacman/module/convertImgMat.cpp ../Pacman/module/type.h \
@@ -756,7 +758,8 @@ score.o: ../Pacman/module/score.cpp ../Pacman/module/score.h \
 		../Pacman/module/gameSprite.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o score.o ../Pacman/module/score.cpp
 
-remplissageMat.o: ../Pacman/module/remplissageMat.cpp ../Pacman/module/type.h \
+remplissageMat.o: ../Pacman/module/remplissageMat.cpp ../Pacman/module/remplissageMat.h \
+		../Pacman/module/type.h \
 		../Pacman/MinGL2/include/mingl/mingl.h \
 		../Pacman/MinGL2/include/mingl/graphics/idrawable.h \
 		../Pacman/MinGL2/include/mingl/graphics/rgbacolor.h \

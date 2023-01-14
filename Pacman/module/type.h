@@ -20,11 +20,17 @@ using namespace nsGraphics;
 typedef pair<pair<unsigned, unsigned>, pair<unsigned,unsigned>> pacMousePos;
 typedef pair<unsigned, unsigned> Position;
 
-typedef vector<vector<unsigned>> UIntMat;
+typedef vector<unsigned> UIntVec;
+typedef vector<UIntVec> UIntMat;
+typedef vector<UIntMat> plotHolder;
 
 //Ces types appartiennent à Monsieur Casali
 typedef std::vector <char> CVLine;
 typedef std::vector <CVLine> CMat;
+
+struct rgbPixelColor {
+    unsigned r, g, b;
+};
 
 struct authorizedKeyPacman {
     const std::vector <std::string> VParamChar {"PKeyUp", "PKeyDown", "PKeyLeft", "PKeyRight"};

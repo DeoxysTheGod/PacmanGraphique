@@ -18,7 +18,8 @@
 #include "module/gameSprite.h"
 #include "module/movement.h"
 #include "module/score.h"
-//#include "module/convertImgMat.h"
+#include "module/convertImgMat.h"
+#include "module/remplissageMat.h"
 
 using namespace std;
 using namespace nsShape;
@@ -99,11 +100,6 @@ void affGhost(MinGL & window, sGhost & ghost) {
     }
 }
 
-
-bool getHit (sGhost & ghost){
-    return ghost.previousCase == '8';
-}
-
 void isKeyPressed (MinGL & window, char & pressedKey) {
     if (window.isPressed({'z', false}))
         pressedKey = 'z';
@@ -170,7 +166,7 @@ int main()
     chrono::microseconds frameTime = chrono::microseconds::zero();
 
     // initialisation des sprites
-    unsigned caseSize = 36;
+    unsigned caseSize = 24;
     unsigned margin = 50;
     string scoreStr, stockStr;
     char pressedKey = 'p';
@@ -179,7 +175,7 @@ int main()
     sGhost ghost1;
     initPacman(pac1, caseSize);
     initGhost(ghost1, caseSize);
-
+/*
     UIntMat matrice =
                  {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                   {1,3,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,3,1},
@@ -202,6 +198,13 @@ int main()
                   {1,2,1,2,1,2,1,2,2,2,2,2,2,2,1,2,1,2,1,2,1},
                   {1,3,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,1},
                   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
+*/
+    UIntMat matrice;
+    matrice = convertMat("../Pacman/carte/map2.ppm");
+    affMat(matrice);
+    //fillMat(matrice);
+
+    //affMat(matrice);
 
     displayMat(matrice, caseSize, margin, window, pac1, ghost1);
     pac1.initialPos = pac1.posMat;
@@ -223,11 +226,6 @@ int main()
         affPac(window, pac1);
         majGhostSpritePos(ghost1);
         affGhost(window, ghost1);
-
-
-
-        affMat(matrice);
-        cout << "--------------------" << endl;
 
         // Mouvements
         isKeyPressed(window, pressedKey);

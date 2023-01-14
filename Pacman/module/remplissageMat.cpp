@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include "type.h"
+#include "remplissageMat.h"
 
 using namespace std ;
 
@@ -22,7 +20,7 @@ bool coordIsForbiddenIn (vector<unsigned> & listForbidden , unsigned & coord1 , 
         return true ;
 }
 
-void fillMat (CMat & Mat)
+void fillMat (UIntMat & Mat)
 {
     vector<unsigned> forbiddencoord {12 ,13 ,14 ,15 ,16 ,17 ,18} ;
 
@@ -30,21 +28,21 @@ void fillMat (CMat & Mat)
     {
         for (unsigned j(0) ; j < Mat[i].size() ; ++j)
         {
-            if (((i == 0) || (i == Mat.size() - 1)) && (Mat[i][j] == '0')) //cas de case vide en haut de map (tp)
-                Mat[i][j] = '7';
-            else if (((j == 0) || (j == Mat.size() - 1))&& (Mat[i][j] == '0')) //cas de case vide en coté de map (tp)
-                Mat[i][j] = '7' ;
+            if (((i == 0) || (i == Mat.size() - 1)) && (Mat[i][j] == 0)) //cas de case vide en haut de map (tp)
+                Mat[i][j] = 7;
+            else if (((j == 0) || (j == Mat.size() - 1))&& (Mat[i][j] == 0)) //cas de case vide en coté de map (tp)
+                Mat[i][j] = 7 ;
 
-            else if (coordIsForbiddenIn(forbiddencoord , i , j) && (Mat[i][j] == '0'))
+            else if (coordIsForbiddenIn(forbiddencoord , i , j) && (Mat[i][j] == 0))
                 continue ;
 
-            else if (Mat[i][j] == '2')
-                Mat[i][j] = '3' ;
+            else if (Mat[i][j] == 2)
+                Mat[i][j] = 3 ;
 
-            else if (Mat[i][j] == '0')
-                Mat[i][j] = '2' ;
+            else if (Mat[i][j] == 0)
+                Mat[i][j] = 2 ;
         }
     }
-    Mat[27][15] = '8' ;
-    Mat[15][15] = '9' ;
+    Mat[27][15] = 8 ;
+    Mat[15][15] = 9 ;
 }

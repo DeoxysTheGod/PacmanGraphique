@@ -1,12 +1,13 @@
 #ifndef REMPLISSAGEMAT_H
 #define REMPLISSAGEMAT_H
 
-#include "../PacMan/Correc_Prof/type.h"
+#include <iostream>
 #include <string>
 #include <vector>
+#include "type.h"
 
 bool coordIsForbiddenIn (std::vector<unsigned> & listForbidden , unsigned & coord1 , unsigned & coord2) ;
 
-void fillMat (CMat & Mat) ;
+void fillMat (UIntMat & Mat) ;
 
 #endif // REMPLISSAGEMAT_H
