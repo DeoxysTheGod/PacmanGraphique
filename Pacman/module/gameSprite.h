@@ -26,6 +26,7 @@ struct sPacman {
     // score
     unsigned score;
     unsigned stock;
+    unsigned beignetToEat;
 
     // cooldown
     unsigned fps;

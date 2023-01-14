@@ -19,14 +19,22 @@
 #include "module/movement.h"
 #include "module/score.h"
 #include "module/convertImgMat.h"
-#include "module/remplissageMat.h"
 
 using namespace std;
 using namespace nsShape;
 using namespace nsGraphics;
 
-void displayMat (UIntMat & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman, sGhost & ghost)
-{
+void displayMat (UIntMat & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman, sGhost & ghost);
+void randomPlot (UIntMat & mat, const plotHolder & allPlot);
+void affPac(MinGL & window, sPacman & pacman);
+void affGhost(MinGL & window, sGhost & ghost);
+void isKeyPressed (MinGL & window, char & pressedKey);
+void isKeyPressedGhost (MinGL & window, char & pressedKey);
+void partialReset (const plotHolder & allPlot, UIntMat & mat, char & pressedKeyPacman, char & pressedKeyGhost, sPacman & pac, sGhost & ghost, const unsigned & caseSize);
+unsigned countBeignet (const UIntMat & mat);
+
+
+void displayMat (UIntMat & mat, const unsigned & caseSize, const unsigned & margeSize, MinGL & window, sPacman & pacman, sGhost & ghost) {
     // reset fenetre
     //windowClear();
     unsigned posx;
@@ -39,13 +47,17 @@ void displayMat (UIntMat & mat, const unsigned & caseSize, const unsigned & marg
                 nsShape::Rectangle rect1(nsGraphics::Vec2D(posx, posy), nsGraphics::Vec2D(posx + caseSize, posy + caseSize), nsGraphics::KBlueWall);
                 window << rect1;
             }
-            if (mat[i][j] == 2){
+            else if (mat[i][j] == 5){
+                nsShape::Rectangle rect1(nsGraphics::Vec2D(posx, posy), nsGraphics::Vec2D(posx + caseSize, posy + caseSize), nsGraphics::KBlueGhostWall);
+                window << rect1;
+            }
+            else if (mat[i][j] == 2){
                 window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 15, 20, 0, 20, nsGraphics::KBeige);
             }
-            if (mat[i][j] == 3){
+            else if (mat[i][j] == 3){
                 window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 5, 20, 0, 20, nsGraphics::KBeige);
             }
-            if (mat[i][j] == 8){
+            else if (mat[i][j] == 8){
                 pacman.posMat = {i, j};
                 if (pacman.cooldown == 0) {
                     pacman.pos.first = posx + (caseSize/2);
@@ -53,7 +65,7 @@ void displayMat (UIntMat & mat, const unsigned & caseSize, const unsigned & marg
                 }
 //                window << nsShape::Circle(nsGraphics::Vec2D(posx + (caseSize/2), posy + (caseSize/2)), caseSize / 2, 20, 0, 20, nsGraphics::KYellow);
             }
-            if (mat[i][j] == 9){
+            else if (mat[i][j] == 9){
                 ghost.posMat = {i, j};
                 if (ghost.cooldown == 0) {
                     ghost.pos.first = posx + (caseSize/2);
@@ -122,7 +134,7 @@ void isKeyPressedGhost (MinGL & window, char & pressedKey) {
         pressedKey = 'm';
 }
 
-void partialReset (UIntMat & mat, char & pressedKeyPacman, char & pressedKeyGhost, sPacman & pac, sGhost & ghost) {
+void partialReset (const plotHolder & allPlot, UIntMat & mat, char & pressedKeyPacman, char & pressedKeyGhost, sPacman & pac, sGhost & ghost, const unsigned & caseSize) {
     pressedKeyGhost = 'p';
     ghost.currentMove = 'p';
     ghost.lastMove = 'p';
@@ -131,7 +143,10 @@ void partialReset (UIntMat & mat, char & pressedKeyPacman, char & pressedKeyGhos
         ghost.previousCase = 8;
     else
         ghost.previousCase = 0;
-    mat[ghost.posMat.first][ghost.posMat.second] = ghost.previousCase;
+    if (ghost.previousCase == 8 && !pac.canEat)
+        mat[ghost.posMat.first][ghost.posMat.second] = 0;
+    else
+        mat[ghost.posMat.first][ghost.posMat.second] = ghost.previousCase;
     mat[ghost.initialPos.first][ghost.initialPos.second] = 9;
     ghost.posMat = ghost.initialPos;
 
@@ -140,7 +155,6 @@ void partialReset (UIntMat & mat, char & pressedKeyPacman, char & pressedKeyGhos
         pac.currentMove = 'p';
         pac.lastMove = 'p';
 
-        mat[pac.posMat.first][pac.posMat.second] = 0;
         mat[pac.initialPos.first][pac.initialPos.second] = 8;
         pac.posMat = pac.initialPos;
         pac.currentAnimation = pac.totalAnimation;
@@ -152,6 +166,31 @@ void partialReset (UIntMat & mat, char & pressedKeyPacman, char & pressedKeyGhos
 
     ghost.hitPacman = false;
     pac.hitGhost = false;
+    if (pac.stock == 0 || pac.beignetToEat == 0) {
+        initPacman(pac, caseSize);
+        initGhost(ghost, caseSize);
+        if (pac.stock == 0)
+            pac.score = 0;
+        pac.stock = 3;
+        randomPlot(mat, allPlot);
+        pac.beignetToEat = countBeignet (mat);
+    }
+}
+
+void randomPlot (UIntMat & mat, const plotHolder & allPlot) {
+    unsigned maxRand = allPlot.size();
+    mat = allPlot.find(rand()%maxRand+1)->second;
+}
+
+unsigned countBeignet (const UIntMat & mat) {
+    unsigned cpt (0);
+    for (auto & i : mat) {
+        for (auto & j : i) {
+            if (j == 2 || j == 3 || j == 4)
+                ++cpt;
+        }
+    }
+    return cpt;
 }
 
 int main()
@@ -173,6 +212,14 @@ int main()
     char pressedKeyGhost = 'p';
     sPacman pac1;
     sGhost ghost1;
+
+    UIntMat matrice;
+
+    plotHolder allPlot;
+    importAllPlot(allPlot, "map");
+    randomPlot (matrice, allPlot);
+    pac1.beignetToEat = countBeignet (matrice);
+
     initPacman(pac1, caseSize);
     initGhost(ghost1, caseSize);
 /*
@@ -199,12 +246,7 @@ int main()
                   {1,3,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,1},
                   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
 */
-    UIntMat matrice;
-    matrice = convertMat("../Pacman/carte/map2.ppm");
     affMat(matrice);
-    //fillMat(matrice);
-
-    //affMat(matrice);
 
     displayMat(matrice, caseSize, margin, window, pac1, ghost1);
     pac1.initialPos = pac1.posMat;
@@ -242,8 +284,8 @@ int main()
         movementDirection(matrice, pressedKey, pac1, caseSize);
         movementDirectionGhost(matrice, pressedKeyGhost, ghost1, caseSize);
 
-        if (ghost1.hitPacman || pac1.hitGhost) {
-            partialReset(matrice, pressedKey, pressedKeyGhost, pac1, ghost1);
+        if (ghost1.hitPacman || pac1.hitGhost || pac1.beignetToEat == 0) {
+            partialReset(allPlot, matrice, pressedKey, pressedKeyGhost, pac1, ghost1, caseSize);
         }
 
         // score

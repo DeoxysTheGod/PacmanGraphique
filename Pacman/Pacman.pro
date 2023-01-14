@@ -9,15 +9,13 @@ SOURCES += \
         module/gameSprite.cpp \
         module/movement.cpp \
         module/parameters.cpp \
-        module/score.cpp \
-        module/remplissageMat.cpp
+        module/score.cpp
 
 include(MinGL2/mingl.pri)
 
 HEADERS += \
     module/gameSprite.h \
     module/convertImgMat.h \
-    module/remplissageMat.h \
     module/movement.h \
     module/parameters.h \
     module/score.h \

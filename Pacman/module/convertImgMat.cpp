@@ -6,20 +6,13 @@
 
 using namespace std;
 
-template<typename T>
-void affMat (vector<vector<T>> & mat) {
-    for (auto & i : mat) {
-        for (auto & j : i)
-            cout << j;
-        cout << endl;
-    }
-}
-
 UIntMat convertMat (const string & nomImg)
 {
     ifstream img(nomImg);
-    if (!img.is_open())
-        cout << "error" << endl;
+    if (!img.is_open()) {
+        UIntMat errorMat (0);
+        return errorMat;
+    }
     string dump;
     unsigned row(0), column (0);
 
@@ -29,8 +22,7 @@ UIntMat convertMat (const string & nomImg)
     img >> row;
     img >> column;
     img >> dump;
-    cout << row << ", " << column << endl;
-    UIntMat mat (row, UIntVec(column, 0));
+    UIntMat mat (column, UIntVec(row, 0));
     for (unsigned i (0); i < mat.size(); ++i) {
         for (unsigned j (0); j < mat[i].size(); ++j) {
             img >> currentPixel.r;
@@ -50,12 +42,30 @@ UIntMat convertMat (const string & nomImg)
                 mat[i][j] = 8;
             else if (currentPixel.r == 0 && currentPixel.g == 255 && currentPixel.b == 255)
                 mat[i][j] = 7;
+            else if (currentPixel.r == 0 && currentPixel.g == 0 && currentPixel.b == 255)
+                mat[i][j] = 5;
             else
                 mat[i][j] = 0;
-            affMat(mat);
-            cout << "-----------------------------------" << endl;
         }
     }
     return mat;
 }
 
+void importAllPlot (plotHolder & allPlot, const string & baseName) {
+    unsigned cpt (1);
+    string fullName;
+    UIntMat tmpMat;
+    while (true) {
+        fullName = "../Pacman/carte/" + baseName + std::to_string(cpt) + ".ppm";
+        cout << fullName << endl;
+        tmpMat = convertMat(fullName);
+        if (tmpMat.size() == 0) {
+            cout << "error" << endl;
+            break;
+        }
+        else {
+            allPlot[cpt] = tmpMat;
+            ++cpt;
+        }
+    }
+}

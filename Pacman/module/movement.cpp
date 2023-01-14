@@ -1,8 +1,12 @@
 #include "movement.h"
 #include "score.h"
 
-bool caseExist (const UIntMat & mat, const Position & pos){
-    return ((pos.first<mat[0].size() && (pos.second<mat.size())) && (mat[pos.first][pos.second] != 1));
+bool caseExistForGhost (const UIntMat & mat, const Position & pos){
+    return ((pos.first<mat.size() && pos.second<mat[0].size()) && mat[pos.first][pos.second] != 1);
+}
+
+bool caseExistForPacman (const UIntMat & mat, const Position & pos){
+    return ((pos.first<mat.size() && pos.second<mat[0].size()) && mat[pos.first][pos.second] != 1 && mat[pos.first][pos.second] != 5);
 }
 
 bool ghostHitPacman (UIntMat & mat, Position & pos) {
@@ -19,7 +23,7 @@ void move (UIntMat & mat, Position & posStart, Position & posEnd, sPacman & pac)
        tp(mat, posEnd);
     if (mat[posEnd.first][posEnd.second] == 9)
         pac.hitGhost = true;
-    addScore(mat, posEnd, pac.score);
+    addScore(mat, posEnd, pac);
     mat[posEnd.first][posEnd.second] = mat[posStart.first][posStart.second];
     mat[posStart.first][posStart.second] = 0;
     posStart.first = posEnd.first;
@@ -40,8 +44,8 @@ void move (UIntMat & mat, Position & posStart, Position & posEnd, sGhost & ghost
 
 void tp (const UIntMat & mat, Position & pos){
     if (pos.first == 0)
-        pos.first = mat.size() -2;
-    else if (pos.first == mat.size() -1)
+        pos.first = mat[1].size() -2;
+    else if (pos.first == mat[1].size() -1)
         pos.first = 1;
     else if (pos.second == 0)
         pos.second = mat.size() -2;
@@ -58,13 +62,13 @@ void movementDirection (UIntMat & mat, char & pressedKey, sPacman & pac, const u
     if (pac.currentMove == 'p' && (pressedKey == kUp || pressedKey == kDown || pressedKey == kRight || pressedKey == kLeft)) {
         if (pac.cooldown == 0) {
             pac.cooldown = caseSize/pac.speed;
-            if (caseExist(mat, {pac.posMat.first-1, pac.posMat.second})) // haut
+            if (caseExistForPacman(mat, {pac.posMat.first-1, pac.posMat.second})) // haut
                 canGo[0] = 1;
-            if (caseExist(mat, {pac.posMat.first+1, pac.posMat.second})) // bas
+            if (caseExistForPacman(mat, {pac.posMat.first+1, pac.posMat.second})) // bas
                 canGo[1] = 1;
-            if (caseExist(mat, {pac.posMat.first, pac.posMat.second-1})) // gauche
+            if (caseExistForPacman(mat, {pac.posMat.first, pac.posMat.second-1})) // gauche
                 canGo[2] = 1;
-            if (caseExist(mat, {pac.posMat.first, pac.posMat.second+1})) // droite
+            if (caseExistForPacman(mat, {pac.posMat.first, pac.posMat.second+1})) // droite
                 canGo[3] = 1;
             // haut
             if (pressedKey == kUp && canGo[0] == 1) {
@@ -163,16 +167,18 @@ void movementDirectionGhost (UIntMat & mat, char & pressedKey, sGhost & ghost, c
     char kRight = ghost.MapParamChar.find("GKeyRight")->second;
     char kLeft = ghost.MapParamChar.find("GKeyLeft")->second;
     vector<unsigned> canGo (4,0);
+    cout << mat[0].size() <<  ", " << mat.size() << endl;
+
     if (ghost.currentMove == 'p' && (pressedKey == kUp || pressedKey == kDown || pressedKey == kLeft || pressedKey == kRight)) {
         if (ghost.cooldown == 0) {
             ghost.cooldown = caseSize/ghost.speed;
-            if (caseExist(mat, {ghost.posMat.first-1, ghost.posMat.second})) // haut
+            if (caseExistForGhost(mat, {ghost.posMat.first-1, ghost.posMat.second})) // haut
                 canGo[0] = 1;
-            if (caseExist(mat, {ghost.posMat.first+1, ghost.posMat.second})) // bas
+            if (caseExistForGhost(mat, {ghost.posMat.first+1, ghost.posMat.second})) // bas
                 canGo[1] = 1;
-            if (caseExist(mat, {ghost.posMat.first, ghost.posMat.second-1})) // gauche
+            if (caseExistForGhost(mat, {ghost.posMat.first, ghost.posMat.second-1})) // gauche
                 canGo[2] = 1;
-            if (caseExist(mat, {ghost.posMat.first, ghost.posMat.second+1})) // droite
+            if (caseExistForGhost(mat, {ghost.posMat.first, ghost.posMat.second+1})) // droite
                 canGo[3] = 1;
             // haut
             if (pressedKey == kUp && canGo[0] == 1) {

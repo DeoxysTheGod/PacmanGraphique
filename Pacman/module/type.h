@@ -22,7 +22,7 @@ typedef pair<unsigned, unsigned> Position;
 
 typedef vector<unsigned> UIntVec;
 typedef vector<UIntVec> UIntMat;
-typedef vector<UIntMat> plotHolder;
+typedef map<unsigned, UIntMat> plotHolder;
 
 //Ces types appartiennent à Monsieur Casali
 typedef std::vector <char> CVLine;

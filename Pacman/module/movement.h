@@ -5,13 +5,22 @@
 #include "gameSprite.h"
 
 /*!
- * \brief caseExist : verifie si la case existe et si c'est possible d'y aller
+ * \brief caseExist : verifie si la case existe et si c'est possible d'y aller pour le fantome
  * \param[in] mat : la matrice qui represente la grille de jeu
  * \param[in] pos : la position de la case
  * \return renvoie un booleen pour dire si la case existe
- * @fn bool caseExist (const UIntMat & mat, const Position & pos);
+ * @fn bool caseExistForGhost (const UIntMat & mat, const Position & pos);
  */
-bool caseExist (const UIntMat & mat, const Position & pos);
+bool caseExistForGhost (const UIntMat & mat, const Position & pos);
+
+/*!
+ * \brief caseExist : verifie si la case existe et si c'est possible d'y aller pour le pacman
+ * \param[in] mat : la matrice qui represente la grille de jeu
+ * \param[in] pos : la position de la case
+ * \return renvoie un booleen pour dire si la case existe
+ * @fn bool caseExistForPacman (const UIntMat & mat, const Position & pos);
+ */
+bool caseExistForPacman (const UIntMat & mat, const Position & pos);
 
 /*!
  * \brief movementDirection : permet de gerer les deplacements reel et fictif en fonction des touches pressees

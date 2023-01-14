@@ -1,14 +1,17 @@
 #include "score.h"
 
-void addScore (const UIntMat & mat, const Position & pos, unsigned & score){
+void addScore (const UIntMat & mat, const Position & pos, sPacman & pacman){
     if (mat[pos.first][pos.second] == 2){
-        score += 10;
+        pacman.score += 10;
+        --pacman.beignetToEat;
     }
     else if (mat[pos.first][pos.second] == 3){
-        score += 50;
+        pacman.score += 50;
+        --pacman.beignetToEat;
     }
     else if (mat[pos.first][pos.second] ==  4){
-        score += 100;
+        pacman.score += 100;
+        --pacman.beignetToEat;
     }
 }
 
