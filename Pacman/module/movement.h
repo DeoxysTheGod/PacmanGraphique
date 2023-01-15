@@ -23,6 +23,24 @@ bool caseExistForGhost (const UIntMat & mat, const Position & pos);
 bool caseExistForPacman (const UIntMat & mat, const Position & pos);
 
 /*!
+ * \brief pacmanHitGhost : dit si pacman est en contact avec le fantome
+ * \param[in] mat : grille de jeu
+ * \param[in] pos : position de la case à vérifier
+ * \return un booléen pour dire si pacman est en contact avec le fantome
+ * @fn bool pacmanHitGhost (const UIntMat & mat, const Position & pos);
+ */
+bool pacmanHitGhost (const UIntMat & mat, const Position & pos);
+
+/*!
+ * \brief ghostHitPacman : dit si le fantome est en contact avec pacman
+ * \param[in] mat : grille de jeu
+ * \param[in] pos : position de la case à vérifier
+ * \return un booléen pour dire si le fantome est en contact avec pacman
+ * @fn bool ghostHitPacman (const UIntMat & mat, const Position & pos);
+*/
+bool ghostHitPacman (const UIntMat & mat, const Position & pos);
+
+/*!
  * \brief movementDirection : permet de gérer les déplacements réel et fictif du pacman en fonction des touches pressées
  * \param[in_out] mat : la matrice qui représente la grille de jeu
  * \param[in_out] pressedKey : la touche qui à été préssé

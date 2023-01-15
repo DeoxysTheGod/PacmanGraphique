@@ -26,4 +26,20 @@ UIntMat convertMat (const std::string & nomImg);
  */
 void importAllPlot (plotHolder & allPlot, const string & baseName);
 
+/*!
+ * \brief randomPlot : choisi une carte au hasard
+ * \param[out] mat : la grille de jeu
+ * \param[in] allPlot : map qui stock les grilles
+ * @fn void randomPlot (UIntMat & mat, const plotHolder & allPlot);
+ */
+void randomPlot (UIntMat & mat, const plotHolder & allPlot);
+
+/*!
+ * \brief countBeignet : compte le nombre de beignet sur la grille de jeu
+ * \param[in] mat : la grille de jeu
+ * \return un entier naturel correspondant au nombre de beignet à manger
+ * @fn unsigned countBeignet (const UIntMat & mat);
+ */
+unsigned countBeignet (const UIntMat & mat);
+
 #endif // CONVERTIMGMAT_H

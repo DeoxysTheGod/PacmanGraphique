@@ -28,14 +28,25 @@ typedef map<unsigned, UIntMat> plotHolder;
 typedef std::vector <char> CVLine;
 typedef std::vector <CVLine> CMat;
 
+/*!
+ * \brief The rgbPixelColor class : elle permet de grouper les trois valeurs d'un pixel
+ */
 struct rgbPixelColor {
     unsigned r, g, b;
 };
 
+/*!
+ * \brief The authorizedKeyPacman class : permet de dire qu'elles sont les touches à lire pour le pacman dans le fichier
+ * config.yaml
+ */
 struct authorizedKeyPacman {
     const std::vector <std::string> VParamChar {"PKeyUp", "PKeyDown", "PKeyLeft", "PKeyRight"};
 };
 
+/*!
+ * \brief The authorizedKeyGhost class : permet de dire qu'elles sont les touches à lire pour le fantome dans le fichier
+ * config.yaml
+ */
 struct authorizedKeyGhost {
     const std::vector <std::string> VParamChar {"GKeyUp", "GKeyDown", "GKeyLeft", "GKeyRight"};
 };
