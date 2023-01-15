@@ -1,0 +1,4 @@
+<map id="nsGui::Text::setTextColor" name="nsGui::Text::setTextColor">
+<area shape="rect" id="node1" title="Définit la nouvelle couleur du texte." alt="" coords="191,5,373,32"/>
+<area shape="rect" id="node2" href="$class_bg_text.html#adb35c1e7e0387e04e8f8e67d9e1468c8" title="Définit les nouvelles valeurs pour l&#39;ID spécifié" alt="" coords="5,5,143,32"/>
+</map>

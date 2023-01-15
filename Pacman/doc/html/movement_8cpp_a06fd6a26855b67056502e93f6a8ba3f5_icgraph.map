@@ -1,0 +1,5 @@
+<map id="caseExistForGhost" name="caseExistForGhost">
+<area shape="rect" id="node1" title="caseExist : vérifie si la case existe et s&#39;il est possible d&#39;y aller, pour le fantome" alt="" coords="347,5,489,32"/>
+<area shape="rect" id="node2" href="$movement_8cpp.html#ab49bbb537448e8b1e9517c184ee46e34" title="movementDirection : permet de gérer les déplacements réel et fictif du fantome en fonction des touche..." alt="" coords="108,5,299,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>

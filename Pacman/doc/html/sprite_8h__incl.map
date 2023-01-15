@@ -1,0 +1,15 @@
+<map id="/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/sprite.h" name="/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/gui/sprite.h">
+<area shape="rect" id="node1" title="Image pouvant être chargé depuis un fichier." alt="" coords="227,5,485,76"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,124,72,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="149,199,211,225"/>
+<area shape="rect" id="node4" href="$idrawable_8h.html" title="Interface pour un objet affichable." alt="" coords="378,124,547,151"/>
+<area shape="rect" id="node6" href="$rgbacolor_8h.html" title="Représente une couleur RGBA." alt="" coords="572,124,737,151"/>
+<area shape="rect" id="node11" href="$vec2d_8h.html" title="Représente un vecteur sur deux dimensions." alt="" coords="761,124,905,151"/>
+<area shape="rect" id="node13" href="$itransitionable_8h.html" title="Interface pour objet &quot;transitionable&quot;." alt="" coords="147,124,354,151"/>
+<area shape="rect" id="node5" title=" " alt="" coords="424,199,501,225"/>
+<area shape="rect" id="node7" title=" " alt="" coords="563,199,669,225"/>
+<area shape="rect" id="node8" href="$ieditable_8h.html" title="declaration de la classe CEditable dans nsUtil" alt="" coords="693,199,832,225"/>
+<area shape="rect" id="node9" title=" " alt="" coords="677,348,757,375"/>
+<area shape="rect" id="node10" href="$ieditable_8hpp.html" title=" " alt="" coords="709,273,816,300"/>
+<area shape="rect" id="node12" title=" " alt="" coords="857,199,933,225"/>
+</map>

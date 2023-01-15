@@ -19,3 +19,4 @@ Il faut utiliser les couleurs suivantes :
 * Rouge (255, 0, 0) : fantôme
 * Vert (0, 255, 0) : Pacman
 * Cyan (0, 255, 255) : teleporteur **! Il doit forcement y en avoir un symétrique !**
+* Bleu (0, 0, 255) : mur d'entrée de la zone du fantome

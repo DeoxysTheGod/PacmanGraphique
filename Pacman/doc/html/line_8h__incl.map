@@ -1,0 +1,15 @@
+<map id="/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/line.h" name="/home/quentin/Documents/cours1A/algo/sae/PacManGraphique/Pacman/MinGL2/include/mingl/shape/line.h">
+<area shape="rect" id="node1" title="Représente une ligne." alt="" coords="305,5,563,76"/>
+<area shape="rect" id="node2" href="$shape_8h.html" title="Représente une forme." alt="" coords="316,124,389,151"/>
+<area shape="rect" id="node12" href="$itransitionable_8h.html" title="Interface pour objet &quot;transitionable&quot;." alt="" coords="449,124,656,151"/>
+<area shape="rect" id="node3" href="$idrawable_8h.html" title="Interface pour un objet affichable." alt="" coords="5,199,175,225"/>
+<area shape="rect" id="node5" href="$rgbacolor_8h.html" title="Représente une couleur RGBA." alt="" coords="199,199,365,225"/>
+<area shape="rect" id="node10" href="$vec2d_8h.html" title="Représente un vecteur sur deux dimensions." alt="" coords="389,199,533,225"/>
+<area shape="rect" id="node4" title=" " alt="" coords="51,273,129,300"/>
+<area shape="rect" id="node6" title=" " alt="" coords="190,273,297,300"/>
+<area shape="rect" id="node7" href="$ieditable_8h.html" title="declaration de la classe CEditable dans nsUtil" alt="" coords="321,273,459,300"/>
+<area shape="rect" id="node8" title=" " alt="" coords="305,423,385,449"/>
+<area shape="rect" id="node9" href="$ieditable_8hpp.html" title=" " alt="" coords="337,348,443,375"/>
+<area shape="rect" id="node11" title=" " alt="" coords="484,273,560,300"/>
+<area shape="rect" id="node13" title=" " alt="" coords="557,199,620,225"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="BgText::getValues" name="BgText::getValues">
+<area shape="rect" id="node1" title="Récupère des valeurs dans un vecteur de float pour l&#39;ID spécifié" alt="" coords="5,130,144,157"/>
+<area shape="rect" id="node2" href="$classns_graphics_1_1_r_g_b_acolor.html#a9ac0893426cce20a177d6ea7af1d7129" title="Récupère le taux de bleu." alt="" coords="210,5,381,47"/>
+<area shape="rect" id="node3" href="$classns_shape_1_1_shape.html#a8efbd1ac47497b188edeb019557ef754" title="Retourne la couleur de remplissage." alt="" coords="192,71,399,98"/>
+<area shape="rect" id="node4" href="$classns_graphics_1_1_r_g_b_acolor.html#a5f2dc1550c34149fc5cbc1629b54d7e4" title="Récupère le taux de vert." alt="" coords="210,123,381,164"/>
+<area shape="rect" id="node5" href="$classns_graphics_1_1_r_g_b_acolor.html#a55e40085f904b696a0bc63aed6258b79" title="Récupère le taux de rouge." alt="" coords="210,188,381,229"/>
+<area shape="rect" id="node6" href="$classns_gui_1_1_text.html#a248f06b3a9a85c05225449424311abd0" title="Récupère la couleur du texte." alt="" coords="203,254,387,281"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="MinGL::setBackgroundColor" name="MinGL::setBackgroundColor">
+<area shape="rect" id="node1" title="Règle la couleur de fond de la fenêtre." alt="" coords="5,111,208,138"/>
+<area shape="rect" id="node2" href="$classns_graphics_1_1_r_g_b_acolor.html#a76299c507a113e326c01fe4b0bca2b1e" title="Récupère le taux de transparence." alt="" coords="256,5,427,47"/>
+<area shape="rect" id="node3" href="$classns_graphics_1_1_r_g_b_acolor.html#a9ac0893426cce20a177d6ea7af1d7129" title="Récupère le taux de bleu." alt="" coords="256,71,427,112"/>
+<area shape="rect" id="node4" href="$classns_graphics_1_1_r_g_b_acolor.html#a5f2dc1550c34149fc5cbc1629b54d7e4" title="Récupère le taux de vert." alt="" coords="256,136,427,177"/>
+<area shape="rect" id="node5" href="$classns_graphics_1_1_r_g_b_acolor.html#a55e40085f904b696a0bc63aed6258b79" title="Récupère le taux de rouge." alt="" coords="256,201,427,243"/>
+</map>

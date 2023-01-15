@@ -1,0 +1,5 @@
+<map id="MinGL::setWindowSize" name="MinGL::setWindowSize">
+<area shape="rect" id="node1" title="Règle la taille de la fenêtre." alt="" coords="5,31,176,57"/>
+<area shape="rect" id="node2" href="$classns_graphics_1_1_vec2_d.html#abcf3d729b05b3cd93e9eff21c74b89a1" title="Récupère la position X (abscisse)" alt="" coords="224,5,405,32"/>
+<area shape="rect" id="node3" href="$classns_graphics_1_1_vec2_d.html#ae70fbda9cca27b9dc0fe068a38ae5e5e" title="Récupère la position Y (ordonnée)" alt="" coords="225,56,405,83"/>
+</map>

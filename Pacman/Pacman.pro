@@ -22,5 +22,4 @@ HEADERS += \
     module/type.h
 
 DISTFILES += \
-    autre/config.yaml \
-    carte/map2.ppm
+    autre/config.yaml

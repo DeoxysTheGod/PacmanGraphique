@@ -1,0 +1,6 @@
+<map id="nsShape::Triangle" name="nsShape::Triangle">
+<area shape="rect" id="node1" title="Classe représentant un triangle." alt="" coords="115,155,251,181"/>
+<area shape="rect" id="node2" href="$classns_shape_1_1_shape.html" title="Classe de base pour une forme." alt="" coords="27,80,152,107"/>
+<area shape="rect" id="node3" href="$classns_graphics_1_1_i_drawable.html" title="Interface pour un objet affichable." alt="" coords="5,5,173,32"/>
+<area shape="rect" id="node4" href="$classns_transition_1_1_i_transitionable.html" title="Une classe abstraite pour n&#39;importe quelle élément pouvant effectuer une transition entre deux états." alt="" coords="176,80,379,107"/>
+</map>

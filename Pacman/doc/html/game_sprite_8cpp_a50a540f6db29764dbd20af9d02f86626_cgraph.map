@@ -1,0 +1,4 @@
+<map id="initGhost" name="initGhost">
+<area shape="rect" id="node1" title="initPacman : initialisation des variables de bases du fantome" alt="" coords="5,5,87,32"/>
+<area shape="rect" id="node2" href="$parameters_8cpp.html#a1fa90f5274c8405424e93233a357dccb" title="loadParameter : Permet de récupérer les paramètres du pacman stockés dans le fichier config...." alt="" coords="135,5,252,32"/>
+</map>
