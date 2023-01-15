@@ -1,0 +1,6 @@
+<map id="nsShape::Shape" name="nsShape::Shape">
+<area shape="rect" id="node1" title="Classe de base pour une forme." alt="" coords="85,185,211,212"/>
+<area shape="rect" id="node2" href="$classns_graphics_1_1_i_drawable.html" title="Interface pour un objet affichable." alt="" coords="5,81,173,108"/>
+<area shape="rect" id="node3" href="$classns_graphics_1_1_r_g_b_acolor.html" title="Classe représentant un couleur RGBA8888." alt="" coords="197,81,368,108"/>
+<area shape="rect" id="node4" href="$classns_util_1_1_i_editable.html" title="Interface pour un objet injectable." alt="" coords="220,5,345,32"/>
+</map>

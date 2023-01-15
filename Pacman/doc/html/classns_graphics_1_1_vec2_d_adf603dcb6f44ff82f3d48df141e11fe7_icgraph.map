@@ -1,7 +1,0 @@
-<map id="nsGraphics::Vec2D::computeMagnitude" name="nsGraphics::Vec2D::computeMagnitude">
-<area shape="rect" id="node1" title="Calcule la magnitude de ce vecteur." alt="" coords="204,104,355,145"/>
-<area shape="rect" id="node2" href="$classns_graphics_1_1_vec2_d.html#accfe96cfa5b8495a0b14c7087068064e" title="Opérateur de stricte infériorité (Vérifie la stricte infériorité de la magnitude des deux vecteurs)" alt="" coords="5,5,156,47"/>
-<area shape="rect" id="node3" href="$classns_graphics_1_1_vec2_d.html#afd5e0e3ba77ef971f8d022d69a4a2647" title="Opérateur d&#39;infériorité (Vérifie l&#39;infériorité de la magnitude des deux vecteurs)" alt="" coords="5,71,156,112"/>
-<area shape="rect" id="node4" href="$classns_graphics_1_1_vec2_d.html#a30da0e7984d8c3e7a66bbdcdcc24c9cb" title="Opérateur de stricte supériorité (Vérifie la stricte supériorité de la magnitude des deux vecteurs)" alt="" coords="5,136,156,177"/>
-<area shape="rect" id="node5" href="$classns_graphics_1_1_vec2_d.html#a478dad2852611070874c6c9e5663b570" title="Opérateur de supériorité (Vérifie la supériorité de la magnitude des deux vecteurs)" alt="" coords="5,201,156,243"/>
-</map>

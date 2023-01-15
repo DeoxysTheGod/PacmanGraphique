@@ -1,0 +1,8 @@
+<map id="MinGL::initGraphic" name="MinGL::initGraphic">
+<area shape="rect" id="node1" title="Initialise minGL et ouvre la fenêtre." alt="" coords="5,129,148,156"/>
+<area shape="rect" id="node2" href="$class_min_g_l.html#a86c940758616957683ffb2e239bba774" title="Efface l&#39;écran avec la couleur de fond spécifiée." alt="" coords="208,5,355,32"/>
+<area shape="rect" id="node3" href="$classns_graphics_1_1_r_g_b_acolor.html#a76299c507a113e326c01fe4b0bca2b1e" title="Récupère le taux de transparence." alt="" coords="196,57,367,98"/>
+<area shape="rect" id="node4" href="$classns_graphics_1_1_r_g_b_acolor.html#a9ac0893426cce20a177d6ea7af1d7129" title="Récupère le taux de bleu." alt="" coords="196,122,367,163"/>
+<area shape="rect" id="node5" href="$classns_graphics_1_1_r_g_b_acolor.html#a5f2dc1550c34149fc5cbc1629b54d7e4" title="Récupère le taux de vert." alt="" coords="196,187,367,229"/>
+<area shape="rect" id="node6" href="$classns_graphics_1_1_r_g_b_acolor.html#a55e40085f904b696a0bc63aed6258b79" title="Récupère le taux de rouge." alt="" coords="196,253,367,294"/>
+</map>

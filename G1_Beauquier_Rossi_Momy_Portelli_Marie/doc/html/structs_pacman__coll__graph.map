@@ -1,0 +1,6 @@
+<map id="sPacman" name="sPacman">
+<area shape="rect" id="node1" title="The sPacman class : informations concernant le pacman." alt="" coords="147,185,227,212"/>
+<area shape="rect" id="node2" href="$classns_graphics_1_1_r_g_b_acolor.html" title="Classe représentant un couleur RGBA8888." alt="" coords="5,81,176,108"/>
+<area shape="rect" id="node3" href="$classns_util_1_1_i_editable.html" title="Interface pour un objet injectable." alt="" coords="28,5,153,32"/>
+<area shape="rect" id="node4" href="$structauthorized_key_pacman.html" title="The authorizedKeyPacman class : permet de dire qu&#39;elles sont les touches à lire pour le pacman dans l..." alt="" coords="201,81,367,108"/>
+</map>

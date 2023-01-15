@@ -1,9 +1,0 @@
-<map id="movementDirection" name="movementDirection">
-<area shape="rect" id="node1" title="movementDirection : permet de gérer les déplacements réel et fictif du pacman en fonction des touches..." alt="" coords="5,56,157,83"/>
-<area shape="rect" id="node2" href="$movement_8cpp.html#afcf635f91ad314849a6dd30cf0e1a5eb" title="caseExist : vérifie si la case existe et s&#39;il est possible d&#39;y aller, pour le pacman" alt="" coords="205,5,360,32"/>
-<area shape="rect" id="node3" href="$movement_8cpp.html#a80963dee526ad5d66422f5f43ce7c062" title="move : gère les déplacement réel du pacman dans la matrice" alt="" coords="253,56,312,83"/>
-<area shape="rect" id="node7" href="$game_sprite_8cpp.html#a3b5583325e6137389eab1a9113519981" title="pacmanAnimation : gère les animations de la bouche de pacman" alt="" coords="212,107,353,133"/>
-<area shape="rect" id="node4" href="$score_8cpp.html#acb9b591f0575ad5e4a2ce433fced6279" title="addScore : modifie le score du pacman en fonction de ce qu&#39;il a mangé" alt="" coords="432,5,515,32"/>
-<area shape="rect" id="node5" href="$movement_8cpp.html#a0a795ae81693ac987aa626936e4b4af4" title="pacmanHitGhost : dit si pacman est en contact avec le fantome" alt="" coords="408,56,539,83"/>
-<area shape="rect" id="node6" href="$movement_8cpp.html#a2ffa7f459b95baee7efc52402749d23a" title="tp : permet de gérer la téléportation de pacman lorsqu&#39;il sort de l&#39;écran" alt="" coords="454,107,493,133"/>
-</map>

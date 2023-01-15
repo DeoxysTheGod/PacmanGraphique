@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="11,5,125,32"/>
-<area shape="rect" id="node2" href="$classns_exception_1_1_c_exception.html" title="Classe pour créer des exceptions facilement." alt="" coords="179,5,361,32"/>
-<area shape="rect" id="node3" href="$classns_util_1_1_i_editable.html" title="Interface pour un objet injectable." alt="" coords="5,56,131,83"/>
-<area shape="rect" id="node4" href="$classns_graphics_1_1_r_g_b_acolor.html" title="Classe représentant un couleur RGBA8888." alt="" coords="185,56,355,83"/>
-<area shape="rect" id="node5" href="$classns_graphics_1_1_vec2_d.html" title="Classe représentant un vecteur deux&#45;dimensionnel." alt="" coords="199,107,341,133"/>
-</map>

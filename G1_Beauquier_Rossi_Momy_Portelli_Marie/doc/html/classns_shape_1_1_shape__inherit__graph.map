@@ -1,0 +1,8 @@
+<map id="nsShape::Shape" name="nsShape::Shape">
+<area shape="rect" id="node1" title="Classe de base pour une forme." alt="" coords="223,80,348,107"/>
+<area shape="rect" id="node3" href="$classns_shape_1_1_circle.html" title="Classe représentant un cercle." alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node4" href="$classns_shape_1_1_line.html" title="Classe représentant une ligne." alt="" coords="152,155,264,181"/>
+<area shape="rect" id="node5" href="$classns_shape_1_1_rectangle.html" title="Classe représentant un rectangle." alt="" coords="289,155,439,181"/>
+<area shape="rect" id="node6" href="$classns_shape_1_1_triangle.html" title="Classe représentant un triangle." alt="" coords="464,155,600,181"/>
+<area shape="rect" id="node2" href="$classns_graphics_1_1_i_drawable.html" title="Interface pour un objet affichable." alt="" coords="201,5,369,32"/>
+</map>

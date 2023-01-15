@@ -1,0 +1,5 @@
+<map id="MinGL::clearScreen" name="MinGL::clearScreen">
+<area shape="rect" id="node1" title="Efface l&#39;écran avec la couleur de fond spécifiée." alt="" coords="299,31,445,57"/>
+<area shape="rect" id="node2" href="$class_min_g_l.html#a5962a0a0ced7879bc0cc65e267e8d7fc" title="Initialise minGL et ouvre la fenêtre." alt="" coords="108,5,251,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,57"/>
+</map>

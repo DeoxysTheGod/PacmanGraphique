@@ -1,0 +1,4 @@
+<map id="nsGui::Text::getTextColor" name="nsGui::Text::getTextColor">
+<area shape="rect" id="node1" title="Récupère la couleur du texte." alt="" coords="192,5,376,32"/>
+<area shape="rect" id="node2" href="$class_bg_text.html#a01cc8269e39184b805351409aac4feb4" title="Récupère des valeurs dans un vecteur de float pour l&#39;ID spécifié" alt="" coords="5,5,144,32"/>
+</map>

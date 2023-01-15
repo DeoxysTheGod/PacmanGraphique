@@ -1,6 +1,0 @@
-<map id="sGhost" name="sGhost">
-<area shape="rect" id="node1" title="The sGhost class : informations concernant le fantome." alt="" coords="93,200,159,227"/>
-<area shape="rect" id="node2" href="$structauthorized_key_ghost.html" title="The authorizedKeyGhost class : permet de dire qu&#39;elles sont les touches à lire pour le fantome dans l..." alt="" coords="5,81,159,108"/>
-<area shape="rect" id="node3" href="$classns_graphics_1_1_r_g_b_acolor.html" title="Classe représentant un couleur RGBA8888." alt="" coords="183,81,354,108"/>
-<area shape="rect" id="node4" href="$classns_util_1_1_i_editable.html" title="Interface pour un objet injectable." alt="" coords="206,5,331,32"/>
-</map>

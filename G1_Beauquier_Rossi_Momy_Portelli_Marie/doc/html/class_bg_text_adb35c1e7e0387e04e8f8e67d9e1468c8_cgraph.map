@@ -1,0 +1,5 @@
+<map id="BgText::setValues" name="BgText::setValues">
+<area shape="rect" id="node1" title="Définit les nouvelles valeurs pour l&#39;ID spécifié" alt="" coords="5,31,143,57"/>
+<area shape="rect" id="node2" href="$classns_shape_1_1_shape.html#a6c0f6392753f72ed4c39424a83f7ed73" title="Règle la couleur de remplissage." alt="" coords="191,5,397,32"/>
+<area shape="rect" id="node3" href="$classns_gui_1_1_text.html#a9e10bb21647ce95f034a4205562e222a" title="Définit la nouvelle couleur du texte." alt="" coords="203,56,385,83"/>
+</map>

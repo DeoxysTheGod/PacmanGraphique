@@ -1,8 +1,0 @@
-<map id="partialReset" name="partialReset">
-<area shape="rect" id="node1" title="partialReset : permet de réinitialiser toutes les valeurs en cas de contact entre le fantome et pacma..." alt="" coords="5,81,107,108"/>
-<area shape="rect" id="node2" href="$convert_img_mat_8cpp.html#a039556488ad4e0452db2130b16547a26" title="countBeignet : compte le nombre de beignet sur la grille de jeu" alt="" coords="155,5,263,32"/>
-<area shape="rect" id="node3" href="$game_sprite_8cpp.html#a50a540f6db29764dbd20af9d02f86626" title="initPacman : initialisation des variables de bases du fantome" alt="" coords="168,56,249,83"/>
-<area shape="rect" id="node5" href="$game_sprite_8cpp.html#af3e9e097ded010fe1ca9ba2c93aeaffd" title="initPacman : initialisation des variables de bases du pacman" alt="" coords="161,107,256,133"/>
-<area shape="rect" id="node6" href="$convert_img_mat_8cpp.html#ac3f4f7361a1f246d1a4b0b3ac35e5922" title="randomPlot : choisi une carte au hasard" alt="" coords="160,157,257,184"/>
-<area shape="rect" id="node4" href="$parameters_8cpp.html#a1fa90f5274c8405424e93233a357dccb" title="loadParameter : Permet de récupérer les paramètres du pacman stockés dans le fichier config...." alt="" coords="311,81,428,108"/>
-</map>

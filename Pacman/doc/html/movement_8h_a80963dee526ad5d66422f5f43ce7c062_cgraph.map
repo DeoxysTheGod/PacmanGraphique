@@ -1,6 +1,0 @@
-<map id="move" name="move">
-<area shape="rect" id="node1" title="move : gère les déplacement réel du pacman dans la matrice" alt="" coords="5,56,64,83"/>
-<area shape="rect" id="node2" href="$score_8cpp.html#acb9b591f0575ad5e4a2ce433fced6279" title="addScore : modifie le score du pacman en fonction de ce qu&#39;il a mangé" alt="" coords="136,5,219,32"/>
-<area shape="rect" id="node3" href="$movement_8cpp.html#a0a795ae81693ac987aa626936e4b4af4" title="pacmanHitGhost : dit si pacman est en contact avec le fantome" alt="" coords="112,56,243,83"/>
-<area shape="rect" id="node4" href="$movement_8cpp.html#a2ffa7f459b95baee7efc52402749d23a" title="tp : permet de gérer la téléportation de pacman lorsqu&#39;il sort de l&#39;écran" alt="" coords="158,107,197,133"/>
-</map>

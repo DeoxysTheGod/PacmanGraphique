@@ -1,5 +1,0 @@
-<map id="nsGui::Text" name="nsGui::Text">
-<area shape="rect" id="node1" title="Gère l&#39;affichage d&#39;un texte." alt="" coords="146,80,241,107"/>
-<area shape="rect" id="node2" href="$classns_graphics_1_1_i_drawable.html" title="Interface pour un objet affichable." alt="" coords="5,5,173,32"/>
-<area shape="rect" id="node3" href="$classns_transition_1_1_i_transitionable.html" title="Une classe abstraite pour n&#39;importe quelle élément pouvant effectuer une transition entre deux états." alt="" coords="197,5,400,32"/>
-</map>

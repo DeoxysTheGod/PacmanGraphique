@@ -1,7 +1,0 @@
-<map id="pacmanHitGhost" name="pacmanHitGhost">
-<area shape="rect" id="node1" title="pacmanHitGhost : dit si pacman est en contact avec le fantome" alt="" coords="453,31,584,57"/>
-<area shape="rect" id="node2" href="$movement_8cpp.html#a80963dee526ad5d66422f5f43ce7c062" title="move : gère les déplacement réel du pacman dans la matrice" alt="" coords="347,31,405,57"/>
-<area shape="rect" id="node3" href="$movement_8cpp.html#ae86e84c821573501d5753f1ccce78a50" title="movementDirection : permet de gérer les déplacements réel et fictif du pacman en fonction des touches..." alt="" coords="127,5,279,32"/>
-<area shape="rect" id="node5" href="$movement_8cpp.html#ab49bbb537448e8b1e9517c184ee46e34" title="movementDirection : permet de gérer les déplacements réel et fictif du fantome en fonction des touche..." alt="" coords="108,56,299,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,57"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="clavier" name="clavier">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,72,133"/>
-<area shape="rect" id="node2" href="$classns_graphics_1_1_vec2_d.html#abcf3d729b05b3cd93e9eff21c74b89a1" title="Récupère la position X (abscisse)" alt="" coords="120,5,301,32"/>
-<area shape="rect" id="node3" href="$classns_graphics_1_1_vec2_d.html#ae70fbda9cca27b9dc0fe068a38ae5e5e" title="Récupère la position Y (ordonnée)" alt="" coords="121,56,301,83"/>
-<area shape="rect" id="node4" href="$class_min_g_l.html#a8f0833403a4fb3df8010c132e81b207f" title="Renvoie l&#39;état d&#39;une touche du clavier (pressée ou non)" alt="" coords="144,107,277,133"/>
-<area shape="rect" id="node5" href="$classns_graphics_1_1_vec2_d.html#ae9d371fdd3817c6e9a3a1ae6ed3fd17d" title="Définit la nouvelle position X (abscisse)" alt="" coords="121,157,301,184"/>
-<area shape="rect" id="node6" href="$classns_graphics_1_1_vec2_d.html#ac0e752e399ab2f727fe2644540b1208f" title="Définit la nouvelle position Y (ordonnée)" alt="" coords="121,208,300,235"/>
-</map>

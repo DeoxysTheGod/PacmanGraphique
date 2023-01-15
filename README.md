@@ -2,7 +2,7 @@
 
 ## Création de carte
 
-Il faut une image au format `.ppm` P3
+Il faut une image au format `.ppm` P3 et la mettre dans le dossier `./carte`
 
 Sur linux :
 

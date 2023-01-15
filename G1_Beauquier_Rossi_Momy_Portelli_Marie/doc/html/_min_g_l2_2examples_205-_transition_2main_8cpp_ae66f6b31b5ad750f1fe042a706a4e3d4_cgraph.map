@@ -1,0 +1,19 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,299,60,326"/>
+<area shape="rect" id="node2" href="$classns_event_1_1_event_manager.html#adbc5ced9a9435f61f58436ff613632b4" title="Vide la queue." alt="" coords="138,5,314,47"/>
+<area shape="rect" id="node3" href="$class_min_g_l.html#a86c940758616957683ffb2e239bba774" title="Efface l&#39;écran avec la couleur de fond spécifiée." alt="" coords="404,110,551,137"/>
+<area shape="rect" id="node4" href="$class_min_g_l.html#a489922f0bdde2e38698adddaf57f6eda" title="Préviens minGL que la frame est terminée." alt="" coords="153,122,299,149"/>
+<area shape="rect" id="node5" href="$class_min_g_l.html#ab558253439905930836ab4910a7ae253" title="Récupère le gestionnaire d&#39;évènements minGL." alt="" coords="133,173,319,199"/>
+<area shape="rect" id="node6" href="$class_min_g_l.html#a17c7718b9e966c8147cd56483dcf4e8d" title="Initialise la bibliothèque freeglut." alt="" coords="167,223,285,250"/>
+<area shape="rect" id="node7" href="$class_min_g_l.html#a5962a0a0ced7879bc0cc65e267e8d7fc" title="Initialise minGL et ouvre la fenêtre." alt="" coords="155,274,297,301"/>
+<area shape="rect" id="node12" href="$class_min_g_l.html#a05a0da9d0729e9c7dbd1121b0956866d" title="Retourne si la fenêtre est ouverte." alt="" coords="168,325,284,351"/>
+<area shape="rect" id="node13" href="$classns_shape_1_1_shape.html#a48821100aa1856f188bdba257505adc3" title="Règle la couleur de bord." alt="" coords="128,376,324,417"/>
+<area shape="rect" id="node14" href="$classns_transition_1_1_transition_contract.html#a8f1ebafd9966553678fd7845f35bac33" title="Définit la fonction de callback a appeler quand la transition est achevée." alt="" coords="108,441,344,483"/>
+<area shape="rect" id="node15" href="$classns_shape_1_1_shape.html#a6c0f6392753f72ed4c39424a83f7ed73" title="Règle la couleur de remplissage." alt="" coords="123,507,329,534"/>
+<area shape="rect" id="node16" href="$classns_transition_1_1_transition_engine.html#ae04163c3488c93e111b9d2638a27d6a9" title="Démarre un contrat." alt="" coords="141,559,311,600"/>
+<area shape="rect" id="node17" href="$classns_transition_1_1_transition_engine.html#a3bc437b23ee918b9ec4af070e205028f" title="Met a jour toutes les transitions dans la liste." alt="" coords="141,624,311,665"/>
+<area shape="rect" id="node8" href="$classns_graphics_1_1_r_g_b_acolor.html#a76299c507a113e326c01fe4b0bca2b1e" title="Récupère le taux de transparence." alt="" coords="392,168,563,209"/>
+<area shape="rect" id="node9" href="$classns_graphics_1_1_r_g_b_acolor.html#a9ac0893426cce20a177d6ea7af1d7129" title="Récupère le taux de bleu." alt="" coords="392,233,563,275"/>
+<area shape="rect" id="node10" href="$classns_graphics_1_1_r_g_b_acolor.html#a5f2dc1550c34149fc5cbc1629b54d7e4" title="Récupère le taux de vert." alt="" coords="392,299,563,340"/>
+<area shape="rect" id="node11" href="$classns_graphics_1_1_r_g_b_acolor.html#a55e40085f904b696a0bc63aed6258b79" title="Récupère le taux de rouge." alt="" coords="392,364,563,405"/>
+</map>

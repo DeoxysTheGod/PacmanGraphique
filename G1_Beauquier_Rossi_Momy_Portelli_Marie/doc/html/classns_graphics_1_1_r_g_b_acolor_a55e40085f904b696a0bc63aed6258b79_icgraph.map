@@ -1,0 +1,12 @@
+<map id="nsGraphics::RGBAcolor::getRed" name="nsGraphics::RGBAcolor::getRed">
+<area shape="rect" id="node1" title="Récupère le taux de rouge." alt="" coords="359,187,529,229"/>
+<area shape="rect" id="node2" href="$classns_gui_1_1_sprite.html#ac4b29170aef06d46990b68da76480f28" title="Fonction pour afficher l&#39;objet." alt="" coords="137,5,282,32"/>
+<area shape="rect" id="node3" href="$classns_shape_1_1_circle.html#a03be5cdd7d6a0feaa7d6b0a819389a7a" title="Fonction pour afficher l&#39;objet." alt="" coords="128,56,291,83"/>
+<area shape="rect" id="node4" href="$classns_shape_1_1_line.html#a593ce7771accbbe3bb0f0baf70ece47b" title="Fonction pour afficher l&#39;objet." alt="" coords="133,107,285,133"/>
+<area shape="rect" id="node5" href="$classns_shape_1_1_rectangle.html#a87e5544cddc2ed7b3bfd189b796ab2a5" title="Fonction pour afficher l&#39;objet." alt="" coords="134,158,285,199"/>
+<area shape="rect" id="node6" href="$classns_shape_1_1_triangle.html#a5586345f4e15181f994a0d4946f61353" title="Fonction pour afficher l&#39;objet." alt="" coords="121,224,297,251"/>
+<area shape="rect" id="node7" href="$class_bg_text.html#a01cc8269e39184b805351409aac4feb4" title="Récupère des valeurs dans un vecteur de float pour l&#39;ID spécifié" alt="" coords="140,275,279,301"/>
+<area shape="rect" id="node8" href="$class_min_g_l.html#a5962a0a0ced7879bc0cc65e267e8d7fc" title="Initialise minGL et ouvre la fenêtre." alt="" coords="138,325,281,352"/>
+<area shape="rect" id="node10" href="$class_min_g_l.html#a4399b7615cea89f850cd5c66e428c367" title="Règle la couleur de fond de la fenêtre." alt="" coords="108,376,311,403"/>
+<area shape="rect" id="node9" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,325,60,352"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="events" name="events">
+<area shape="rect" id="node1" title=" " alt="" coords="5,129,72,156"/>
+<area shape="rect" id="node2" href="$class_min_g_l.html#ab558253439905930836ab4910a7ae253" title="Récupère le gestionnaire d&#39;évènements minGL." alt="" coords="120,5,307,32"/>
+<area shape="rect" id="node3" href="$classns_event_1_1_event_manager.html#a5a3119d969a296b8e94f223171fdf2e6" title="Vérifie si un événement doit être traité" alt="" coords="125,57,301,98"/>
+<area shape="rect" id="node4" href="$classns_event_1_1_event_manager.html#adb00a0a006f4caa976471e74bf99cdc9" title="Tire l&#39;événement le plus ancien, et l&#39;enlève de la queue." alt="" coords="125,122,301,163"/>
+<area shape="rect" id="node5" href="$classns_graphics_1_1_vec2_d.html#ae9d371fdd3817c6e9a3a1ae6ed3fd17d" title="Définit la nouvelle position X (abscisse)" alt="" coords="123,188,303,215"/>
+<area shape="rect" id="node6" href="$classns_graphics_1_1_vec2_d.html#ac0e752e399ab2f727fe2644540b1208f" title="Définit la nouvelle position Y (ordonnée)" alt="" coords="124,239,303,265"/>
+</map>

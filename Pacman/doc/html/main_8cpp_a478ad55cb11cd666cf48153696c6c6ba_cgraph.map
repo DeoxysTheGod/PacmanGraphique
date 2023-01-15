@@ -1,4 +1,0 @@
-<map id="isKeyPressedGhost" name="isKeyPressedGhost">
-<area shape="rect" id="node1" title="isKeyPressedGhost : détecte les touches préssées" alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node2" href="$class_min_g_l.html#a8f0833403a4fb3df8010c132e81b207f" title="Renvoie l&#39;état d&#39;une touche du clavier (pressée ou non)" alt="" coords="200,5,333,32"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="ghostHitPacman" name="ghostHitPacman">
-<area shape="rect" id="node1" title="ghostHitPacman : dit si le fantome est en contact avec pacman" alt="" coords="112,5,240,32"/>
-<area shape="rect" id="node2" href="$movement_8cpp.html#a6b937fc953ac119d96b871ee8f796f29" title=" " alt="" coords="5,5,64,32"/>
-</map>
